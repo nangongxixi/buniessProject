@@ -1,0 +1,29 @@
+<ul class="sidebar-menu">
+    <li class="header"></li>
+
+    {foreach $pauth_info as $k => $v}
+        {foreach $sauth_info as $kk => $vv}
+                {*当前父级id与外边的id一致，才显示*}
+                {if $vv.auth_pid == $v.auth_id}
+                    <li style="cursor:pointer" class="menu" save="caidan{$kk}" address="{$smarty.const.__MODULE__}/{$vv.auth_c}/{$vv.auth_a}">
+                        <a href="#">
+                            <i class="{$icon[$kk]}"></i><span>{$vv.auth_name}</span>
+                        </a>
+                    </li>
+                {/if}
+        {/foreach}
+    {/foreach}
+
+</ul>
+<script>
+    var menu = localStorage.getItem('menu');
+    for(var i=0; i<$('.sidebar-menu li').length; i++){
+        if(menu ==$('.sidebar-menu li').eq(i).attr('save') ){
+            $('.sidebar-menu li').eq(i).addClass('active');
+        }
+    }
+
+
+
+
+</script>
