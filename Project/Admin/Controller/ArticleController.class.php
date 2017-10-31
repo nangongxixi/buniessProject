@@ -37,7 +37,7 @@ class ArticleController extends AdminController
     function detail($id)
     {
         $info = D('Articles')->find($id);
-        $imgInfo = D('images')->where('article_id='.$id)->select();
+        $imgInfo = D('images')->where(' status=0 and article_id='.$id)->order('sort desc, id desc')->select();
         $imgArr = [];
         foreach ($imgInfo as $k=>$v){
             array_push($imgArr,$v['img_url']);
@@ -125,9 +125,9 @@ class ArticleController extends AdminController
         }
         //根据当前id获取详情
         if ($id) {
-            //获得被修改管理员的信息
+            //图片列表
             $info = D('Articles')->find($id);
-            $imgInfo = D('images')->where('article_id='.$id)->select();
+            $imgInfo = D('images')->where('status=0 and article_id='.$id)->select();
             $imgArr = [];
             foreach ($imgInfo as $k=>$v){
                 array_push($imgArr,$v['img_url']);
@@ -208,6 +208,7 @@ class ArticleController extends AdminController
             //插入数据库
             $images = D('images');
             $data['img_url'] = $uploaddir . $_FILES['file']['name'];
+            $data["createtime"] = date("Y-m-d H:i:s", time());
             $addid = $images->add($data);
             $_SESSION['imgArr'][$addid] = $addid;//将新增返回的id保存到session，以便新增资料的时候回填
         } else {
@@ -219,7 +220,40 @@ class ArticleController extends AdminController
     //编辑多图
     function editImg($id)
     {
-        $info = D('images')->where('article_id='.$id)->select();
+		$imgMod = D('images');
+		//编辑排序
+		if($_POST['sort']){			
+			$inertID = $imgMod->where('id='.$_POST['id'])->save($_POST);
+			if ($inertID) {
+				$this->ajaxReturn(array(
+					'status' => true,
+					'msg' => '操作成功',
+				));
+			} else {
+				$this->ajaxReturn(array(
+					'status' => false,
+					'msg' => '操作失败',
+				));
+			}
+		}
+		//删除
+		if($_POST['status']){			
+			$inertID = $imgMod->where('id='.$_POST['id'])->save($_POST);
+			if ($inertID) {
+				$this->ajaxReturn(array(
+					'status' => true,
+					'msg' => '操作成功',
+				));
+			} else {
+				$this->ajaxReturn(array(
+					'status' => false,
+					'msg' => '操作失败',
+				));
+			}
+		}
+		
+		
+        $info = $imgMod->where('status=0 and article_id='.$id)->order('sort desc,id desc')->select();
         $this->assign('info', $info);
         $this->display();
     }

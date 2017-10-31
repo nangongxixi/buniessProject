@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2017-10-26 09:06:36
+<?php /* Smarty version Smarty-3.1.6, created on 2017-10-31 15:23:09
          compiled from "D:/phpStudy/WWW/buniessProject/Project/Admin/View\Manager\login.html" */ ?>
 <?php /*%%SmartyHeaderCode:2461059f1351c780193-66411112%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '549d5cc5c169060093713b013e55d0aedba9226f' => 
     array (
       0 => 'D:/phpStudy/WWW/buniessProject/Project/Admin/View\\Manager\\login.html',
-      1 => 1508808741,
+      1 => 1509434586,
       2 => 'file',
     ),
   ),
@@ -15,13 +15,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.6',
+  'unifunc' => 'content_59f1351c7ddda',
   'variables' => 
   array (
     'errors' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.6',
-  'unifunc' => 'content_59f1351c7ddda',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_59f1351c7ddda')) {function content_59f1351c7ddda($_smarty_tpl) {?><!DOCTYPE html>
 <html>
@@ -112,7 +112,7 @@ bgpic.jpg); background-size: 100%; overflow: hidden">
             color: aliceblue;
             box-shadow: 0px 0px 20px 0px #819e99;
             ">
-        <h2>欢迎登录<span id="errors" style="display:none "><?php echo $_smarty_tpl->tpl_vars['errors']->value;?>
+        <h2>欢迎登录<span id="errors" style="font-size: 16px; color: red; font-weight: bold; display: inline-block; margin-left: 15px"><?php echo $_smarty_tpl->tpl_vars['errors']->value;?>
 </span></h2>
         <br/>
         <form action="<?php echo @__SELF__;?>
@@ -179,20 +179,6 @@ jquery-2.2.3.min.js"></script>
 layer/layer.js"></script>
 
 
-<script>
-
-    $('#submit').on('click',function(){
-        var errors = $('#errors').html();
-        if (errors.length > 0) {
-            alert(errors);
-           // layer.msg(errors);
-           // return false;
-
-        }
-    });
-
-
-</script>
 
 </body>
 </html>

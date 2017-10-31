@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2017-10-26 10:07:19
+<?php /* Smarty version Smarty-3.1.6, created on 2017-10-31 15:59:16
          compiled from "D:/phpStudy/WWW/buniessProject/Project/Admin/View\Common\left.html" */ ?>
 <?php /*%%SmartyHeaderCode:593259f135275b97f1-48838821%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '8613f28c185d95870673e4378e2e30b98af2ffde' => 
     array (
       0 => 'D:/phpStudy/WWW/buniessProject/Project/Admin/View\\Common\\left.html',
-      1 => 1508983637,
+      1 => 1509436755,
       2 => 'file',
     ),
   ),
@@ -38,6 +38,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     <li style="cursor:pointer" class="menu" save="caidan2" address="/index.php/Admin/Manager/showlist">
         <a href="#">
             <i class="fa fa-user"></i><span>用户管理</span>
+        </a>
+    </li>
+    <li style="cursor:pointer" class="menu" save="caidan3" address="/index.php/Admin/Category/showlist">
+        <a href="#">
+            <i class="fa fa-paste"></i><span>文章类别</span>
         </a>
     </li>
 </ul>

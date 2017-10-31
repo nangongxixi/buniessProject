@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2017-10-26 17:44:29
+<?php /* Smarty version Smarty-3.1.6, created on 2017-10-27 09:05:24
          compiled from "D:/phpStudy/WWW/buniessProject/Project/Admin/View\article\editImg.html" */ ?>
 <?php /*%%SmartyHeaderCode:1624959f1a6cfdfc347-93284522%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '2c4d1071f13c917ffecef2886062cecac11ac212' => 
     array (
       0 => 'D:/phpStudy/WWW/buniessProject/Project/Admin/View\\article\\editImg.html',
-      1 => 1509011063,
+      1 => 1509066217,
       2 => 'file',
     ),
   ),
@@ -127,12 +127,80 @@ $_smarty_tpl->tpl_vars['v']->_loop = true;
 <script>
     $(function () {
         //点击编辑（显示input）
-        $('.editItem').on('click',function(){
+        $('.editItem').unbind('click').on('click',function(){
             var itemID = $(this).attr('itemID');
             $(this).parent().siblings('.sort').hide();
             $(this).parent().siblings('.sortInput').show();
             $(this).html('保存');
-            $(this).removeClass("bg-maroon").addClass('btn-success');
+            $(this).removeClass("bg-maroon").removeClass("editItem").addClass('btn-success');			
         });
+		
+		//保存
+		$(document).on('click','.btn-success',function(){		
+			var itemID = $(this).attr('itemid');
+			var sort = $(this).parent().siblings().find('input').val();			
+			var url = '../article/editImg';
+			var dataArr = {
+				"id": itemID,
+				"sort":sort
+			}
+			$.ajax({
+				url: url,
+				type: "post",
+				dataType: "json",
+				data: dataArr,
+				success: function (returnJSON) {
+					//console.log(returnJSON);
+					//return false;
+					if (returnJSON.status == true) {
+						layer.msg(returnJSON.msg, {
+							icon: 1,
+							time: 2000 //2秒关闭（如果不配置，默认是3秒）
+						}, function () {
+							location.reload();
+						});
+					} else {
+						layer.msg(returnJSON.msg);
+					}
+				}
+			});							
+		});
+		
+		//删除
+		$('.deleteItem').on('click',function(){
+			var itemID = $(this).attr('itemid');						
+			var url = '../article/editImg';
+			var dataArr = {
+				"id": itemID,
+				"status":1
+			}
+			layer.confirm('您确定要删除id为' + itemID + '的数据？', {
+                    btn: ['确定', '取消'] //按钮
+                }, function () {
+                    $.ajax({
+						url: url,
+						type: "post",
+						dataType: "json",
+						data: dataArr,
+						success: function (returnJSON) {
+							//console.log(returnJSON);
+							//return false;
+							if (returnJSON.status == true) {
+								layer.msg(returnJSON.msg, {
+									icon: 1,
+									time: 2000 //2秒关闭（如果不配置，默认是3秒）
+								}, function () {
+									location.reload();
+								});
+							} else {
+								layer.msg(returnJSON.msg);
+							}
+						}
+					});
+                });
+                return false;
+		});
+		
+		
     });
 </script><?php }} ?>

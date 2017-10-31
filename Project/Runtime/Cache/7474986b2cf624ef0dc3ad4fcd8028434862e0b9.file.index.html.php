@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2017-10-26 16:32:10
+<?php /* Smarty version Smarty-3.1.6, created on 2017-10-31 09:59:06
          compiled from "D:/phpStudy/WWW/buniessProject/Project/Admin/View\Index\index.html" */ ?>
 <?php /*%%SmartyHeaderCode:3165259f13526c9f007-77879905%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '7474986b2cf624ef0dc3ad4fcd8028434862e0b9' => 
     array (
       0 => 'D:/phpStudy/WWW/buniessProject/Project/Admin/View\\Index\\index.html',
-      1 => 1509006729,
+      1 => 1509415140,
       2 => 'file',
     ),
   ),
@@ -55,6 +55,10 @@ layer/layer.js"></script>
     <!-- 日期插件 -->
     <script src="<?php echo @STATIC_URL;?>
 laydate/laydate.js"></script>
+
+    <!--表单验证 -->
+    <script src="<?php echo @STATIC_URL;?>
+js/Validform_v5.3.2_min.js"></script>
 
     <!--富文本编辑器-->
     <script src="<?php echo @STATIC_URL;?>
