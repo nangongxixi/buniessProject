@@ -4,19 +4,22 @@ namespace Model;
 use Think\Model;
 
 //权限模型
-class CagegoryModel extends Model{
-    //添加权限方法
+class CategoryModel extends Model{
+    //添加分类方法
     function addCagegory($auth){
         //$auth里边存在4个信息，还缺少两个关键信息：auth_path和auth_level
         //① insert生成一个新记录
         //② update把path和leve更新进去
+
+
+        show_bug($auth);
         $new_id = $this -> add($auth);  //返回新记录的主键id值
         
         //path的值分为两种情况
         //全路径：父级全路径与本身id的连接信息
         //① 当前权限是顶级权限，path=$new_id
         //② 当前权限是非顶级权限，path=父级全路径+$new_id
-        if($auth['auth_pid'] == 0){
+        if($auth['category_pid'] == 0){
             $auth_path = $new_id;
         } else {
             //查询指定父级的全路径,条件：$auth['auth_pid']

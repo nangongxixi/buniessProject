@@ -6,7 +6,7 @@ return array(
     //'URL_MODEL' =>  0,
     'URL_MODEL' => 1,
     //让页面显示追踪日志信息(右下角的黑框框)
-    'SHOW_PAGE_TRACE' => false,
+    'SHOW_PAGE_TRACE' => true,
     //url地址大小写不敏感设置
     'URL_CASE_INSENSITIVE' => false,
     //数据库连接配置
