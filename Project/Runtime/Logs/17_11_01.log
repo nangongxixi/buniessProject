@@ -16472,3 +16472,1009 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTrace [ RunTime:0.000000s ]
 INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
 
+[ 2017-11-01T14:12:08+08:00 ] 127.0.0.1 /index.php/Admin/Manager/showlist
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLang [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\phpStudy\WWW\buniessProject\Firame\Library\Think\Db\Driver\Mysql.class.php 第 53 行.
+SQL: select role_auth_ac from yw_manager a join yw_role b on a.mg_role_id=b.role_id where a.mg_id=1 [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `yw_manager` [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: mg_real_name D:\phpStudy\WWW\buniessProject\Project\Admin\Controller\ManagerController.class.php 第 74 行.
+NOTIC: [8] Undefined variable: condition D:\phpStudy\WWW\buniessProject\Project\Admin\Controller\ManagerController.class.php 第 82 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `yw_manager` WHERE ( mg_deleted=0 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: condition D:\phpStudy\WWW\buniessProject\Project\Admin\Controller\ManagerController.class.php 第 87 行.
+SQL: select * from `yw_manager` where 1=1 and mg_deleted=0  order by mg_id desc Limit 0, 14 [ RunTime:0.000000s ]
+NOTIC: [8] Undefined offset: 8 D:\phpStudy\WWW\buniessProject\Project\Component\Page.class.php 第 151 行.
+SQL: SHOW COLUMNS FROM `yw_role` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `yw_role`  [ RunTime:0.001000s ]
+INFO: [ view_begin ] --START--
+INFO: [ view_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\buniessProject\Project\Runtime\Cache\eb2dfb40348094d9ae53b64e9e264b75fbad819b.file.showlist.html.php 第 72 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\buniessProject\Project\Runtime\Cache\eb2dfb40348094d9ae53b64e9e264b75fbad819b.file.showlist.html.php 第 72 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\buniessProject\Project\Runtime\Cache\eb2dfb40348094d9ae53b64e9e264b75fbad819b.file.showlist.html.php 第 72 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\buniessProject\Project\Runtime\Cache\eb2dfb40348094d9ae53b64e9e264b75fbad819b.file.showlist.html.php 第 72 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\buniessProject\Project\Runtime\Cache\eb2dfb40348094d9ae53b64e9e264b75fbad819b.file.showlist.html.php 第 72 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\buniessProject\Project\Runtime\Cache\eb2dfb40348094d9ae53b64e9e264b75fbad819b.file.showlist.html.php 第 72 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\buniessProject\Project\Runtime\Cache\eb2dfb40348094d9ae53b64e9e264b75fbad819b.file.showlist.html.php 第 72 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\buniessProject\Project\Runtime\Cache\eb2dfb40348094d9ae53b64e9e264b75fbad819b.file.showlist.html.php 第 72 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\buniessProject\Project\Runtime\Cache\eb2dfb40348094d9ae53b64e9e264b75fbad819b.file.showlist.html.php 第 72 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\buniessProject\Project\Runtime\Cache\eb2dfb40348094d9ae53b64e9e264b75fbad819b.file.showlist.html.php 第 72 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\buniessProject\Project\Runtime\Cache\eb2dfb40348094d9ae53b64e9e264b75fbad819b.file.showlist.html.php 第 72 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.007001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-11-01T14:12:09+08:00 ] 127.0.0.1 /index.php/Admin/Category/showlist
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLang [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\phpStudy\WWW\buniessProject\Firame\Library\Think\Db\Driver\Mysql.class.php 第 53 行.
+SQL: select role_auth_ac from yw_manager a join yw_role b on a.mg_role_id=b.role_id where a.mg_id=1 [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `yw_articles_category` [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: id D:\phpStudy\WWW\buniessProject\Project\Admin\Controller\CategoryController.class.php 第 92 行.
+SQL: SELECT * FROM `yw_articles_category` WHERE ( status=0 ) ORDER BY category_path asc,category_sort asc  [ RunTime:0.000000s ]
+INFO: [ view_begin ] --START--
+INFO: [ view_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: pagelist D:\phpStudy\WWW\buniessProject\Project\Runtime\Cache\6f9015f3db7bf9c34d57cfa29bb4393204164982.file.showlist.html.php 第 87 行.
+NOTIC: [8] Trying to get property of non-object D:\phpStudy\WWW\buniessProject\Project\Runtime\Cache\6f9015f3db7bf9c34d57cfa29bb4393204164982.file.showlist.html.php 第 87 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.006000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-11-01T14:12:09+08:00 ] 127.0.0.1 /index.php/Admin/Manager/showlist
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLang [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\phpStudy\WWW\buniessProject\Firame\Library\Think\Db\Driver\Mysql.class.php 第 53 行.
+SQL: select role_auth_ac from yw_manager a join yw_role b on a.mg_role_id=b.role_id where a.mg_id=1 [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `yw_manager` [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: mg_real_name D:\phpStudy\WWW\buniessProject\Project\Admin\Controller\ManagerController.class.php 第 74 行.
+NOTIC: [8] Undefined variable: condition D:\phpStudy\WWW\buniessProject\Project\Admin\Controller\ManagerController.class.php 第 82 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `yw_manager` WHERE ( mg_deleted=0 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: condition D:\phpStudy\WWW\buniessProject\Project\Admin\Controller\ManagerController.class.php 第 87 行.
+SQL: select * from `yw_manager` where 1=1 and mg_deleted=0  order by mg_id desc Limit 0, 14 [ RunTime:0.000000s ]
+NOTIC: [8] Undefined offset: 8 D:\phpStudy\WWW\buniessProject\Project\Component\Page.class.php 第 151 行.
+SQL: SHOW COLUMNS FROM `yw_role` [ RunTime:0.001001s ]
+SQL: SELECT * FROM `yw_role`  [ RunTime:0.000000s ]
+INFO: [ view_begin ] --START--
+INFO: [ view_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\buniessProject\Project\Runtime\Cache\eb2dfb40348094d9ae53b64e9e264b75fbad819b.file.showlist.html.php 第 72 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\buniessProject\Project\Runtime\Cache\eb2dfb40348094d9ae53b64e9e264b75fbad819b.file.showlist.html.php 第 72 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\buniessProject\Project\Runtime\Cache\eb2dfb40348094d9ae53b64e9e264b75fbad819b.file.showlist.html.php 第 72 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\buniessProject\Project\Runtime\Cache\eb2dfb40348094d9ae53b64e9e264b75fbad819b.file.showlist.html.php 第 72 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\buniessProject\Project\Runtime\Cache\eb2dfb40348094d9ae53b64e9e264b75fbad819b.file.showlist.html.php 第 72 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\buniessProject\Project\Runtime\Cache\eb2dfb40348094d9ae53b64e9e264b75fbad819b.file.showlist.html.php 第 72 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\buniessProject\Project\Runtime\Cache\eb2dfb40348094d9ae53b64e9e264b75fbad819b.file.showlist.html.php 第 72 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\buniessProject\Project\Runtime\Cache\eb2dfb40348094d9ae53b64e9e264b75fbad819b.file.showlist.html.php 第 72 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\buniessProject\Project\Runtime\Cache\eb2dfb40348094d9ae53b64e9e264b75fbad819b.file.showlist.html.php 第 72 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\buniessProject\Project\Runtime\Cache\eb2dfb40348094d9ae53b64e9e264b75fbad819b.file.showlist.html.php 第 72 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\buniessProject\Project\Runtime\Cache\eb2dfb40348094d9ae53b64e9e264b75fbad819b.file.showlist.html.php 第 72 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.005000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-11-01T14:12:10+08:00 ] 127.0.0.1 /index.php/Admin/Article/showlist
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLang [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\phpStudy\WWW\buniessProject\Firame\Library\Think\Db\Driver\Mysql.class.php 第 53 行.
+SQL: select role_auth_ac from yw_manager a join yw_role b on a.mg_role_id=b.role_id where a.mg_id=1 [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `yw_articles` [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: title D:\phpStudy\WWW\buniessProject\Project\Admin\Controller\ArticleController.class.php 第 15 行.
+NOTIC: [8] Undefined variable: condition D:\phpStudy\WWW\buniessProject\Project\Admin\Controller\ArticleController.class.php 第 23 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `yw_articles` WHERE ( status=0 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: condition D:\phpStudy\WWW\buniessProject\Project\Admin\Controller\ArticleController.class.php 第 28 行.
+SQL: select * from `yw_articles` where 1=1 and status=0  order by sort desc Limit 0, 14 [ RunTime:0.000000s ]
+NOTIC: [8] Undefined offset: 8 D:\phpStudy\WWW\buniessProject\Project\Component\Page.class.php 第 151 行.
+INFO: [ view_begin ] --START--
+INFO: [ view_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplate [ RunTime:0.005001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-11-01T14:12:10+08:00 ] 127.0.0.1 /index.php/Admin/Manager/showlist
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLang [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\phpStudy\WWW\buniessProject\Firame\Library\Think\Db\Driver\Mysql.class.php 第 53 行.
+SQL: select role_auth_ac from yw_manager a join yw_role b on a.mg_role_id=b.role_id where a.mg_id=1 [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `yw_manager` [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: mg_real_name D:\phpStudy\WWW\buniessProject\Project\Admin\Controller\ManagerController.class.php 第 74 行.
+NOTIC: [8] Undefined variable: condition D:\phpStudy\WWW\buniessProject\Project\Admin\Controller\ManagerController.class.php 第 82 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `yw_manager` WHERE ( mg_deleted=0 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: condition D:\phpStudy\WWW\buniessProject\Project\Admin\Controller\ManagerController.class.php 第 87 行.
+SQL: select * from `yw_manager` where 1=1 and mg_deleted=0  order by mg_id desc Limit 0, 14 [ RunTime:0.000000s ]
+NOTIC: [8] Undefined offset: 8 D:\phpStudy\WWW\buniessProject\Project\Component\Page.class.php 第 151 行.
+SQL: SHOW COLUMNS FROM `yw_role` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `yw_role`  [ RunTime:0.001001s ]
+INFO: [ view_begin ] --START--
+INFO: [ view_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\buniessProject\Project\Runtime\Cache\eb2dfb40348094d9ae53b64e9e264b75fbad819b.file.showlist.html.php 第 72 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\buniessProject\Project\Runtime\Cache\eb2dfb40348094d9ae53b64e9e264b75fbad819b.file.showlist.html.php 第 72 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\buniessProject\Project\Runtime\Cache\eb2dfb40348094d9ae53b64e9e264b75fbad819b.file.showlist.html.php 第 72 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\buniessProject\Project\Runtime\Cache\eb2dfb40348094d9ae53b64e9e264b75fbad819b.file.showlist.html.php 第 72 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\buniessProject\Project\Runtime\Cache\eb2dfb40348094d9ae53b64e9e264b75fbad819b.file.showlist.html.php 第 72 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\buniessProject\Project\Runtime\Cache\eb2dfb40348094d9ae53b64e9e264b75fbad819b.file.showlist.html.php 第 72 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\buniessProject\Project\Runtime\Cache\eb2dfb40348094d9ae53b64e9e264b75fbad819b.file.showlist.html.php 第 72 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\buniessProject\Project\Runtime\Cache\eb2dfb40348094d9ae53b64e9e264b75fbad819b.file.showlist.html.php 第 72 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\buniessProject\Project\Runtime\Cache\eb2dfb40348094d9ae53b64e9e264b75fbad819b.file.showlist.html.php 第 72 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\buniessProject\Project\Runtime\Cache\eb2dfb40348094d9ae53b64e9e264b75fbad819b.file.showlist.html.php 第 72 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\buniessProject\Project\Runtime\Cache\eb2dfb40348094d9ae53b64e9e264b75fbad819b.file.showlist.html.php 第 72 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.007000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_end ] --START--
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-11-01T14:12:10+08:00 ] 127.0.0.1 /index.php/Admin/Category/showlist
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLang [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\phpStudy\WWW\buniessProject\Firame\Library\Think\Db\Driver\Mysql.class.php 第 53 行.
+SQL: select role_auth_ac from yw_manager a join yw_role b on a.mg_role_id=b.role_id where a.mg_id=1 [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `yw_articles_category` [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: id D:\phpStudy\WWW\buniessProject\Project\Admin\Controller\CategoryController.class.php 第 92 行.
+SQL: SELECT * FROM `yw_articles_category` WHERE ( status=0 ) ORDER BY category_path asc,category_sort asc  [ RunTime:0.000000s ]
+INFO: [ view_begin ] --START--
+INFO: [ view_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: pagelist D:\phpStudy\WWW\buniessProject\Project\Runtime\Cache\6f9015f3db7bf9c34d57cfa29bb4393204164982.file.showlist.html.php 第 87 行.
+NOTIC: [8] Trying to get property of non-object D:\phpStudy\WWW\buniessProject\Project\Runtime\Cache\6f9015f3db7bf9c34d57cfa29bb4393204164982.file.showlist.html.php 第 87 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.005000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-11-01T14:12:11+08:00 ] 127.0.0.1 /index.php/Admin/Manager/showlist
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLang [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\phpStudy\WWW\buniessProject\Firame\Library\Think\Db\Driver\Mysql.class.php 第 53 行.
+SQL: select role_auth_ac from yw_manager a join yw_role b on a.mg_role_id=b.role_id where a.mg_id=1 [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `yw_manager` [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: mg_real_name D:\phpStudy\WWW\buniessProject\Project\Admin\Controller\ManagerController.class.php 第 74 行.
+NOTIC: [8] Undefined variable: condition D:\phpStudy\WWW\buniessProject\Project\Admin\Controller\ManagerController.class.php 第 82 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `yw_manager` WHERE ( mg_deleted=0 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: condition D:\phpStudy\WWW\buniessProject\Project\Admin\Controller\ManagerController.class.php 第 87 行.
+SQL: select * from `yw_manager` where 1=1 and mg_deleted=0  order by mg_id desc Limit 0, 14 [ RunTime:0.000000s ]
+NOTIC: [8] Undefined offset: 8 D:\phpStudy\WWW\buniessProject\Project\Component\Page.class.php 第 151 行.
+SQL: SHOW COLUMNS FROM `yw_role` [ RunTime:0.001000s ]
+SQL: SELECT * FROM `yw_role`  [ RunTime:0.000000s ]
+INFO: [ view_begin ] --START--
+INFO: [ view_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\buniessProject\Project\Runtime\Cache\eb2dfb40348094d9ae53b64e9e264b75fbad819b.file.showlist.html.php 第 72 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\buniessProject\Project\Runtime\Cache\eb2dfb40348094d9ae53b64e9e264b75fbad819b.file.showlist.html.php 第 72 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\buniessProject\Project\Runtime\Cache\eb2dfb40348094d9ae53b64e9e264b75fbad819b.file.showlist.html.php 第 72 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\buniessProject\Project\Runtime\Cache\eb2dfb40348094d9ae53b64e9e264b75fbad819b.file.showlist.html.php 第 72 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\buniessProject\Project\Runtime\Cache\eb2dfb40348094d9ae53b64e9e264b75fbad819b.file.showlist.html.php 第 72 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\buniessProject\Project\Runtime\Cache\eb2dfb40348094d9ae53b64e9e264b75fbad819b.file.showlist.html.php 第 72 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\buniessProject\Project\Runtime\Cache\eb2dfb40348094d9ae53b64e9e264b75fbad819b.file.showlist.html.php 第 72 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\buniessProject\Project\Runtime\Cache\eb2dfb40348094d9ae53b64e9e264b75fbad819b.file.showlist.html.php 第 72 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\buniessProject\Project\Runtime\Cache\eb2dfb40348094d9ae53b64e9e264b75fbad819b.file.showlist.html.php 第 72 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\buniessProject\Project\Runtime\Cache\eb2dfb40348094d9ae53b64e9e264b75fbad819b.file.showlist.html.php 第 72 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\buniessProject\Project\Runtime\Cache\eb2dfb40348094d9ae53b64e9e264b75fbad819b.file.showlist.html.php 第 72 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.009000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-11-01T14:12:11+08:00 ] 127.0.0.1 /index.php/Admin/Article/showlist
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLang [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\phpStudy\WWW\buniessProject\Firame\Library\Think\Db\Driver\Mysql.class.php 第 53 行.
+SQL: select role_auth_ac from yw_manager a join yw_role b on a.mg_role_id=b.role_id where a.mg_id=1 [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `yw_articles` [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: title D:\phpStudy\WWW\buniessProject\Project\Admin\Controller\ArticleController.class.php 第 15 行.
+NOTIC: [8] Undefined variable: condition D:\phpStudy\WWW\buniessProject\Project\Admin\Controller\ArticleController.class.php 第 23 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `yw_articles` WHERE ( status=0 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: condition D:\phpStudy\WWW\buniessProject\Project\Admin\Controller\ArticleController.class.php 第 28 行.
+SQL: select * from `yw_articles` where 1=1 and status=0  order by sort desc Limit 0, 14 [ RunTime:0.000000s ]
+NOTIC: [8] Undefined offset: 8 D:\phpStudy\WWW\buniessProject\Project\Component\Page.class.php 第 151 行.
+INFO: [ view_begin ] --START--
+INFO: [ view_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplate [ RunTime:0.005000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2017-11-01T14:12:12+08:00 ] 127.0.0.1 /index.php/Admin/Category/showlist
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLang [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\phpStudy\WWW\buniessProject\Firame\Library\Think\Db\Driver\Mysql.class.php 第 53 行.
+SQL: select role_auth_ac from yw_manager a join yw_role b on a.mg_role_id=b.role_id where a.mg_id=1 [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `yw_articles_category` [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: id D:\phpStudy\WWW\buniessProject\Project\Admin\Controller\CategoryController.class.php 第 92 行.
+SQL: SELECT * FROM `yw_articles_category` WHERE ( status=0 ) ORDER BY category_path asc,category_sort asc  [ RunTime:0.001000s ]
+INFO: [ view_begin ] --START--
+INFO: [ view_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: pagelist D:\phpStudy\WWW\buniessProject\Project\Runtime\Cache\6f9015f3db7bf9c34d57cfa29bb4393204164982.file.showlist.html.php 第 87 行.
+NOTIC: [8] Trying to get property of non-object D:\phpStudy\WWW\buniessProject\Project\Runtime\Cache\6f9015f3db7bf9c34d57cfa29bb4393204164982.file.showlist.html.php 第 87 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.005000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-11-01T14:12:13+08:00 ] 127.0.0.1 /index.php/Admin/Category/showlist
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLang [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\phpStudy\WWW\buniessProject\Firame\Library\Think\Db\Driver\Mysql.class.php 第 53 行.
+SQL: select role_auth_ac from yw_manager a join yw_role b on a.mg_role_id=b.role_id where a.mg_id=1 [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `yw_articles_category` [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: id D:\phpStudy\WWW\buniessProject\Project\Admin\Controller\CategoryController.class.php 第 92 行.
+SQL: SELECT * FROM `yw_articles_category` WHERE ( status=0 ) ORDER BY category_path asc,category_sort asc  [ RunTime:0.001000s ]
+INFO: [ view_begin ] --START--
+INFO: [ view_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: pagelist D:\phpStudy\WWW\buniessProject\Project\Runtime\Cache\6f9015f3db7bf9c34d57cfa29bb4393204164982.file.showlist.html.php 第 87 行.
+NOTIC: [8] Trying to get property of non-object D:\phpStudy\WWW\buniessProject\Project\Runtime\Cache\6f9015f3db7bf9c34d57cfa29bb4393204164982.file.showlist.html.php 第 87 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.007000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-11-01T14:12:40+08:00 ] 127.0.0.1 /index.php/Admin/Common/left.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLang [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\phpStudy\WWW\buniessProject\Firame\Library\Think\Db\Driver\Mysql.class.php 第 53 行.
+SQL: select role_auth_ac from yw_manager a join yw_role b on a.mg_role_id=b.role_id where a.mg_id=1 [ RunTime:0.000000s ]
+SQL: select * from yw_manager where mg_id=1 and mg_deleted=0 [ RunTime:0.000000s ]
+SQL: select * from yw_role where role_id=1 and role_deleted=0 [ RunTime:0.000000s ]
+SQL: select * from yw_auth where auth_level=0 and deleted=0 [ RunTime:0.000000s ]
+SQL: select * from yw_auth where auth_level=1 and auth_id<>10 and deleted=0 [ RunTime:0.000000s ]
+INFO: [ view_begin ] --START--
+INFO: [ view_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined offset: 6 D:\phpStudy\WWW\buniessProject\Project\Runtime\Cache\8613f28c185d95870673e4378e2e30b98af2ffde.file.left.html.php 第 75 行.
+NOTIC: [8] Undefined offset: 7 D:\phpStudy\WWW\buniessProject\Project\Runtime\Cache\8613f28c185d95870673e4378e2e30b98af2ffde.file.left.html.php 第 75 行.
+NOTIC: [8] Undefined offset: 8 D:\phpStudy\WWW\buniessProject\Project\Runtime\Cache\8613f28c185d95870673e4378e2e30b98af2ffde.file.left.html.php 第 75 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.008000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-11-01T14:12:41+08:00 ] 127.0.0.1 /index.php/Admin/Category/showlist
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLang [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\phpStudy\WWW\buniessProject\Firame\Library\Think\Db\Driver\Mysql.class.php 第 53 行.
+SQL: select role_auth_ac from yw_manager a join yw_role b on a.mg_role_id=b.role_id where a.mg_id=1 [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `yw_articles_category` [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: id D:\phpStudy\WWW\buniessProject\Project\Admin\Controller\CategoryController.class.php 第 92 行.
+SQL: SELECT * FROM `yw_articles_category` WHERE ( status=0 ) ORDER BY category_path asc,category_sort asc  [ RunTime:0.001000s ]
+INFO: [ view_begin ] --START--
+INFO: [ view_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: pagelist D:\phpStudy\WWW\buniessProject\Project\Runtime\Cache\6f9015f3db7bf9c34d57cfa29bb4393204164982.file.showlist.html.php 第 87 行.
+NOTIC: [8] Trying to get property of non-object D:\phpStudy\WWW\buniessProject\Project\Runtime\Cache\6f9015f3db7bf9c34d57cfa29bb4393204164982.file.showlist.html.php 第 87 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.006000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-11-01T14:13:58+08:00 ] 127.0.0.1 /index.php/Admin/Manager/showlist
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLang [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\phpStudy\WWW\buniessProject\Firame\Library\Think\Db\Driver\Mysql.class.php 第 53 行.
+SQL: select role_auth_ac from yw_manager a join yw_role b on a.mg_role_id=b.role_id where a.mg_id=1 [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `yw_manager` [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: mg_real_name D:\phpStudy\WWW\buniessProject\Project\Admin\Controller\ManagerController.class.php 第 74 行.
+NOTIC: [8] Undefined variable: condition D:\phpStudy\WWW\buniessProject\Project\Admin\Controller\ManagerController.class.php 第 82 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `yw_manager` WHERE ( mg_deleted=0 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: condition D:\phpStudy\WWW\buniessProject\Project\Admin\Controller\ManagerController.class.php 第 87 行.
+SQL: select * from `yw_manager` where 1=1 and mg_deleted=0  order by mg_id desc Limit 0, 14 [ RunTime:0.000000s ]
+NOTIC: [8] Undefined offset: 8 D:\phpStudy\WWW\buniessProject\Project\Component\Page.class.php 第 151 行.
+SQL: SHOW COLUMNS FROM `yw_role` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `yw_role`  [ RunTime:0.000000s ]
+INFO: [ view_begin ] --START--
+INFO: [ view_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\buniessProject\Project\Runtime\Cache\eb2dfb40348094d9ae53b64e9e264b75fbad819b.file.showlist.html.php 第 72 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\buniessProject\Project\Runtime\Cache\eb2dfb40348094d9ae53b64e9e264b75fbad819b.file.showlist.html.php 第 72 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\buniessProject\Project\Runtime\Cache\eb2dfb40348094d9ae53b64e9e264b75fbad819b.file.showlist.html.php 第 72 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\buniessProject\Project\Runtime\Cache\eb2dfb40348094d9ae53b64e9e264b75fbad819b.file.showlist.html.php 第 72 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\buniessProject\Project\Runtime\Cache\eb2dfb40348094d9ae53b64e9e264b75fbad819b.file.showlist.html.php 第 72 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\buniessProject\Project\Runtime\Cache\eb2dfb40348094d9ae53b64e9e264b75fbad819b.file.showlist.html.php 第 72 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\buniessProject\Project\Runtime\Cache\eb2dfb40348094d9ae53b64e9e264b75fbad819b.file.showlist.html.php 第 72 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\buniessProject\Project\Runtime\Cache\eb2dfb40348094d9ae53b64e9e264b75fbad819b.file.showlist.html.php 第 72 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\buniessProject\Project\Runtime\Cache\eb2dfb40348094d9ae53b64e9e264b75fbad819b.file.showlist.html.php 第 72 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\buniessProject\Project\Runtime\Cache\eb2dfb40348094d9ae53b64e9e264b75fbad819b.file.showlist.html.php 第 72 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\buniessProject\Project\Runtime\Cache\eb2dfb40348094d9ae53b64e9e264b75fbad819b.file.showlist.html.php 第 72 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.005000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-11-01T14:13:59+08:00 ] 127.0.0.1 /index.php/Admin/Article/showlist
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLang [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\phpStudy\WWW\buniessProject\Firame\Library\Think\Db\Driver\Mysql.class.php 第 53 行.
+SQL: select role_auth_ac from yw_manager a join yw_role b on a.mg_role_id=b.role_id where a.mg_id=1 [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `yw_articles` [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: title D:\phpStudy\WWW\buniessProject\Project\Admin\Controller\ArticleController.class.php 第 15 行.
+NOTIC: [8] Undefined variable: condition D:\phpStudy\WWW\buniessProject\Project\Admin\Controller\ArticleController.class.php 第 23 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `yw_articles` WHERE ( status=0 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: condition D:\phpStudy\WWW\buniessProject\Project\Admin\Controller\ArticleController.class.php 第 28 行.
+SQL: select * from `yw_articles` where 1=1 and status=0  order by sort desc Limit 0, 14 [ RunTime:0.001000s ]
+NOTIC: [8] Undefined offset: 8 D:\phpStudy\WWW\buniessProject\Project\Component\Page.class.php 第 151 行.
+INFO: [ view_begin ] --START--
+INFO: [ view_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplate [ RunTime:0.005000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-11-01T14:13:59+08:00 ] 127.0.0.1 /index.php/Admin/Category/showlist
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLang [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\phpStudy\WWW\buniessProject\Firame\Library\Think\Db\Driver\Mysql.class.php 第 53 行.
+SQL: select role_auth_ac from yw_manager a join yw_role b on a.mg_role_id=b.role_id where a.mg_id=1 [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `yw_articles_category` [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: id D:\phpStudy\WWW\buniessProject\Project\Admin\Controller\CategoryController.class.php 第 92 行.
+SQL: SELECT * FROM `yw_articles_category` WHERE ( status=0 ) ORDER BY category_path asc,category_sort asc  [ RunTime:0.000000s ]
+INFO: [ view_begin ] --START--
+INFO: [ view_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: pagelist D:\phpStudy\WWW\buniessProject\Project\Runtime\Cache\6f9015f3db7bf9c34d57cfa29bb4393204164982.file.showlist.html.php 第 87 行.
+NOTIC: [8] Trying to get property of non-object D:\phpStudy\WWW\buniessProject\Project\Runtime\Cache\6f9015f3db7bf9c34d57cfa29bb4393204164982.file.showlist.html.php 第 87 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.006001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-11-01T14:17:45+08:00 ] 127.0.0.1 /index.php/Admin/Category/showlist
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLang [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\phpStudy\WWW\buniessProject\Firame\Library\Think\Db\Driver\Mysql.class.php 第 53 行.
+SQL: select role_auth_ac from yw_manager a join yw_role b on a.mg_role_id=b.role_id where a.mg_id=1 [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `yw_articles_category` [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: id D:\phpStudy\WWW\buniessProject\Project\Admin\Controller\CategoryController.class.php 第 92 行.
+SQL: SELECT * FROM `yw_articles_category` WHERE ( status=0 ) ORDER BY category_path asc,category_sort asc  [ RunTime:0.000000s ]
+INFO: [ view_begin ] --START--
+INFO: [ view_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: pagelist D:\phpStudy\WWW\buniessProject\Project\Runtime\Cache\6f9015f3db7bf9c34d57cfa29bb4393204164982.file.showlist.html.php 第 87 行.
+NOTIC: [8] Trying to get property of non-object D:\phpStudy\WWW\buniessProject\Project\Runtime\Cache\6f9015f3db7bf9c34d57cfa29bb4393204164982.file.showlist.html.php 第 87 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.006001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-11-01T14:18:44+08:00 ] 127.0.0.1 /index.php/Admin/Manager/showlist
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLang [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\phpStudy\WWW\buniessProject\Firame\Library\Think\Db\Driver\Mysql.class.php 第 53 行.
+SQL: select role_auth_ac from yw_manager a join yw_role b on a.mg_role_id=b.role_id where a.mg_id=1 [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `yw_manager` [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: mg_real_name D:\phpStudy\WWW\buniessProject\Project\Admin\Controller\ManagerController.class.php 第 74 行.
+NOTIC: [8] Undefined variable: condition D:\phpStudy\WWW\buniessProject\Project\Admin\Controller\ManagerController.class.php 第 82 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `yw_manager` WHERE ( mg_deleted=0 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: condition D:\phpStudy\WWW\buniessProject\Project\Admin\Controller\ManagerController.class.php 第 87 行.
+SQL: select * from `yw_manager` where 1=1 and mg_deleted=0  order by mg_id desc Limit 0, 14 [ RunTime:0.000000s ]
+NOTIC: [8] Undefined offset: 8 D:\phpStudy\WWW\buniessProject\Project\Component\Page.class.php 第 151 行.
+SQL: SHOW COLUMNS FROM `yw_role` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `yw_role`  [ RunTime:0.000000s ]
+INFO: [ view_begin ] --START--
+INFO: [ view_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\buniessProject\Project\Runtime\Cache\eb2dfb40348094d9ae53b64e9e264b75fbad819b.file.showlist.html.php 第 72 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\buniessProject\Project\Runtime\Cache\eb2dfb40348094d9ae53b64e9e264b75fbad819b.file.showlist.html.php 第 72 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\buniessProject\Project\Runtime\Cache\eb2dfb40348094d9ae53b64e9e264b75fbad819b.file.showlist.html.php 第 72 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\buniessProject\Project\Runtime\Cache\eb2dfb40348094d9ae53b64e9e264b75fbad819b.file.showlist.html.php 第 72 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\buniessProject\Project\Runtime\Cache\eb2dfb40348094d9ae53b64e9e264b75fbad819b.file.showlist.html.php 第 72 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\buniessProject\Project\Runtime\Cache\eb2dfb40348094d9ae53b64e9e264b75fbad819b.file.showlist.html.php 第 72 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\buniessProject\Project\Runtime\Cache\eb2dfb40348094d9ae53b64e9e264b75fbad819b.file.showlist.html.php 第 72 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\buniessProject\Project\Runtime\Cache\eb2dfb40348094d9ae53b64e9e264b75fbad819b.file.showlist.html.php 第 72 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\buniessProject\Project\Runtime\Cache\eb2dfb40348094d9ae53b64e9e264b75fbad819b.file.showlist.html.php 第 72 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\buniessProject\Project\Runtime\Cache\eb2dfb40348094d9ae53b64e9e264b75fbad819b.file.showlist.html.php 第 72 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\buniessProject\Project\Runtime\Cache\eb2dfb40348094d9ae53b64e9e264b75fbad819b.file.showlist.html.php 第 72 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.007000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-11-01T14:18:45+08:00 ] 127.0.0.1 /index.php/Admin/Article/showlist
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLang [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\phpStudy\WWW\buniessProject\Firame\Library\Think\Db\Driver\Mysql.class.php 第 53 行.
+SQL: select role_auth_ac from yw_manager a join yw_role b on a.mg_role_id=b.role_id where a.mg_id=1 [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `yw_articles` [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: title D:\phpStudy\WWW\buniessProject\Project\Admin\Controller\ArticleController.class.php 第 15 行.
+NOTIC: [8] Undefined variable: condition D:\phpStudy\WWW\buniessProject\Project\Admin\Controller\ArticleController.class.php 第 23 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `yw_articles` WHERE ( status=0 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: condition D:\phpStudy\WWW\buniessProject\Project\Admin\Controller\ArticleController.class.php 第 28 行.
+SQL: select * from `yw_articles` where 1=1 and status=0  order by sort desc Limit 0, 14 [ RunTime:0.000000s ]
+NOTIC: [8] Undefined offset: 8 D:\phpStudy\WWW\buniessProject\Project\Component\Page.class.php 第 151 行.
+INFO: [ view_begin ] --START--
+INFO: [ view_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplate [ RunTime:0.007000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-11-01T14:18:46+08:00 ] 127.0.0.1 /index.php/Admin/Category/showlist
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLang [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\phpStudy\WWW\buniessProject\Firame\Library\Think\Db\Driver\Mysql.class.php 第 53 行.
+SQL: select role_auth_ac from yw_manager a join yw_role b on a.mg_role_id=b.role_id where a.mg_id=1 [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `yw_articles_category` [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: id D:\phpStudy\WWW\buniessProject\Project\Admin\Controller\CategoryController.class.php 第 92 行.
+SQL: SELECT * FROM `yw_articles_category` WHERE ( status=0 ) ORDER BY category_path asc,category_sort asc  [ RunTime:0.001000s ]
+INFO: [ view_begin ] --START--
+INFO: [ view_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: pagelist D:\phpStudy\WWW\buniessProject\Project\Runtime\Cache\6f9015f3db7bf9c34d57cfa29bb4393204164982.file.showlist.html.php 第 87 行.
+NOTIC: [8] Trying to get property of non-object D:\phpStudy\WWW\buniessProject\Project\Runtime\Cache\6f9015f3db7bf9c34d57cfa29bb4393204164982.file.showlist.html.php 第 87 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.012001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-11-01T14:18:46+08:00 ] 127.0.0.1 /index.php/Admin/Manager/showlist
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLang [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\phpStudy\WWW\buniessProject\Firame\Library\Think\Db\Driver\Mysql.class.php 第 53 行.
+SQL: select role_auth_ac from yw_manager a join yw_role b on a.mg_role_id=b.role_id where a.mg_id=1 [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `yw_manager` [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: mg_real_name D:\phpStudy\WWW\buniessProject\Project\Admin\Controller\ManagerController.class.php 第 74 行.
+NOTIC: [8] Undefined variable: condition D:\phpStudy\WWW\buniessProject\Project\Admin\Controller\ManagerController.class.php 第 82 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `yw_manager` WHERE ( mg_deleted=0 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: condition D:\phpStudy\WWW\buniessProject\Project\Admin\Controller\ManagerController.class.php 第 87 行.
+SQL: select * from `yw_manager` where 1=1 and mg_deleted=0  order by mg_id desc Limit 0, 14 [ RunTime:0.000000s ]
+NOTIC: [8] Undefined offset: 8 D:\phpStudy\WWW\buniessProject\Project\Component\Page.class.php 第 151 行.
+SQL: SHOW COLUMNS FROM `yw_role` [ RunTime:0.001000s ]
+SQL: SELECT * FROM `yw_role`  [ RunTime:0.000000s ]
+INFO: [ view_begin ] --START--
+INFO: [ view_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\buniessProject\Project\Runtime\Cache\eb2dfb40348094d9ae53b64e9e264b75fbad819b.file.showlist.html.php 第 72 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\buniessProject\Project\Runtime\Cache\eb2dfb40348094d9ae53b64e9e264b75fbad819b.file.showlist.html.php 第 72 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\buniessProject\Project\Runtime\Cache\eb2dfb40348094d9ae53b64e9e264b75fbad819b.file.showlist.html.php 第 72 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\buniessProject\Project\Runtime\Cache\eb2dfb40348094d9ae53b64e9e264b75fbad819b.file.showlist.html.php 第 72 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\buniessProject\Project\Runtime\Cache\eb2dfb40348094d9ae53b64e9e264b75fbad819b.file.showlist.html.php 第 72 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\buniessProject\Project\Runtime\Cache\eb2dfb40348094d9ae53b64e9e264b75fbad819b.file.showlist.html.php 第 72 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\buniessProject\Project\Runtime\Cache\eb2dfb40348094d9ae53b64e9e264b75fbad819b.file.showlist.html.php 第 72 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\buniessProject\Project\Runtime\Cache\eb2dfb40348094d9ae53b64e9e264b75fbad819b.file.showlist.html.php 第 72 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\buniessProject\Project\Runtime\Cache\eb2dfb40348094d9ae53b64e9e264b75fbad819b.file.showlist.html.php 第 72 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\buniessProject\Project\Runtime\Cache\eb2dfb40348094d9ae53b64e9e264b75fbad819b.file.showlist.html.php 第 72 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\buniessProject\Project\Runtime\Cache\eb2dfb40348094d9ae53b64e9e264b75fbad819b.file.showlist.html.php 第 72 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.005000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-11-01T14:18:47+08:00 ] 127.0.0.1 /index.php/Admin/Article/showlist
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLang [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\phpStudy\WWW\buniessProject\Firame\Library\Think\Db\Driver\Mysql.class.php 第 53 行.
+SQL: select role_auth_ac from yw_manager a join yw_role b on a.mg_role_id=b.role_id where a.mg_id=1 [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `yw_articles` [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: title D:\phpStudy\WWW\buniessProject\Project\Admin\Controller\ArticleController.class.php 第 15 行.
+NOTIC: [8] Undefined variable: condition D:\phpStudy\WWW\buniessProject\Project\Admin\Controller\ArticleController.class.php 第 23 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `yw_articles` WHERE ( status=0 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: condition D:\phpStudy\WWW\buniessProject\Project\Admin\Controller\ArticleController.class.php 第 28 行.
+SQL: select * from `yw_articles` where 1=1 and status=0  order by sort desc Limit 0, 14 [ RunTime:0.001000s ]
+NOTIC: [8] Undefined offset: 8 D:\phpStudy\WWW\buniessProject\Project\Component\Page.class.php 第 151 行.
+INFO: [ view_begin ] --START--
+INFO: [ view_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplate [ RunTime:0.007001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-11-01T14:19:49+08:00 ] 127.0.0.1 /index.php/Admin/Manager/showlist
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLang [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\phpStudy\WWW\buniessProject\Firame\Library\Think\Db\Driver\Mysql.class.php 第 53 行.
+SQL: select role_auth_ac from yw_manager a join yw_role b on a.mg_role_id=b.role_id where a.mg_id=1 [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `yw_manager` [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: mg_real_name D:\phpStudy\WWW\buniessProject\Project\Admin\Controller\ManagerController.class.php 第 74 行.
+NOTIC: [8] Undefined variable: condition D:\phpStudy\WWW\buniessProject\Project\Admin\Controller\ManagerController.class.php 第 82 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `yw_manager` WHERE ( mg_deleted=0 ) LIMIT 1   [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: condition D:\phpStudy\WWW\buniessProject\Project\Admin\Controller\ManagerController.class.php 第 87 行.
+SQL: select * from `yw_manager` where 1=1 and mg_deleted=0  order by mg_id desc Limit 0, 14 [ RunTime:0.001000s ]
+NOTIC: [8] Undefined offset: 8 D:\phpStudy\WWW\buniessProject\Project\Component\Page.class.php 第 151 行.
+SQL: SHOW COLUMNS FROM `yw_role` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `yw_role`  [ RunTime:0.000000s ]
+INFO: [ view_begin ] --START--
+INFO: [ view_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\buniessProject\Project\Runtime\Cache\eb2dfb40348094d9ae53b64e9e264b75fbad819b.file.showlist.html.php 第 72 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\buniessProject\Project\Runtime\Cache\eb2dfb40348094d9ae53b64e9e264b75fbad819b.file.showlist.html.php 第 72 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\buniessProject\Project\Runtime\Cache\eb2dfb40348094d9ae53b64e9e264b75fbad819b.file.showlist.html.php 第 72 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\buniessProject\Project\Runtime\Cache\eb2dfb40348094d9ae53b64e9e264b75fbad819b.file.showlist.html.php 第 72 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\buniessProject\Project\Runtime\Cache\eb2dfb40348094d9ae53b64e9e264b75fbad819b.file.showlist.html.php 第 72 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\buniessProject\Project\Runtime\Cache\eb2dfb40348094d9ae53b64e9e264b75fbad819b.file.showlist.html.php 第 72 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\buniessProject\Project\Runtime\Cache\eb2dfb40348094d9ae53b64e9e264b75fbad819b.file.showlist.html.php 第 72 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\buniessProject\Project\Runtime\Cache\eb2dfb40348094d9ae53b64e9e264b75fbad819b.file.showlist.html.php 第 72 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\buniessProject\Project\Runtime\Cache\eb2dfb40348094d9ae53b64e9e264b75fbad819b.file.showlist.html.php 第 72 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\buniessProject\Project\Runtime\Cache\eb2dfb40348094d9ae53b64e9e264b75fbad819b.file.showlist.html.php 第 72 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\buniessProject\Project\Runtime\Cache\eb2dfb40348094d9ae53b64e9e264b75fbad819b.file.showlist.html.php 第 72 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.006001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-11-01T14:19:50+08:00 ] 127.0.0.1 /index.php/Admin/Category/showlist
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLang [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\phpStudy\WWW\buniessProject\Firame\Library\Think\Db\Driver\Mysql.class.php 第 53 行.
+SQL: select role_auth_ac from yw_manager a join yw_role b on a.mg_role_id=b.role_id where a.mg_id=1 [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `yw_articles_category` [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: id D:\phpStudy\WWW\buniessProject\Project\Admin\Controller\CategoryController.class.php 第 92 行.
+SQL: SELECT * FROM `yw_articles_category` WHERE ( status=0 ) ORDER BY category_path asc,category_sort asc  [ RunTime:0.000000s ]
+INFO: [ view_begin ] --START--
+INFO: [ view_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: pagelist D:\phpStudy\WWW\buniessProject\Project\Runtime\Cache\6f9015f3db7bf9c34d57cfa29bb4393204164982.file.showlist.html.php 第 87 行.
+NOTIC: [8] Trying to get property of non-object D:\phpStudy\WWW\buniessProject\Project\Runtime\Cache\6f9015f3db7bf9c34d57cfa29bb4393204164982.file.showlist.html.php 第 87 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.005000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-11-01T15:47:24+08:00 ] 127.0.0.1 /index.php/Admin/Category/showlist
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLang [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\phpStudy\WWW\buniessProject\Firame\Library\Think\Db\Driver\Mysql.class.php 第 53 行.
+SQL: select role_auth_ac from yw_manager a join yw_role b on a.mg_role_id=b.role_id where a.mg_id=1 [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `yw_articles_category` [ RunTime:0.031002s ]
+NOTIC: [8] Undefined index: id D:\phpStudy\WWW\buniessProject\Project\Admin\Controller\CategoryController.class.php 第 92 行.
+SQL: SELECT * FROM `yw_articles_category` WHERE ( status=0 ) ORDER BY category_path asc,category_sort asc  [ RunTime:0.001000s ]
+INFO: [ view_begin ] --START--
+INFO: [ view_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: pagelist D:\phpStudy\WWW\buniessProject\Project\Runtime\Cache\6f9015f3db7bf9c34d57cfa29bb4393204164982.file.showlist.html.php 第 87 行.
+NOTIC: [8] Trying to get property of non-object D:\phpStudy\WWW\buniessProject\Project\Runtime\Cache\6f9015f3db7bf9c34d57cfa29bb4393204164982.file.showlist.html.php 第 87 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.022001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-11-01T15:47:24+08:00 ] 127.0.0.1 /index.php/Admin/Common/left.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLang [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\phpStudy\WWW\buniessProject\Firame\Library\Think\Db\Driver\Mysql.class.php 第 53 行.
+SQL: select role_auth_ac from yw_manager a join yw_role b on a.mg_role_id=b.role_id where a.mg_id=1 [ RunTime:0.000000s ]
+SQL: select * from yw_manager where mg_id=1 and mg_deleted=0 [ RunTime:0.000000s ]
+SQL: select * from yw_role where role_id=1 and role_deleted=0 [ RunTime:0.000000s ]
+SQL: select * from yw_auth where auth_level=0 and deleted=0 [ RunTime:0.000000s ]
+SQL: select * from yw_auth where auth_level=1 and auth_id<>10 and deleted=0 [ RunTime:0.000000s ]
+INFO: [ view_begin ] --START--
+INFO: [ view_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined offset: 6 D:\phpStudy\WWW\buniessProject\Project\Runtime\Cache\8613f28c185d95870673e4378e2e30b98af2ffde.file.left.html.php 第 75 行.
+NOTIC: [8] Undefined offset: 7 D:\phpStudy\WWW\buniessProject\Project\Runtime\Cache\8613f28c185d95870673e4378e2e30b98af2ffde.file.left.html.php 第 75 行.
+NOTIC: [8] Undefined offset: 8 D:\phpStudy\WWW\buniessProject\Project\Runtime\Cache\8613f28c185d95870673e4378e2e30b98af2ffde.file.left.html.php 第 75 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.005000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-11-01T15:47:26+08:00 ] 127.0.0.1 /index.php/Admin/Category/showlist
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLang [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\phpStudy\WWW\buniessProject\Firame\Library\Think\Db\Driver\Mysql.class.php 第 53 行.
+SQL: select role_auth_ac from yw_manager a join yw_role b on a.mg_role_id=b.role_id where a.mg_id=1 [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `yw_articles_category` [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: id D:\phpStudy\WWW\buniessProject\Project\Admin\Controller\CategoryController.class.php 第 92 行.
+SQL: SELECT * FROM `yw_articles_category` WHERE ( status=0 ) ORDER BY category_path asc,category_sort asc  [ RunTime:0.000000s ]
+INFO: [ view_begin ] --START--
+INFO: [ view_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: pagelist D:\phpStudy\WWW\buniessProject\Project\Runtime\Cache\6f9015f3db7bf9c34d57cfa29bb4393204164982.file.showlist.html.php 第 87 行.
+NOTIC: [8] Trying to get property of non-object D:\phpStudy\WWW\buniessProject\Project\Runtime\Cache\6f9015f3db7bf9c34d57cfa29bb4393204164982.file.showlist.html.php 第 87 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.005000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-11-01T15:47:27+08:00 ] 127.0.0.1 /index.php/Admin/Manager/showlist
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLang [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\phpStudy\WWW\buniessProject\Firame\Library\Think\Db\Driver\Mysql.class.php 第 53 行.
+SQL: select role_auth_ac from yw_manager a join yw_role b on a.mg_role_id=b.role_id where a.mg_id=1 [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `yw_manager` [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: mg_real_name D:\phpStudy\WWW\buniessProject\Project\Admin\Controller\ManagerController.class.php 第 74 行.
+NOTIC: [8] Undefined variable: condition D:\phpStudy\WWW\buniessProject\Project\Admin\Controller\ManagerController.class.php 第 82 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `yw_manager` WHERE ( mg_deleted=0 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: condition D:\phpStudy\WWW\buniessProject\Project\Admin\Controller\ManagerController.class.php 第 87 行.
+SQL: select * from `yw_manager` where 1=1 and mg_deleted=0  order by mg_id desc Limit 0, 14 [ RunTime:0.000000s ]
+NOTIC: [8] Undefined offset: 8 D:\phpStudy\WWW\buniessProject\Project\Component\Page.class.php 第 151 行.
+SQL: SHOW COLUMNS FROM `yw_role` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `yw_role`  [ RunTime:0.000000s ]
+INFO: [ view_begin ] --START--
+INFO: [ view_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\buniessProject\Project\Runtime\Cache\eb2dfb40348094d9ae53b64e9e264b75fbad819b.file.showlist.html.php 第 72 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\buniessProject\Project\Runtime\Cache\eb2dfb40348094d9ae53b64e9e264b75fbad819b.file.showlist.html.php 第 72 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\buniessProject\Project\Runtime\Cache\eb2dfb40348094d9ae53b64e9e264b75fbad819b.file.showlist.html.php 第 72 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\buniessProject\Project\Runtime\Cache\eb2dfb40348094d9ae53b64e9e264b75fbad819b.file.showlist.html.php 第 72 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\buniessProject\Project\Runtime\Cache\eb2dfb40348094d9ae53b64e9e264b75fbad819b.file.showlist.html.php 第 72 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\buniessProject\Project\Runtime\Cache\eb2dfb40348094d9ae53b64e9e264b75fbad819b.file.showlist.html.php 第 72 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\buniessProject\Project\Runtime\Cache\eb2dfb40348094d9ae53b64e9e264b75fbad819b.file.showlist.html.php 第 72 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\buniessProject\Project\Runtime\Cache\eb2dfb40348094d9ae53b64e9e264b75fbad819b.file.showlist.html.php 第 72 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\buniessProject\Project\Runtime\Cache\eb2dfb40348094d9ae53b64e9e264b75fbad819b.file.showlist.html.php 第 72 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\buniessProject\Project\Runtime\Cache\eb2dfb40348094d9ae53b64e9e264b75fbad819b.file.showlist.html.php 第 72 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\buniessProject\Project\Runtime\Cache\eb2dfb40348094d9ae53b64e9e264b75fbad819b.file.showlist.html.php 第 72 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.006000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-11-01T15:47:27+08:00 ] 127.0.0.1 /index.php/Admin/Article/showlist
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLang [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\phpStudy\WWW\buniessProject\Firame\Library\Think\Db\Driver\Mysql.class.php 第 53 行.
+SQL: select role_auth_ac from yw_manager a join yw_role b on a.mg_role_id=b.role_id where a.mg_id=1 [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `yw_articles` [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: title D:\phpStudy\WWW\buniessProject\Project\Admin\Controller\ArticleController.class.php 第 15 行.
+NOTIC: [8] Undefined variable: condition D:\phpStudy\WWW\buniessProject\Project\Admin\Controller\ArticleController.class.php 第 23 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `yw_articles` WHERE ( status=0 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: condition D:\phpStudy\WWW\buniessProject\Project\Admin\Controller\ArticleController.class.php 第 28 行.
+SQL: select * from `yw_articles` where 1=1 and status=0  order by sort desc Limit 0, 14 [ RunTime:0.000000s ]
+NOTIC: [8] Undefined offset: 8 D:\phpStudy\WWW\buniessProject\Project\Component\Page.class.php 第 151 行.
+INFO: [ view_begin ] --START--
+INFO: [ view_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplate [ RunTime:0.005000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-11-01T15:47:32+08:00 ] 127.0.0.1 /index.php/Admin/article/add
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLang [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\phpStudy\WWW\buniessProject\Firame\Library\Think\Db\Driver\Mysql.class.php 第 53 行.
+SQL: select role_auth_ac from yw_manager a join yw_role b on a.mg_role_id=b.role_id where a.mg_id=1 [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `yw_articles` [ RunTime:0.014000s ]
+SQL: SHOW COLUMNS FROM `yw_images` [ RunTime:0.060003s ]
+NOTIC: [8] Undefined index: mg_img D:\phpStudy\WWW\buniessProject\Project\Admin\Controller\ArticleController.class.php 第 57 行.
+NOTIC: [8] Undefined variable: Errors D:\phpStudy\WWW\buniessProject\Project\Admin\Controller\ArticleController.class.php 第 139 行.
+INFO: [ view_begin ] --START--
+INFO: [ view_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: info D:\phpStudy\WWW\buniessProject\Project\Runtime\Cache\27a3ccc445768961011a70130dd7a4d73add2a19.file.add.html.php 第 44 行.
+NOTIC: [8] Trying to get property of non-object D:\phpStudy\WWW\buniessProject\Project\Runtime\Cache\27a3ccc445768961011a70130dd7a4d73add2a19.file.add.html.php 第 44 行.
+NOTIC: [8] Undefined index: info D:\phpStudy\WWW\buniessProject\Project\Runtime\Cache\27a3ccc445768961011a70130dd7a4d73add2a19.file.add.html.php 第 61 行.
+NOTIC: [8] Trying to get property of non-object D:\phpStudy\WWW\buniessProject\Project\Runtime\Cache\27a3ccc445768961011a70130dd7a4d73add2a19.file.add.html.php 第 61 行.
+NOTIC: [8] Undefined index: info D:\phpStudy\WWW\buniessProject\Project\Runtime\Cache\27a3ccc445768961011a70130dd7a4d73add2a19.file.add.html.php 第 63 行.
+NOTIC: [8] Trying to get property of non-object D:\phpStudy\WWW\buniessProject\Project\Runtime\Cache\27a3ccc445768961011a70130dd7a4d73add2a19.file.add.html.php 第 63 行.
+NOTIC: [8] Undefined index: info D:\phpStudy\WWW\buniessProject\Project\Runtime\Cache\27a3ccc445768961011a70130dd7a4d73add2a19.file.add.html.php 第 74 行.
+NOTIC: [8] Trying to get property of non-object D:\phpStudy\WWW\buniessProject\Project\Runtime\Cache\27a3ccc445768961011a70130dd7a4d73add2a19.file.add.html.php 第 74 行.
+NOTIC: [8] Undefined index: info D:\phpStudy\WWW\buniessProject\Project\Runtime\Cache\27a3ccc445768961011a70130dd7a4d73add2a19.file.add.html.php 第 82 行.
+NOTIC: [8] Trying to get property of non-object D:\phpStudy\WWW\buniessProject\Project\Runtime\Cache\27a3ccc445768961011a70130dd7a4d73add2a19.file.add.html.php 第 82 行.
+NOTIC: [8] Undefined index: info D:\phpStudy\WWW\buniessProject\Project\Runtime\Cache\27a3ccc445768961011a70130dd7a4d73add2a19.file.add.html.php 第 92 行.
+NOTIC: [8] Trying to get property of non-object D:\phpStudy\WWW\buniessProject\Project\Runtime\Cache\27a3ccc445768961011a70130dd7a4d73add2a19.file.add.html.php 第 92 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.048003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.048003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-11-01T16:20:18+08:00 ] 127.0.0.1 /index.php/Home/wap/index
+ERR: Syntax Error in template "D:/phpStudy/WWW/buniessProject/Project/Home/View\wap\index.html"  on line 64 ".fk-tabStyle2 .f-formTabButtonList .formTabButtonClick{border-bottom-color:#ce2122;}"  - Unexpected ":", expected one of: "}" , " "
+

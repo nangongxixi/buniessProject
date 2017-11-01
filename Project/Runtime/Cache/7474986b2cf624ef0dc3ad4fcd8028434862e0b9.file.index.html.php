@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2017-11-01 14:01:19
+<?php /* Smarty version Smarty-3.1.6, created on 2017-11-01 14:12:40
          compiled from "D:/phpStudy/WWW/buniessProject/Project/Admin/View\Index\index.html" */ ?>
 <?php /*%%SmartyHeaderCode:3165259f13526c9f007-77879905%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '7474986b2cf624ef0dc3ad4fcd8028434862e0b9' => 
     array (
       0 => 'D:/phpStudy/WWW/buniessProject/Project/Admin/View\\Index\\index.html',
-      1 => 1509516078,
+      1 => 1509516759,
       2 => 'file',
     ),
   ),
@@ -28,7 +28,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>外出签到管理系统</title>
+    <title>米袋金融</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <!-- Bootstrap 3.3.6 -->
