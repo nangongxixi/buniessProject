@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2017-10-31 17:33:12
+<?php /* Smarty version Smarty-3.1.6, created on 2017-11-01 13:28:05
          compiled from "D:/phpStudy/WWW/buniessProject/Project/Admin/View\category\add.html" */ ?>
 <?php /*%%SmartyHeaderCode:1675859f83c351844f6-36652529%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '15dd393c66ff39650bd278f66ae121dd9a1357e8' => 
     array (
       0 => 'D:/phpStudy/WWW/buniessProject/Project/Admin/View\\category\\add.html',
-      1 => 1509442386,
+      1 => 1509514081,
       2 => 'file',
     ),
   ),
@@ -19,8 +19,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'unifunc' => 'content_59f83c352823a',
   'variables' => 
   array (
-    'info' => 0,
+    'categoryDetail' => 0,
     'categoryinfo' => 0,
+    'k' => 0,
+    'parentDetail' => 0,
+    'v' => 0,
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
@@ -41,11 +44,11 @@ upImage/zyupload/zyupload.basic-1.0.0.min.js"></script>
                         <th class="detail-title">分类名称</th>
                         <td>
                             <div>
-                                <input type="hidden" name="category_id" class="form-control"
-                                       value="<?php echo $_smarty_tpl->tpl_vars['info']->value['category_id'];?>
+                                <input type="hidden" name="id" class="form-control"
+                                       value="<?php echo $_smarty_tpl->tpl_vars['categoryDetail']->value['category_id'];?>
 ">
                                 <input type="text" name="category_name" class="form-control"
-                                       value="<?php echo $_smarty_tpl->tpl_vars['info']->value['category_name'];?>
+                                       value="<?php echo $_smarty_tpl->tpl_vars['categoryDetail']->value['category_name'];?>
 "
                                        errorMsg="分类名称不能为空"
                                        placeholder="请填写分类名称">
@@ -58,8 +61,19 @@ upImage/zyupload/zyupload.basic-1.0.0.min.js"></script>
                             <div>
                                 <select class="form-control" name="category_pid">
                                     <option value="">—— 请选择 ——</option>
-                                    <?php echo smarty_function_html_options(array('options'=>$_smarty_tpl->tpl_vars['categoryinfo']->value),$_smarty_tpl);?>
-
+                                   <!-- <?php echo smarty_function_html_options(array('options'=>$_smarty_tpl->tpl_vars['categoryinfo']->value),$_smarty_tpl);?>
+-->
+                                        <?php  $_smarty_tpl->tpl_vars['v'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['v']->_loop = false;
+ $_smarty_tpl->tpl_vars['k'] = new Smarty_Variable;
+ $_from = $_smarty_tpl->tpl_vars['categoryinfo']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['v']->key => $_smarty_tpl->tpl_vars['v']->value){
+$_smarty_tpl->tpl_vars['v']->_loop = true;
+ $_smarty_tpl->tpl_vars['k']->value = $_smarty_tpl->tpl_vars['v']->key;
+?>
+                                        <option value="<?php echo $_smarty_tpl->tpl_vars['k']->value;?>
+" <?php if ($_smarty_tpl->tpl_vars['k']->value==$_smarty_tpl->tpl_vars['parentDetail']->value['category_id']){?>selected="selected" <?php }?>><?php echo $_smarty_tpl->tpl_vars['v']->value;?>
+</option>
+                                        <?php } ?>
                                 </select>
                             </div>
                         </td>
@@ -68,7 +82,7 @@ upImage/zyupload/zyupload.basic-1.0.0.min.js"></script>
                         <th class="detail-title">排序</th>
                         <td>
                             <div>
-                                <input type="text" name="category_sort" class="form-control" value="<?php echo $_smarty_tpl->tpl_vars['info']->value['category_sort'];?>
+                                <input type="text" name="category_sort" class="form-control" value="<?php echo $_smarty_tpl->tpl_vars['categoryDetail']->value['category_sort'];?>
 "
                                        placeholder="请填写排序">
                             </div>
@@ -139,7 +153,7 @@ upImage/zyupload/zyupload.basic-1.0.0.min.js"></script>
             var formVal = $('form input,textarea');
 
             //标题
-            if ($(formVal[2]).val() == '') {
+            if ($(formVal[1]).val() == '') {
                 layer.msg($(formVal[1]).attr("errorMsg"), {
                     icon: 2,
                     time: 2000

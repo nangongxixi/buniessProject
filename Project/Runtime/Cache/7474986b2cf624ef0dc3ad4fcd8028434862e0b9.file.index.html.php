@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2017-10-31 09:59:06
+<?php /* Smarty version Smarty-3.1.6, created on 2017-11-01 14:01:19
          compiled from "D:/phpStudy/WWW/buniessProject/Project/Admin/View\Index\index.html" */ ?>
 <?php /*%%SmartyHeaderCode:3165259f13526c9f007-77879905%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '7474986b2cf624ef0dc3ad4fcd8028434862e0b9' => 
     array (
       0 => 'D:/phpStudy/WWW/buniessProject/Project/Admin/View\\Index\\index.html',
-      1 => 1509415140,
+      1 => 1509516078,
       2 => 'file',
     ),
   ),
@@ -205,6 +205,15 @@ dist/js/app.min.js"></script>
 
         //默认加载当前点击过的页面
         var address = localStorage.getItem('address');
+
+        //默认加载的页面
+        if(address==null){
+            address = '../Article/showlist';
+            $('#bkname').html('文章管理');
+            $('.bkname').html('文章列表');
+        }
+
+
         $('#content').load(address);
 
         //点击左侧菜单的谁改变谁
@@ -215,6 +224,8 @@ dist/js/app.min.js"></script>
             localStorage.setItem('address', address);//子页面地址
             $(this).addClass('active').siblings().removeClass('active');
             $('#content').load(address);
+            $('#bkname').html($(this).find('span').html());
+            $('.bkname').html($(this).attr('minname'));
         });
 
         //点击分页页码的时候

@@ -12,10 +12,10 @@
                         <th class="detail-title">分类名称</th>
                         <td>
                             <div>
-                                <input type="hidden" name="category_id" class="form-control"
-                                       value="{$info.category_id}">
+                                <input type="hidden" name="id" class="form-control"
+                                       value="{$categoryDetail.category_id}">
                                 <input type="text" name="category_name" class="form-control"
-                                       value="{$info.category_name}"
+                                       value="{$categoryDetail.category_name}"
                                        errorMsg="分类名称不能为空"
                                        placeholder="请填写分类名称">
                             </div>
@@ -27,7 +27,10 @@
                             <div>
                                 <select class="form-control" name="category_pid">
                                     <option value="">—— 请选择 ——</option>
-                                    {html_options options=$categoryinfo}
+                                   <!-- {html_options options=$categoryinfo}-->
+                                        {foreach $categoryinfo as $k=>$v}
+                                        <option value="{$k}" {if $k== $parentDetail.category_id}selected="selected" {/if}>{$v}</option>
+                                        {/foreach}
                                 </select>
                             </div>
                         </td>
@@ -36,7 +39,7 @@
                         <th class="detail-title">排序</th>
                         <td>
                             <div>
-                                <input type="text" name="category_sort" class="form-control" value="{$info.category_sort}"
+                                <input type="text" name="category_sort" class="form-control" value="{$categoryDetail.category_sort}"
                                        placeholder="请填写排序">
                             </div>
                         </td>
@@ -106,7 +109,7 @@
             var formVal = $('form input,textarea');
 
             //标题
-            if ($(formVal[2]).val() == '') {
+            if ($(formVal[1]).val() == '') {
                 layer.msg($(formVal[1]).attr("errorMsg"), {
                     icon: 2,
                     time: 2000

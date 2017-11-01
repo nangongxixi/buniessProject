@@ -167,6 +167,15 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
         //默认加载当前点击过的页面
         var address = localStorage.getItem('address');
+
+        //默认加载的页面
+        if(address==null){
+            address = '../Article/showlist';
+            $('#bkname').html('文章管理');
+            $('.bkname').html('文章列表');
+        }
+
+
         $('#content').load(address);
 
         //点击左侧菜单的谁改变谁
@@ -177,6 +186,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
             localStorage.setItem('address', address);//子页面地址
             $(this).addClass('active').siblings().removeClass('active');
             $('#content').load(address);
+            $('#bkname').html($(this).find('span').html());
+            $('.bkname').html($(this).attr('minname'));
         });
 
         //点击分页页码的时候
