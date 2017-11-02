@@ -10,10 +10,37 @@ Target Server Type    : MYSQL
 Target Server Version : 50717
 File Encoding         : 65001
 
-Date: 2017-10-26 17:26:49
+Date: 2017-11-02 16:19:25
 */
 
 SET FOREIGN_KEY_CHECKS=0;
+
+-- ----------------------------
+-- Table structure for `yw_apply`
+-- ----------------------------
+DROP TABLE IF EXISTS `yw_apply`;
+CREATE TABLE `yw_apply` (
+  `apply_id` int(10) NOT NULL AUTO_INCREMENT,
+  `name` varchar(50) NOT NULL,
+  `amount` decimal(10,2) NOT NULL COMMENT '金额',
+  `phone` varchar(20) NOT NULL,
+  `source` varchar(100) NOT NULL COMMENT '来源（1.PC网站，2.WAP网站）',
+  `website` varchar(100) NOT NULL COMMENT '来源网站',
+  `createtime` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `updatetime` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `status` tinyint(10) NOT NULL DEFAULT '0' COMMENT '是否删除（0未删除，1已删除）',
+  PRIMARY KEY (`apply_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4;
+
+-- ----------------------------
+-- Records of yw_apply
+-- ----------------------------
+INSERT INTO `yw_apply` VALUES ('1', '张三丰', '3.50', '13554555555', '1', 'm.baidu.com', '2017-11-02 14:39:34', '2017-11-02 15:21:15', '0');
+INSERT INTO `yw_apply` VALUES ('2', '张武吉', '5.70', '13568777777', '2', 'www.baidu.com', '2017-11-02 14:43:44', '2017-11-02 15:21:04', '0');
+INSERT INTO `yw_apply` VALUES ('3', '222', '111.00', '34654654654', '1', 'www.yunwei.com', '2017-11-02 15:57:11', '2017-11-02 15:57:11', '0');
+INSERT INTO `yw_apply` VALUES ('4', '刘德华', '3.50', '13564979746', '2', 'www.yunwei.com', '2017-11-02 15:58:18', '2017-11-02 15:58:18', '0');
+INSERT INTO `yw_apply` VALUES ('5', '3645', '12.00', '65654654654', '1', 'www.yunwei.com', '2017-11-02 16:00:14', '2017-11-02 16:00:14', '0');
+INSERT INTO `yw_apply` VALUES ('6', '5454', '2.00', '15454545454', '1', 'www.yunwei.com', '2017-11-02 16:17:02', '2017-11-02 16:17:02', '0');
 
 -- ----------------------------
 -- Table structure for `yw_articles`
@@ -29,24 +56,60 @@ CREATE TABLE `yw_articles` (
   `updatetime` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `status` tinyint(10) NOT NULL DEFAULT '0' COMMENT '是否删除（0未删除，1已删除）',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=utf8mb4;
 
 -- ----------------------------
 -- Records of yw_articles
 -- ----------------------------
 INSERT INTO `yw_articles` VALUES ('1', '文章标题4545454', '<p>文章内容发生大幅度撒反对撒反对撒反对撒反对撒反对撒法防守打法范德萨富士达反对撒法撒反对撒反对撒反对撒反对撒反对撒反对撒反对撒发生大幅度撒防撒旦范德萨反对撒反对撒范德萨品部件的品质。 德国毕克化学BYK助剂拥有完整的产品系列，涵盖了消泡剂、润湿分散剂、流变助剂、表面助剂、附着力促进剂、紫外线吸收剂、蜡助剂、加工助剂，以及纳米助剂。 德国毕克化学BYK分散剂：BYK-P104 、BYK-P104S 、BYK-P105 、BYK-2</p>', '文章描述反对撒反对撒发生大幅度撒范德萨', '0', '2017-10-26 15:36:09', '2017-10-26 15:36:09', '0');
-INSERT INTO `yw_articles` VALUES ('2', '发大水f', '<p>fdsa富士达范德萨富士达范德萨富士达防撒旦范德萨</p>', '描述描述描述反描述描述对撒反对撒发生大幅度防守打法', '7', '2017-10-26 15:39:49', '2017-10-26 15:39:49', '0');
+INSERT INTO `yw_articles` VALUES ('2', '发大水f', '<p>fdsa富士达范德萨富士达范德萨富士达防撒旦范德萨</p>', '描述描述描述反描述描述对撒反对撒发生大幅度防守打法', '7', '2017-10-30 17:22:50', '2017-10-30 17:22:50', '0');
 INSERT INTO `yw_articles` VALUES ('3', '法定sag撒大f', '', '反对撒反对撒反对撒反对撒', '5', '2017-10-26 10:40:33', '2017-10-26 10:40:33', '0');
-INSERT INTO `yw_articles` VALUES ('4', '倒萨范德萨富士达', '<p>反对撒法反对撒反对撒范德萨富士达范德萨<img alt=\"\" data-cke-saved-src=\"http://www.yunwei.com/public/upload/2017-10-26/59f14c5fd1057.jpg\" src=\"http://www.yunwei.com/public/upload/2017-10-26/59f14c5fd1057.jpg\" style=\"height:200px; width:200px\">​​​​​​​</p>', 'fdsafds', '0', '2017-10-26 10:48:31', '2017-10-26 10:48:31', '0');
+INSERT INTO `yw_articles` VALUES ('4', '倒萨范德萨富士达', '<p>fdsafdsafsdafsd</p>', 'fdsafds', '0', '2017-10-31 15:28:22', '2017-10-31 15:28:22', '0');
 INSERT INTO `yw_articles` VALUES ('5', '反对撒反对撒', '<p>反对撒法</p>', '反对撒反对撒', '0', '2017-10-26 17:01:34', '2017-10-26 17:01:34', '0');
 INSERT INTO `yw_articles` VALUES ('6', 'fsdaf', '<p>fdsafdsa</p>', 'afdsa', '0', '2017-10-26 15:20:38', '2017-10-26 15:20:38', '0');
 INSERT INTO `yw_articles` VALUES ('7', '大撒旦范德萨', '<p>发撒旦</p>', 'fdsadfds', '0', '2017-10-26 15:25:44', '2017-10-26 15:25:44', '0');
 INSERT INTO `yw_articles` VALUES ('8', 'f适当', '<p>范德萨飞洒</p>', '发撒旦', '0', '2017-10-26 15:36:51', '2017-10-26 15:36:51', '0');
-INSERT INTO `yw_articles` VALUES ('9', '', '<p><br></p>', 'f散打', '0', '2017-10-26 15:27:36', '2017-10-26 15:27:36', '0');
+INSERT INTO `yw_articles` VALUES ('9', '', '<p><br></p>', 'f散打', '15', '2017-10-30 17:24:13', '2017-10-30 17:24:13', '0');
 INSERT INTO `yw_articles` VALUES ('10', '富士达', '<p>范德萨</p>', 'f散打', '0', '2017-10-26 15:27:45', '2017-10-26 15:27:45', '0');
 INSERT INTO `yw_articles` VALUES ('11', '富士达', '<p>范德萨</p>', 'f散打', '0', '2017-10-26 15:28:11', '2017-10-26 15:28:11', '0');
-INSERT INTO `yw_articles` VALUES ('12', '', '<p>飞洒</p>', '', '0', '2017-10-26 15:32:38', '2017-10-26 15:32:38', '0');
+INSERT INTO `yw_articles` VALUES ('12', '54654654', '<p>反对撒反对撒发送大范德萨</p>\r\n', '反对撒反对撒反对撒反对撒', '0', '2017-10-31 15:20:52', '2017-10-31 15:20:52', '0');
 INSERT INTO `yw_articles` VALUES ('13', '', '<p>fdsa&nbsp;</p>', 'fdsafsd ', '0', '2017-10-26 15:42:16', '2017-10-26 15:42:16', '0');
+INSERT INTO `yw_articles` VALUES ('14', '测试卢兰奇', '<p>反对撒反对撒反对撒反对撒反对撒</p>', '反对撒反对撒防撒旦发生大', '32', '2017-10-30 17:28:01', '2017-10-30 17:28:01', '0');
+INSERT INTO `yw_articles` VALUES ('15', '111', '<p>申请条件：全款车、按揭车<br>产品优势： 利息低至0.73%-0.83%<br>押证不押车：钱你贷走、车照开<br>押车押证：全国车辆可、30分钟...</p><ul><li>不看征信、不看负责、来车就批</li><li>钱你贷走、车照开</li><li>办理全国车辆、汽车二押</li><li><img alt=\"\" data-cke-saved-src=\"http://www.yunwei.com/public/upload/2017-10-31/59f7cd932c105.jpg\" src=\"http://www.yunwei.com/public/upload/2017-10-31/59f7cd932c105.jpg\" style=\"height:200px; width:200px\"></li></ul>', '222', '66', '2017-10-31 15:40:59', '2017-10-31 15:40:59', '0');
+INSERT INTO `yw_articles` VALUES ('16', '', '<p><br></p>', '', '0', '2017-10-31 09:40:29', '2017-10-31 09:45:17', '1');
+INSERT INTO `yw_articles` VALUES ('17', '', '<p><br></p>', '', '0', '2017-10-31 09:44:48', '2017-10-31 09:45:10', '1');
+INSERT INTO `yw_articles` VALUES ('18', '', 'null', '', '0', '2017-10-31 15:15:18', '2017-10-31 15:22:01', '1');
+INSERT INTO `yw_articles` VALUES ('19', '7676', '<p>76767反对撒反对撒反对撒反对撒反对撒反对撒范德萨飞洒</p>', '76769999', '0', '2017-10-31 13:25:02', '2017-10-31 13:25:02', '0');
+INSERT INTO `yw_articles` VALUES ('20', '测试反对撒反对撒', '[object Text]', '反对撒反对撒反对撒反对撒', '0', '2017-10-31 14:24:14', '2017-10-31 14:24:14', '0');
+INSERT INTO `yw_articles` VALUES ('21', '88888测试反对撒反对撒', '<p style=\"text-align: center;\"><strong>gfdsgfd gfdsgfds反对撒<span style=\"font-size:36px;\"><span style=\"color:#e74c3c;\">反对撒反对撒反对撒</span></span></strong><br></p><p style=\"text-align: center;\">8<img alt=\"\" data-cke-saved-src=\"http://www.yunwei.com/public/upload/2017-10-31/59f827840a1d8.jpg\" src=\"http://www.yunwei.com/public/upload/2017-10-31/59f827840a1d8.jpg\" style=\"height:200px; width:200px\"><img alt=\"\" data-cke-saved-src=\"http://www.yunwei.com/public/upload/2017-10-31/59f8278f96e6e.jpg\" src=\"http://www.yunwei.com/public/upload/2017-10-31/59f8278f96e6e.jpg\" style=\"height: 532px; width: 800px;\">​​​​​​​</p>', '反对撒反对撒反对撒反对撒', '100', '2017-10-31 15:35:31', '2017-10-31 15:35:31', '0');
+
+-- ----------------------------
+-- Table structure for `yw_articles_category`
+-- ----------------------------
+DROP TABLE IF EXISTS `yw_articles_category`;
+CREATE TABLE `yw_articles_category` (
+  `category_id` int(10) NOT NULL AUTO_INCREMENT,
+  `category_name` varchar(200) NOT NULL DEFAULT '' COMMENT '分类名称',
+  `category_pid` int(10) NOT NULL COMMENT '父级ID',
+  `category_path` varchar(100) NOT NULL COMMENT '分类全路径',
+  `category_level` int(10) NOT NULL COMMENT '所属层级',
+  `category_sort` int(10) NOT NULL COMMENT '排序',
+  `createtime` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `updatetime` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `status` int(10) NOT NULL DEFAULT '0' COMMENT '0未删，1已删除',
+  PRIMARY KEY (`category_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COMMENT='文章分类表';
+
+-- ----------------------------
+-- Records of yw_articles_category
+-- ----------------------------
+INSERT INTO `yw_articles_category` VALUES ('1', '新闻中心', '0', '1', '0', '0', '2017-11-01 11:20:15', '2017-11-01 11:20:15', '0');
+INSERT INTO `yw_articles_category` VALUES ('2', '公司新闻', '1', '1-2', '1', '0', '2017-11-01 11:20:25', '2017-11-01 12:22:58', '0');
+INSERT INTO `yw_articles_category` VALUES ('3', '行业动态', '1', '1-3', '1', '2', '2017-11-01 11:20:35', '2017-11-01 11:22:29', '0');
+INSERT INTO `yw_articles_category` VALUES ('4', '小分类99', '3', '1-2-4', '2', '3', '2017-11-01 13:25:19', '2017-11-01 13:25:19', '0');
+INSERT INTO `yw_articles_category` VALUES ('5', '小分类99', '3', '1-2-5', '2', '3', '2017-11-01 13:24:29', '2017-11-01 13:27:16', '1');
+INSERT INTO `yw_articles_category` VALUES ('6', '薪酬车上', '2', '1-3-6', '2', '2', '2017-11-01 13:26:55', '2017-11-01 13:26:55', '0');
+INSERT INTO `yw_articles_category` VALUES ('7', '修噶个大类', '0', '1-2-7', '2', '2', '2017-11-01 13:29:15', '2017-11-01 13:29:15', '0');
 
 -- ----------------------------
 -- Table structure for `yw_auth`
@@ -64,7 +127,7 @@ CREATE TABLE `yw_auth` (
   `updated` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `deleted` int(10) unsigned NOT NULL DEFAULT '0',
   PRIMARY KEY (`auth_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=utf8 COMMENT='权限表';
+) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=utf8 COMMENT='权限表';
 
 -- ----------------------------
 -- Records of yw_auth
@@ -90,6 +153,7 @@ INSERT INTO `yw_auth` VALUES ('18', '问题列表', '17', 'Problem', 'showlist',
 INSERT INTO `yw_auth` VALUES ('19', '添加问题', '17', 'Problem', 'add', '17-19', '1', '2016-10-26 08:55:27', '2016-10-27 09:57:07', '1');
 INSERT INTO `yw_auth` VALUES ('20', '修改用户', '7', 'Manager', 'upd', '7-20', '1', '2016-10-26 09:05:55', '2016-11-03 15:22:34', '1');
 INSERT INTO `yw_auth` VALUES ('21', '状态图', '17', 'Problem', 'hchats', '17-21', '1', '2016-10-27 09:56:55', '2016-10-27 10:02:08', '0');
+INSERT INTO `yw_auth` VALUES ('22', '1111', '11', '22', '333', '1-11-22', '2', '0000-00-00 00:00:00', '2017-11-01 09:17:45', '0');
 
 -- ----------------------------
 -- Table structure for `yw_images`
@@ -103,21 +167,41 @@ CREATE TABLE `yw_images` (
   `cover` tinyint(1) NOT NULL COMMENT '是否是封面图（1.是、0.不是）',
   `status` tinyint(1) NOT NULL DEFAULT '0' COMMENT '是否删除（0未删除，1已删除）',
   `sort` int(50) NOT NULL DEFAULT '0' COMMENT '排序（越大越靠前）',
+  `createtime` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `updatetime` timestamp NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=28 DEFAULT CHARSET=utf8mb4;
 
 -- ----------------------------
 -- Records of yw_images
 -- ----------------------------
-INSERT INTO `yw_images` VALUES ('1', '1', 'public/upload/u=1146158479,1811960157&fm=27&gp=0.jpg', '', '0', '0', '0');
-INSERT INTO `yw_images` VALUES ('2', '5', 'public/upload/u=1146158479,1811960157&fm=27&gp=0.jpg', '', '0', '0', '0');
-INSERT INTO `yw_images` VALUES ('3', '5', 'public/upload/u=846598781,1700184812&fm=27&gp=0.jpg', '', '0', '0', '0');
-INSERT INTO `yw_images` VALUES ('4', '13', 'public/upload/u=1146158479,1811960157&fm=27&gp=0.jpg', '', '0', '0', '0');
-INSERT INTO `yw_images` VALUES ('5', '13', 'public/upload/u=846598781,1700184812&fm=27&gp=0.jpg', '', '0', '0', '0');
-INSERT INTO `yw_images` VALUES ('6', '5', 'public/upload/u=1146158479,1811960157&fm=27&gp=0.jpg', '', '0', '0', '0');
-INSERT INTO `yw_images` VALUES ('7', '5', 'public/upload/banner1.jpg', '', '0', '0', '0');
-INSERT INTO `yw_images` VALUES ('8', '5', 'public/upload/u=846598781,1700184812&fm=27&gp=0.jpg', '', '0', '0', '0');
-INSERT INTO `yw_images` VALUES ('9', '5', 'public/upload/banner1.jpg', '', '0', '0', '0');
+INSERT INTO `yw_images` VALUES ('1', '1', 'public/upload/u=1146158479,1811960157&fm=27&gp=0.jpg', '', '0', '0', '10', '0000-00-00 00:00:00', '2017-10-30 17:34:25');
+INSERT INTO `yw_images` VALUES ('2', '5', 'public/upload/u=1146158479,1811960157&fm=27&gp=0.jpg', '', '0', '1', '0', '0000-00-00 00:00:00', '2017-10-30 17:34:25');
+INSERT INTO `yw_images` VALUES ('3', '5', 'public/upload/u=846598781,1700184812&fm=27&gp=0.jpg', '', '0', '0', '0', '0000-00-00 00:00:00', '2017-10-30 17:34:25');
+INSERT INTO `yw_images` VALUES ('4', '13', 'public/upload/u=1146158479,1811960157&fm=27&gp=0.jpg', '', '0', '0', '0', '0000-00-00 00:00:00', '2017-10-30 17:34:25');
+INSERT INTO `yw_images` VALUES ('5', '13', 'public/upload/u=846598781,1700184812&fm=27&gp=0.jpg', '', '0', '0', '0', '0000-00-00 00:00:00', '2017-10-30 17:34:25');
+INSERT INTO `yw_images` VALUES ('6', '5', 'public/upload/u=1146158479,1811960157&fm=27&gp=0.jpg', '', '0', '0', '10', '0000-00-00 00:00:00', '2017-10-30 17:34:25');
+INSERT INTO `yw_images` VALUES ('7', '5', 'public/upload/banner1.jpg', '', '0', '0', '0', '0000-00-00 00:00:00', '2017-10-30 17:34:25');
+INSERT INTO `yw_images` VALUES ('8', '5', 'public/upload/u=846598781,1700184812&fm=27&gp=0.jpg', '', '0', '0', '0', '0000-00-00 00:00:00', '2017-10-30 17:34:25');
+INSERT INTO `yw_images` VALUES ('9', '5', 'public/upload/banner1.jpg', '', '0', '0', '7', '0000-00-00 00:00:00', '2017-10-30 17:34:25');
+INSERT INTO `yw_images` VALUES ('10', '2', 'public/upload/u=1146158479,1811960157&fm=27&gp=0.jpg', '', '0', '0', '0', '0000-00-00 00:00:00', '2017-10-30 17:34:25');
+INSERT INTO `yw_images` VALUES ('11', '14', 'public/upload/u=846598781,1700184812&fm=27&gp=0.jpg', '', '0', '0', '0', '0000-00-00 00:00:00', '2017-10-30 17:34:25');
+INSERT INTO `yw_images` VALUES ('12', '15', 'public/upload/432252_184127590000_2.jpg', '', '0', '0', '7', '0000-00-00 00:00:00', '2017-10-31 09:10:20');
+INSERT INTO `yw_images` VALUES ('13', '15', 'public/upload/u=1146158479,1811960157&fm=27&gp=0.jpg', '', '0', '1', '0', '0000-00-00 00:00:00', '2017-10-31 15:40:36');
+INSERT INTO `yw_images` VALUES ('14', '15', 'public/upload/u=1146158479,1811960157&fm=27&gp=0.jpg', '', '0', '1', '0', '0000-00-00 00:00:00', '2017-10-31 15:40:45');
+INSERT INTO `yw_images` VALUES ('15', '20', 'public/upload/432252_184127590000_2.jpg', '', '0', '1', '0', '0000-00-00 00:00:00', '2017-10-31 14:23:49');
+INSERT INTO `yw_images` VALUES ('16', '20', 'public/upload/u=846598781,1700184812&fm=27&gp=0.jpg', '', '0', '1', '0', '0000-00-00 00:00:00', '2017-10-31 14:23:57');
+INSERT INTO `yw_images` VALUES ('17', '20', 'public/upload/u=846598781,1700184812&fm=27&gp=0.jpg', '', '0', '1', '0', '0000-00-00 00:00:00', '2017-10-31 14:23:52');
+INSERT INTO `yw_images` VALUES ('18', '20', 'public/upload/u=1146158479,1811960157&fm=27&gp=0.jpg', '', '0', '1', '0', '0000-00-00 00:00:00', '2017-10-31 14:24:01');
+INSERT INTO `yw_images` VALUES ('19', '20', 'public/upload/u=846598781,1700184812&fm=27&gp=0.jpg', '', '0', '1', '0', '0000-00-00 00:00:00', '2017-10-31 14:24:05');
+INSERT INTO `yw_images` VALUES ('20', '20', 'public/upload/u=846598781,1700184812&fm=27&gp=0.jpg', '', '0', '0', '0', '0000-00-00 00:00:00', '2017-10-31 14:23:36');
+INSERT INTO `yw_images` VALUES ('21', '20', 'public/upload/u=1146158479,1811960157&fm=27&gp=0.jpg', '', '0', '0', '0', '0000-00-00 00:00:00', '2017-10-31 14:23:36');
+INSERT INTO `yw_images` VALUES ('22', '21', 'public/upload/u=846598781,1700184812&fm=27&gp=0.jpg', '', '0', '0', '10', '0000-00-00 00:00:00', '2017-10-31 15:33:12');
+INSERT INTO `yw_images` VALUES ('23', '12', 'public/upload/u=846598781,1700184812&fm=27&gp=0.jpg', '', '0', '0', '0', '0000-00-00 00:00:00', '2017-10-31 15:20:39');
+INSERT INTO `yw_images` VALUES ('24', '4', 'public/upload/432252_184127590000_2.jpg', '', '0', '1', '0', '0000-00-00 00:00:00', '2017-10-31 15:24:47');
+INSERT INTO `yw_images` VALUES ('25', '4', 'public/upload/u=846598781,1700184812&fm=27&gp=0.jpg', '', '0', '0', '0', '0000-00-00 00:00:00', '2017-10-31 15:28:22');
+INSERT INTO `yw_images` VALUES ('26', '21', 'public/upload/u=1146158479,1811960157&fm=27&gp=0.jpg', '', '0', '0', '0', '0000-00-00 00:00:00', '2017-10-31 15:32:56');
+INSERT INTO `yw_images` VALUES ('27', '15', 'public/upload/u=846598781,1700184812&fm=27&gp=0.jpg', '', '0', '0', '10', '2017-10-31 15:40:58', '2017-10-31 15:41:29');
 
 -- ----------------------------
 -- Table structure for `yw_log`
@@ -336,7 +420,7 @@ INSERT INTO `yw_manager` VALUES ('112', '', '', '', '', '', '', '0000-00-00 00:0
 INSERT INTO `yw_manager` VALUES ('113', '', '', '', 'eee', '', '999', '0000-00-00 00:00:00', '2017-10-25 17:08:19', '', '', '1');
 INSERT INTO `yw_manager` VALUES ('114', '', '', '44', '', '', '', '0000-00-00 00:00:00', '2017-10-25 15:43:15', '', '', '0');
 INSERT INTO `yw_manager` VALUES ('115', '发撒旦', '防守打法三大', 'ee67e3f91573510a6b520ed1381450e5', '淡淡的', '3', '<p>98989<img alt=\"\" data-cke-saved-src=\"http://www.yunwei.com/public/upload/2017-10-25/59f056da87326.jpg\" src=\"http://www.yunwei.com/public/upload/2017-10-25/59f056da87326.jpg\" style=\"height:200px; width:200px\">​​​​​​​</p>', '2017-10-25 17:18:42', '2017-10-25 17:18:50', 'upload/2017-10-25/59f056e0ca9cc.jpg', 'upload/2017-10-25/small_59f056e0ca9cc.jpg', '1');
-INSERT INTO `yw_manager` VALUES ('116', '反对撒反对撒反对撒法', '我让你依靠989', 'd41d8cd98f00b204e9800998ecf8427e', '淡淡的', '', '<p>f&nbsp;<img alt=\"\" data-cke-saved-src=\"http://www.yunwei.com/public/upload/2017-10-25/59f053e8ab317.jpg\" src=\"http://www.yunwei.com/public/upload/2017-10-25/59f053e8ab317.jpg\" style=\"height:200px; width:200px\"><img alt=\"\" data-cke-saved-src=\"http://www.yunwei.com/public/upload/2017-10-25/59f053f10ddea.jpg\" src=\"http://www.yunwei.com/public/upload/2017-10-25/59f053f10ddea.jpg\" style=\"height:200px; width:200px\">​​​​​​​发生大幅度撒范德萨富士达</p>', '2017-10-25 17:06:23', '2017-10-25 17:06:23', 'upload/2017-10-25/59f042fd02d22.jpg', 'upload/2017-10-25/small_59f042fd02d22.jpg', '0');
+INSERT INTO `yw_manager` VALUES ('116', '反对撒反对撒反对撒法', '我让你依靠989', 'd41d8cd98f00b204e9800998ecf8427e', '淡淡的', '1', '<p>f&nbsp;<img alt=\"\" data-cke-saved-src=\"http://www.yunwei.com/public/upload/2017-10-25/59f053e8ab317.jpg\" src=\"http://www.yunwei.com/public/upload/2017-10-25/59f053e8ab317.jpg\" style=\"height:200px; width:200px\"><img alt=\"\" data-cke-saved-src=\"http://www.yunwei.com/public/upload/2017-10-25/59f053f10ddea.jpg\" src=\"http://www.yunwei.com/public/upload/2017-10-25/59f053f10ddea.jpg\" style=\"height:200px; width:200px\">​​​​​​​发生大幅度撒范德萨富士达</p>', '2017-10-31 09:07:09', '2017-10-31 09:07:09', 'upload/2017-10-25/59f042fd02d22.jpg', 'upload/2017-10-25/small_59f042fd02d22.jpg', '0');
 INSERT INTO `yw_manager` VALUES ('117', '富士达99', '号发给对方的88', 'd41d8cd98f00b204e9800998ecf8427e', '范德萨', '2', '<p style=\"text-align:center\">反<span style=\"font-size:36px\">对<strong>撒反对撒发是</strong></span>对撒法s</p><p style=\"text-align:center\">反对撒反对撒反对撒反对撒</p><p style=\"text-align:center\"><img alt=\"\" data-cke-saved-src=\"http://www.yunwei.com/public/upload/2017-10-25/59f054581b6d4.jpg\" src=\"http://www.yunwei.com/public/upload/2017-10-25/59f054581b6d4.jpg\" style=\"height:200px; width:200px\"></p>', '2017-10-25 17:08:08', '2017-10-25 17:09:05', 'upload/2017-10-25/59f05462913b6.jpg', 'upload/2017-10-25/small_59f05462913b6.jpg', '1');
 INSERT INTO `yw_manager` VALUES ('118', '', '', '', '', '', '&lt;p&gt;&lt;img alt=&quot;&quot; data-cke-saved-src=&quot;http://www.yunwei.com/public/upload/2017-10-25/59f058d7746a0.jpg&quot; src=&quot;http://www.yunwei.com/public/upload/2017-10-25/59f058d7746a0.jpg&quot; style=&quot;width: 200px; height: 200px;&quot;&gt;​​​​​​​&lt;br&gt;&lt;/p&gt;', '0000-00-00 00:00:00', '2017-10-25 17:26:50', '', '', '0');
 INSERT INTO `yw_manager` VALUES ('119', '', '', '', '', '', '&lt;p&gt;反对撒反对撒反对撒反对撒&lt;/p&gt;', '0000-00-00 00:00:00', '2017-10-26 10:33:23', '', '', '0');

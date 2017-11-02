@@ -1,30 +1,30 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2017-11-01 17:02:53
+<?php /* Smarty version Smarty-3.1.6, created on 2017-11-02 16:36:55
          compiled from "D:/phpStudy/WWW/buniessProject/Project/Home/View\wap\index.html" */ ?>
-<?php /*%%SmartyHeaderCode:2759559f97affc67d48-32199965%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:2016059fad74e73aef8-50984141%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '9ef958812e2417576346aa957d58cc78350b0fab' => 
     array (
       0 => 'D:/phpStudy/WWW/buniessProject/Project/Home/View\\wap\\index.html',
-      1 => 1509526971,
+      1 => 1509611795,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '2759559f97affc67d48-32199965',
+  'nocache_hash' => '2016059fad74e73aef8-50984141',
   'function' => 
   array (
   ),
   'version' => 'Smarty-3.1.6',
-  'unifunc' => 'content_59f97affcc97e',
+  'unifunc' => 'content_59fad74e7eab9',
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_59f97affcc97e')) {function content_59f97affcc97e($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_59fad74e7eab9')) {function content_59fad74e7eab9($_smarty_tpl) {?><!DOCTYPE html>
 <!-- saved from url=(0030)http://m.fkgg22.icoc.me/?_sc=2 -->
 <html style="font-size: 32px;">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>网站模板-广告</title>
+    <title>米袋金融</title>
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta http-equiv="Cache-Control" content="no-transform">
@@ -58,21 +58,88 @@ dist/css/skins/skin-blue.min.css">
 
     <link rel="stylesheet" href="<?php echo @CSS_URL;?>
 wap.css">
-    <link rel="stylesheet" type="text/css" href="<?php echo @CSS_URL;?>
-base.min.css" title="default">
+
+
+    <link rel="stylesheet" href="<?php echo @CSS_URL;?>
+alifont/iconfont.css">
 
     <meta name="keywords" content=""/>
     <meta name="description" content=""/>
 
     <style>
-        .input-border {
-            border: 1px solid #8b8487;
-        }
         .submitlog {
             background-color: #e6212a;
             border-color: #e6212a;
             color: #fff
         }
+
+        .footer {
+            position: fixed;
+            bottom: 0px;
+            width: 100%;
+            left: 50%;
+            max-width: 1080px;
+            -webkit-transform: translateX(-50%);
+            -moz-transform: translateX(-50%);
+            -o-transform: translateX(-50%);
+            -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+            z-index: 10;
+        }
+
+        .footer-nav {
+            width: 100%;
+            background-color: #FFF;
+            font-size: 0;
+        }
+
+        .footer-nav a {
+            height: 45px;
+            display: inline-block;
+            text-align: center;
+            line-height: 45px;
+            font-size: 15px;
+            vertical-align: middle;
+            width: 50%;
+            color: #FFF;
+            border: 0;
+        }
+
+        .red-nav {
+            background: #ff6161 !important;
+        }
+
+        .default-nav {
+            background: #00aeff !important;
+        }
+
+        .footer-nav a span {
+            font-size: 22px;
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 5px;
+        }
+
+        .glyphicon:before {
+            color: #333
+        }
+
+        .btn-warning, .btn-danger {
+            background-color: #fff !important;
+        }
+
+        .form-control {
+            border-left: 0px !important;
+        }
+
+        .btn-warning, .btn-danger {
+            border-color: #d2d6de !important;
+        }
+        .btn{
+            color:#fff !important
+        }
+
+
     </style>
 
     <!-- ./wrapper -->
@@ -86,7 +153,7 @@ layer/layer.js"></script>
 <body class="skin-blue sidebar-mini">
 <div class="wrapper" style="background-color: #fff">
     <table id="__01" width="100%" height="100%" border="0" cellpadding="0" cellspacing="0"
-           style="margin: 0 auto !important;">
+           style="margin: 0 auto 8% !important;">
         <tr>
             <td>
                 <img src="<?php echo @IMG_URL;?>
@@ -95,35 +162,40 @@ wap/wap_01.gif" width="1080" height="132" border="0"></td>
         <tr>
             <td>
                 <img src="<?php echo @IMG_URL;?>
-wap/wap_02.gif" width="1080" height="573" border="0"></td>
+wap/wap_02.gif" width="1080" height="573" border="0">
+            </td>
         </tr>
         <tr>
             <td>
-                <img src="<?php echo @IMG_URL;?>
-wap/wap_03.gif" width="1080" height="473" border="0"></td>
+                <a target="_blank"
+                   href="http://www16.53kf.com/webCompany.php?arg=10161753&amp;style=1&amp;language=cn&amp;charset=GBK&amp;kflist=off&amp;kf=&amp;zdkf_type=1&amp;referer=http%3A%2F%2Fwww.scmidai.com%2F&amp;keyword=&amp;tfrom=1&amp;tpl=crystal_blue&amp;uid=9469d95cc13f1e69b1a27b8527c440bf&amp;timeStamp=1502931683656&amp;ucust_id=">
+                    <img src="<?php echo @IMG_URL;?>
+wap/wap_03.gif" width="1080" height="473" border="0">
+                </a>
+            </td>
         </tr>
         <tr>
             <td>
-                <form action="<?php echo @__SELF__;?>
-" method="post" style="width: 90%; margin: 30px auto">
+                <form method="post" enctype="multipart/form-data" id="formData" style="width: 90%; margin: 30px auto">
                     <div class="form-group">
                         <div class="input-group input-group-lg">
                             <div class="input-group-btn">
                                 <span class="btn btn-warning dropdown-toggle id=" sizing-addon1"><i
-                                    class="glyphicon glyphicon-user"
+                                    class="glyphicon glyphicon-usd "
                                     aria-hidden="true"></i></span>
                             </div>
-                            <input type="text" name="mg_username" class="form-control input-border"
-                                   placeholder="请输入贷款金额" style="font-size: 16px">
+                            <input type="text" name="amount" class="form-control input-border"
+                                   placeholder="请输入贷款金额" style="font-size: 16px" errorMsg="金额格式为：X或者X.X或者X.XX">
                         </div>
                     </div>
                     <div class="form-group">
                         <div class="input-group input-group-lg">
                             <div class="input-group-btn">
                                 <span class="btn btn-warning dropdown-toggle id=" sizing-addon1"><i
-                                    class="glyphicon glyphicon-lock"></i></span>
+                                    class="glyphicon glyphicon-user"></i></span>
                             </div>
-                            <input type="text" name="mg_password" class="form-control input-border" placeholder="请输入姓名" style="font-size: 16px">
+                            <input type="text" name="name" class="form-control input-border" placeholder="请输入姓名"
+                                   style="font-size: 16px" errorMsg="姓名不能为空">
                         </div>
                     </div>
 
@@ -131,13 +203,14 @@ wap/wap_03.gif" width="1080" height="473" border="0"></td>
                         <div class="input-group input-group-lg">
                             <div class="input-group-btn">
                                 <span class="btn btn-warning dropdown-toggle id=" sizing-addon1"><i
-                                    class="glyphicon glyphicon-lock"></i></span>
+                                    class="glyphicon glyphicon-phone"></i></span>
                             </div>
-                            <input type="text" name="mg_password" class="form-control input-border"
-                                   placeholder="请输入手机号" style="font-size: 16px">
+                            <input type="text" name="phone" class="form-control input-border"
+                                   placeholder="请输入手机号" maxlength="11" style="font-size: 16px" errorMsg="手机号为1开始的11位纯数字">
                         </div>
                     </div>
 
+                    <!--
                     <div class="form-group">
                         <div class="input-group input-group-lg">
                             <div class="input-group-btn">
@@ -148,30 +221,34 @@ wap/wap_03.gif" width="1080" height="473" border="0"></td>
                             <input id="captcha" name="captcha" type="text" class="form-control input-border"
                                    style="width:50%"
                                    placeholder="请输入验证码" style="font-size: 16px !important;">
+
                             <span style="margin-left: 15px;    margin-left: 15px;    position: absolute;">
-                        <img class="yanzm"  src="<?php echo @__CONTROLLER__;?>
+                        <img class="yanzm" src="<?php echo @__CONTROLLER__;?>
 /verifyImg"
                              onclick="this.src=this.src+'?'"/>
                     </span>
-
-
                         </div>
                     </div>
+                    -->
 
-                    <button type="submit" id="submit" class="btn btn-block btn-lg submitlog">登录</button>
+                    <button type="button" id="submit" class="btn btn-block btn-lg submitlog">立即申请</button>
 
                 </form>
             </td>
         </tr>
         <tr>
             <td>
-                <img src="<?php echo @IMG_URL;?>
-wap/wap_05.gif" width="1080" height="1066" border="0"></td>
+                <a href="tel:18080889915"><img src="<?php echo @IMG_URL;?>
+wap/wap_05.gif" width="1080" height="1066"
+                                               border="0"></a></td>
         </tr>
         <tr>
             <td>
-                <img src="<?php echo @IMG_URL;?>
-wap/wap_06.gif" width="1080" height="1081" border="0"></td>
+                <a target="_blank"
+                   href="http://www16.53kf.com/webCompany.php?arg=10161753&amp;style=1&amp;language=cn&amp;charset=GBK&amp;kflist=off&amp;kf=&amp;zdkf_type=1&amp;referer=http%3A%2F%2Fwww.scmidai.com%2F&amp;keyword=&amp;tfrom=1&amp;tpl=crystal_blue&amp;uid=9469d95cc13f1e69b1a27b8527c440bf&amp;timeStamp=1502931683656&amp;ucust_id=">
+                    <img src="<?php echo @IMG_URL;?>
+wap/wap_06.gif" width="1080"
+                         height="1081" border="0"></a></td>
         </tr>
         <tr>
             <td>
@@ -190,6 +267,92 @@ wap/wap_09.gif" width="1080" height="222" border="0"></td>
         </tr>
     </table>
 </div>
+<div class="footer">
+    <div class="footer-nav">
+        <a href="tel:18080889915" class="default-nav"><span class="iconfont icon-dianhua"></span>免费电话咨询</a>
+        <a target="_blank" class="red-nav"
+           href="http://www16.53kf.com/webCompany.php?arg=10161753&amp;style=1&amp;language=cn&amp;charset=GBK&amp;kflist=off&amp;kf=&amp;zdkf_type=1&amp;referer=http%3A%2F%2Fwww.scmidai.com%2F&amp;keyword=&amp;tfrom=1&amp;tpl=crystal_blue&amp;uid=9469d95cc13f1e69b1a27b8527c440bf&amp;timeStamp=1502931683656&amp;ucust_id=">
+            <span class="iconfont icon-kefu"></span>免费在线咨询
+        </a>
+    </div>
+</div>
+
+
+<script>
+    $(function () {
+
+        //数据提交
+        $('#submit').unbind('click').click(function () {
+
+            //数据验证
+            if(!validata()){
+                return false;
+            }
+
+            var formData = new FormData($("#formData")[0]);
+            $.ajax({
+                url: 'wap/add',
+                type: 'POST',
+                data: formData,
+                async: false,
+                cache: false,
+                contentType: false,
+                processData: false,
+                success: function (returnJSON) {
+                    if (returnJSON.status) {
+                        layer.msg(returnJSON.msg, {
+                            icon: 1,
+                            time: 2000
+                        }, function () {
+                            sessionStorage.clear();
+                            location.reload();
+                           // localStorage.setItem('address', '../article/showlist');//保存当前地址,避免刷新跳转
+                           // $('#content').load('../article/showlist');
+                        });
+                    } else {
+                        layer.msg(returnJSON.msg, {
+                            icon: 2,
+                            time: 2000
+                        });
+                    }
+                }
+            });
+        });
+
+        //数据验证
+        function validata() {
+            var formVal = $('form input,textarea');
+            //金额
+            if ($(formVal[0]).val() == '' || !$(formVal[0]).val().match(/^\d+.?\d{0,2}$/g)) {
+                layer.msg($(formVal[0]).attr("errorMsg"), {
+                    icon: 2,
+                    time: 2000
+                });
+                return false;
+            }
+
+            //姓名
+            if ($(formVal[1]).val() == '') {
+                layer.msg($(formVal[1]).attr("errorMsg"), {
+                    icon: 2,
+                    time: 2000
+                });
+                return false;
+            }
+
+            //电话
+            if ($(formVal[2]).val() == '' || !$(formVal[2]).val().match(/^1\d{10}$/g)) {
+                layer.msg($(formVal[2]).attr("errorMsg"), {
+                    icon: 2,
+                    time: 2000
+                });
+                return false;
+            }
+            return true;
+        }
+    });
+</script>
+
 </body>
 </html>
 <?php }} ?>

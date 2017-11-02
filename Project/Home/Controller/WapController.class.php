@@ -1,18 +1,60 @@
 <?php
 
 namespace Home\Controller;
+
 use Think\Controller;
 
 //Controller父类：ThinkPHP/Library/Think/Controller.class.php
 
-class WapController extends Controller{
+class WapController extends Controller
+{
 
-   function index(){
-       $this -> display();
-   }
+    function index()
+    {
+        $this->display();
+    }
 
-    function _empty(){
-        echo "<img src='".IMG_URL.'404.gif'."' alt='' />";
+    //新增、修改
+    function add()
+    {
+        $article = D('apply');
+        //操作数据库
+        if (!empty($_POST)) {
+            if (!$article->create()) {
+                $this->ajaxReturn(array(
+                    'status' => false,
+                    'msg' => '操作失败',
+                ));
+            } else {
+                $_POST["createtime"] = date("Y-m-d H:i:s", time());
+                $_POST["website"] = $_SERVER['HTTP_HOST'];
+
+                if ($_SERVER['HTTP_HOST'] == 'www.yunwei.com') {
+                    $_POST["source"] = 1; //PC
+                } else {
+                    $_POST["source"] = 2; //WAP
+                }
+
+                $inertID = $article->add($_POST);
+                if ($inertID) {
+                    $this->ajaxReturn(array(
+                        'status' => true,
+                        'msg' => '操作成功',
+                    ));
+                } else {
+                    $this->ajaxReturn(array(
+                        'status' => false,
+                        'msg' => '请点“开始上传”',
+                    ));
+                }
+            }
+        }
+        $this->display();
+    }
+
+    function _empty()
+    {
+        echo "<img src='" . IMG_URL . '404.gif' . "' alt='' />";
     }
 
     //制作专门方法实现验证码生成
@@ -33,7 +75,6 @@ class WapController extends Controller{
         $verify = new \Think\Verify($config);
         $verify->entry();
     }
-
 
 }
 

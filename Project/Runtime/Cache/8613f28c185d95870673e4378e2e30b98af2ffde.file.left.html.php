@@ -1,22 +1,20 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2017-11-01 13:43:51
+<?php /* Smarty version Smarty-3.1.6, created on 2017-11-02 16:39:27
          compiled from "D:/phpStudy/WWW/buniessProject/Project/Admin/View\Common\left.html" */ ?>
-<?php /*%%SmartyHeaderCode:593259f135275b97f1-48838821%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:2767059fad9bf219605-80669241%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '8613f28c185d95870673e4378e2e30b98af2ffde' => 
     array (
       0 => 'D:/phpStudy/WWW/buniessProject/Project/Admin/View\\Common\\left.html',
-      1 => 1509515012,
+      1 => 1509605264,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '593259f135275b97f1-48838821',
+  'nocache_hash' => '2767059fad9bf219605-80669241',
   'function' => 
   array (
   ),
-  'version' => 'Smarty-3.1.6',
-  'unifunc' => 'content_59f135275fbe8',
   'variables' => 
   array (
     'pauth_info' => 0,
@@ -27,24 +25,32 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'icon' => 0,
   ),
   'has_nocache_code' => false,
+  'version' => 'Smarty-3.1.6',
+  'unifunc' => 'content_59fad9bf25fb1',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_59f135275fbe8')) {function content_59f135275fbe8($_smarty_tpl) {?><ul class="sidebar-menu">
+<?php if ($_valid && !is_callable('content_59fad9bf25fb1')) {function content_59fad9bf25fb1($_smarty_tpl) {?><ul class="sidebar-menu">
     <li class="header"></li>
-    <li style="cursor:pointer" class="menu" save="caidan1" minname="文章列表" address="/index.php/Admin/Article/showlist">
+    <li style="cursor:pointer" class="menu active" save="caidan1"  minname="订单信息" address="/index.php/Admin/Apply/showlist">
+        <a href="#">
+            <i class="fa fa-paste"></i><span>订单信息</span>
+        </a>
+    </li>
+    <li style="cursor:pointer" class="menu" save="caidan2" minname="文章列表" address="/index.php/Admin/Article/showlist">
         <a href="#">
             <i class="fa fa-paste"></i><span>文章管理</span>
         </a>
     </li>
-    <li style="cursor:pointer" class="menu" save="caidan2"  minname="用户列表" address="/index.php/Admin/Manager/showlist">
+    <li style="cursor:pointer" class="menu" save="caidan3"  minname="用户列表" address="/index.php/Admin/Manager/showlist">
         <a href="#">
             <i class="fa fa-user"></i><span>用户管理</span>
         </a>
     </li>
-    <li style="cursor:pointer" class="menu" save="caidan3"  minname="类别列表" address="/index.php/Admin/Category/showlist">
+    <li style="cursor:pointer" class="menu" save="caidan4"  minname="类别列表" address="/index.php/Admin/Category/showlist">
         <a href="#">
             <i class="fa fa-paste"></i><span>文章类别</span>
         </a>
     </li>
+
 </ul>
 
 <!--

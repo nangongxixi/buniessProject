@@ -1,25 +1,25 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2017-11-01 14:12:40
+<?php /* Smarty version Smarty-3.1.6, created on 2017-11-02 16:39:26
          compiled from "D:/phpStudy/WWW/buniessProject/Project/Admin/View\Index\index.html" */ ?>
-<?php /*%%SmartyHeaderCode:3165259f13526c9f007-77879905%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:563059fad9be7baa45-79284231%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '7474986b2cf624ef0dc3ad4fcd8028434862e0b9' => 
     array (
       0 => 'D:/phpStudy/WWW/buniessProject/Project/Admin/View\\Index\\index.html',
-      1 => 1509516759,
+      1 => 1509605291,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '3165259f13526c9f007-77879905',
+  'nocache_hash' => '563059fad9be7baa45-79284231',
   'function' => 
   array (
   ),
-  'version' => 'Smarty-3.1.6',
-  'unifunc' => 'content_59f13526d1049',
   'has_nocache_code' => false,
+  'version' => 'Smarty-3.1.6',
+  'unifunc' => 'content_59fad9be833bd',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_59f13526d1049')) {function content_59f13526d1049($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_59fad9be833bd')) {function content_59fad9be833bd($_smarty_tpl) {?><!DOCTYPE html>
 <!--
 This is a starter template page. Use this page to start your new project from
 scratch. This page gets rid of all links and provides the needed markup only.
@@ -208,9 +208,9 @@ dist/js/app.min.js"></script>
 
         //默认加载的页面
         if(address==null){
-            address = '../Article/showlist';
-            $('#bkname').html('文章管理');
-            $('.bkname').html('文章列表');
+            address = '../Apply/showlist';
+            $('#bkname').html('订单信息');
+            $('.bkname').html('订单列表');
         }
 
 

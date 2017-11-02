@@ -1920,7 +1920,8 @@ a:hover, a:active, a:focus {
 .box-body .table {
     margin-bottom: 0;
     width: 98%;
-    margin: 0 auto
+    margin: 0 auto;
+    font-size: 16px !important;
 }
 
 .box-body .fc {
