@@ -107,12 +107,35 @@
         .btn-warning, .btn-danger {
             border-color: #d2d6de !important;
         }
-        .btn{
-            color:#fff !important
+
+        .btn {
+            color: #fff !important
         }
 
 
     </style>
+
+    <!-- 基础代码 -->
+    <script type="text/javascript">;
+    (function (root) {
+        root._tt_config = true;
+        var ta = document.createElement('script');
+        ta.type = 'text/javascript';
+        ta.async = true;
+        ta.src = document.location.protocol + '//' + 's1.pstatp.com/bytecom/resource/track_log/src/toutiao-track-log.js';
+        ta.onerror = function () {
+            var request = new XMLHttpRequest();
+            var web_url = window.encodeURIComponent(window.location.href);
+            var js_url = ta.src;
+            var url = '//ad.toutiao.com/link_monitor/cdn_failed?web_url=' + web_url + '&js_url=' + js_url + '&convert_id=74381099680';
+            request.open('GET', url, true);
+            request.send(null);
+        }
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(ta, s);
+    })(window);
+    </script>
+
 
     <!-- ./wrapper -->
     <script src="{$smarty.const.ADMIN_JS_URL}jquery-2.2.3.min.js"></script>
@@ -173,7 +196,8 @@
                                     class="glyphicon glyphicon-phone"></i></span>
                             </div>
                             <input type="text" name="phone" class="form-control input-border"
-                                   placeholder="请输入手机号" maxlength="11" style="font-size: 16px" errorMsg="手机号为1开始的11位纯数字">
+                                   placeholder="请输入手机号" maxlength="11" style="font-size: 16px"
+                                   errorMsg="手机号为1开始的11位纯数字">
                         </div>
                     </div>
 
@@ -245,14 +269,17 @@
         //数据提交
         $('#submit').unbind('click').click(function () {
 
+            _taq.push({convert_id: "74381099680", event_type: "form"});
+
+
             //数据验证
-            if(!validata()){
+            if (!validata()) {
                 return false;
             }
 
             var formData = new FormData($("#formData")[0]);
             $.ajax({
-                url: 'wap/add',
+                url: 'index.php/Home/wap/add',
                 type: 'POST',
                 data: formData,
                 async: false,
@@ -267,8 +294,8 @@
                         }, function () {
                             sessionStorage.clear();
                             location.reload();
-                           // localStorage.setItem('address', '../article/showlist');//保存当前地址,避免刷新跳转
-                           // $('#content').load('../article/showlist');
+                            // localStorage.setItem('address', '../article/showlist');//保存当前地址,避免刷新跳转
+                            // $('#content').load('../article/showlist');
                         });
                     } else {
                         layer.msg(returnJSON.msg, {

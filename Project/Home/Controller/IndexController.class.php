@@ -4,7 +4,7 @@ namespace Home\Controller;
 use Think\Controller;
 class IndexController extends Controller {
     public function index(){
-        $this->redirect('/Admin/Manager/login');       
+        $this->display();
     }
 
     public function hello(){

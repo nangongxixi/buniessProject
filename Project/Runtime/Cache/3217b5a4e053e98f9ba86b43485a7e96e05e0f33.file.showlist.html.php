@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2017-11-02 17:07:39
+<?php /* Smarty version Smarty-3.1.6, created on 2017-11-03 09:42:16
          compiled from "D:/phpStudy/WWW/buniessProject/Project/Admin/View\Apply\showlist.html" */ ?>
 <?php /*%%SmartyHeaderCode:750659fad9c013aee0-76741370%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '3217b5a4e053e98f9ba86b43485a7e96e05e0f33' => 
     array (
       0 => 'D:/phpStudy/WWW/buniessProject/Project/Admin/View\\Apply\\showlist.html',
-      1 => 1509613657,
+      1 => 1509613677,
       2 => 'file',
     ),
   ),
@@ -194,6 +194,8 @@ $_smarty_tpl->tpl_vars['v']->_loop = true;
             for (var i = 0; i < obj.length; i++) {
                 url+=obj.eq(i).attr('name') + '/' + obj.eq(i).val()+ '/'
             }
+
+            //todo 删除最后一个符号
             url.substring(0,url.length-1);
 
 

@@ -14,6 +14,14 @@ class WapController extends Controller
         $this->display();
     }
 
+    function test()
+    {
+        $php = M('apply');
+        $result = $php->find(1);
+        var_dump($result);
+        $this->display();
+    }
+
     //新增、修改
     function add()
     {

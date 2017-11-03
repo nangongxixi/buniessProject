@@ -1,0 +1,66 @@
+﻿@charset "utf-8";
+/* CSS Document */
+body{background-color:#fff; overflow-x:hidden; color:#666; font-size:12px; font-family: microsoft yahei , "宋体"; position:relative;}/*网站字体颜色*/
+.header , .footer , .container{margin-left:auto; margin-right:auto; width:1200px; font-family:microsoft yahei; overflow: hidden}
+
+.footer-bg{
+    background:url(../img/footer_bg.png) no-repeat top left; height:110px; overflow:hidden
+}
+.footer-nav1{
+    margin: 0 0 0 115px
+}
+.footer-nav{
+    margin: 0 0 0 102px
+}
+.footer-navtit{
+    color:#3c0c00; font-size: 16px; font-weight: bold
+}
+
+.footer-nav1,footer-nav li{
+    position:relative
+}
+
+
+/*页眉*/
+.footer{ width:100%}
+.footer .ft{ height:127px; background:#d5d1d0}
+.footer .ft ul { background:url(Img/Index/ft_03.png); height:127px; overflow:hidden; float:left}
+.footer .ft ul li{line-height: 25px; color:#7f4f27}
+
+
+.footer .ft ul li:first-child{line-height: 35px}
+
+
+.footer .ft ul li em{ font-size:20px; font-weight:bold;color:#ff8900;}
+.footer .ft ul li p{ font-size:15px;color:#ffffff;}
+.footer .ft ul li p span{font-size:20px;color:#ff8900}
+.footer .ft ul .l1{ padding-left:110px; width:190px; padding-top:40px}
+.footer .ft ul .l2{ padding-left:130px; width:170px; padding-top:40px}
+.footer .ft ul .l3{ padding-left:130px; width:170px; padding-top:40px}
+.footer .ft ul .l4{ padding-left:120px; width:180px; padding-top:40px}
+.footer .fb{ height:140px; background:#303030; overflow:hidden; text-align: center; padding: 15px 0}
+.footer .fb .fnav{ overflow:hidden;padding-top:40px; padding-bottom:26px; border-bottom:1px #262626 solid; height:24px; }
+.footer .fb .fnav ul{ width:800px; margin:0px auto}
+.footer .fb .fnav li{ float:left; border-left:1px #595959 dotted; }
+.footer .fb .fnav li a{color:#999999; font-size:14px;padding:0px 18px;}
+.footer .fb .fnav .nob{ border:0px;}
+.footer .fb .fbb{ border-top:1px #383838 solid}
+.footer .fb .fbb span{ float:left; border-left:1px #484848 dotted; height:63px; float:left; margin-top:28px;}
+.footer .fb .fbb .nob{ border:0px;}
+.footer .fb .fbb .s1{ padding-left:20px; width:282px; padding-top:12px;}
+.footer .fb .fbb .s1 img{ display:block; float:left; margin-right:14px;}
+.footer .fb .fbb .s1 em{ font-size:13px;color:#848484}
+.footer .fb .fbb .s1 p{ font-size:28px;color:#ffffff; font-family:Arial; margin-top:3px;}
+.footer .fb .fbb .s2{ padding-left:40px; padding-top:10px; width:430px}
+.footer .fb .fbb .s2 img{ display:block; float:left; margin-right:22px;}
+.footer .fb .fbb .s2 em{ font-size:13px; line-height:20px}
+.footer .fb .fbb .s2 em a{color:#636363}
+.footer .fb .fbb .s2 p{ font-size:13;color:#ffffff; margin-top:5px;}
+.footer .fb .fbb .s3{ padding-left:84px;}
+
+
+#roll_top, #fall, #ct{position: relative;cursor: pointer;height: 72px;width: 26px;}
+#roll_top{	background: url(/Skins/Default/Img/top.gif) no-repeat;}
+#fall{background: url(/Skins/Default/Img/top.gif) no-repeat 0 -80px;}
+#ct{background: url(/Skins/Default/Img/top.gif) no-repeat 0 -40px;}
+#roll{display: block;width: 15px;position: fixed;right:6%;	top: 50%;	_margin-right: -525px;	_position: absolute;_margin-top: 300px;	_top: expression(eval(document.documentElement.scrollTop));}
