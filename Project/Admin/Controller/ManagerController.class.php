@@ -237,8 +237,11 @@ class ManagerController extends AdminController
             if (!$z) {
                 echo "<script type=\"text/javascript\">window.parent.CKEDITOR.tools.callFunction(1, '/', '上传失败," . $upload->getError() . "！');</script>";
             } else {
+                $callback = $_REQUEST["CKEditorFuncNum"];
                 $path = 'http://'.$_SERVER['HTTP_HOST'].'/public/'. $z['savepath'] . $z['savename'];
-                echo "<script type=\"text/javascript\">window.parent.CKEDITOR.tools.callFunction(1,'$path','');</script>";
+                //echo $path ;
+                //echo "<script type=\"text/javascript\">window.parent.CKEDITOR.tools.callFunction(1,'$path','');</script>";
+                echo "<script type='text/javascript'>window.parent.CKEDITOR.tools.callFunction($callback,'".$path."','');</script>";
             }
         }
     }

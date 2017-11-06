@@ -1,25 +1,25 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2017-11-03 10:50:34
+<?php /* Smarty version Smarty-3.1.6, created on 2017-11-06 09:43:20
          compiled from "D:/phpStudy/WWW/buniessProject/Project/Home/View\wap\index.html" */ ?>
-<?php /*%%SmartyHeaderCode:2016059fad74e73aef8-50984141%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:3249159ffbe21c13b11-06454873%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '9ef958812e2417576346aa957d58cc78350b0fab' => 
     array (
       0 => 'D:/phpStudy/WWW/buniessProject/Project/Home/View\\wap\\index.html',
-      1 => 1509677324,
+      1 => 1509932596,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '2016059fad74e73aef8-50984141',
+  'nocache_hash' => '3249159ffbe21c13b11-06454873',
   'function' => 
   array (
   ),
   'version' => 'Smarty-3.1.6',
-  'unifunc' => 'content_59fad74e7eab9',
+  'unifunc' => 'content_59ffbe21cc764',
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_59fad74e7eab9')) {function content_59fad74e7eab9($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_59ffbe21cc764')) {function content_59ffbe21cc764($_smarty_tpl) {?><!DOCTYPE html>
 <!-- saved from url=(0030)http://m.fkgg22.icoc.me/?_sc=2 -->
 <html style="font-size: 32px;">
 <head>
@@ -308,7 +308,7 @@ wap/wap_09.gif" width="1080" height="222" border="0"></td>
         //数据提交
         $('#submit').unbind('click').click(function () {
 
-            _taq.push({convert_id: "74381099680", event_type: "form"});
+          //  _taq.push({convert_id: "74381099680", event_type: "form"});
 
 
             //数据验证
@@ -318,7 +318,7 @@ wap/wap_09.gif" width="1080" height="222" border="0"></td>
 
             var formData = new FormData($("#formData")[0]);
             $.ajax({
-                url: 'index.php/Home/wap/add',
+                url: '/index.php/Home/add',
                 type: 'POST',
                 data: formData,
                 async: false,

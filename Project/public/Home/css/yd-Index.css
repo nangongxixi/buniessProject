@@ -174,10 +174,10 @@
 .dkpt .dkpt_l .dkpt_l_o .lotot img{ display:block; float:left; margin:0px 20px;} 
 .dkpt .dkpt_l .dkpt_l_o .lotot h5{ float:left;width:290px;}
 .dkpt .dkpt_l .dkpt_l_o .lotot h5 a{ font-size:16px;color:#ff8900; line-height:30px}
-.dkpt .dkpt_l .dkpt_l_o .lotot p{ float:left;width:290px; font-size:13px;color:#333333; line-height:20px; margin-top:15px;}
+.dkpt .dkpt_l .dkpt_l_o .lotot p{/* float:left;width:290px; font-size:13px;color:#333333; line-height:20px; margin-top:15px;*/}
 .dkpt .dkpt_l .dkpt_l_o .lotot ul{ width:260px; float:left; background:url(../img/cpys_07.png) no-repeat; padding-left:30px; margin-top:30px; min-height:78px}
 .dkpt .dkpt_l .dkpt_l_o .lotot ul li{ font-size:15px;color:#ff8900; background:url(../img/gou_07.png) left center no-repeat; padding-left:22px; line-height:26px;}
-.dkpt .dkpt_l .dkpt_l_o .lotot .anniu{ width:282px; height:50px; background:url(../img/abg_03.png); line-height:50px; float:left; margin-top:70px}
+.dkpt .dkpt_l .dkpt_l_o .lotot .anniu{ width:282px; height:50px; background:url(../img/abg_03.png); line-height:50px; margin-top:70px;right: 0; position: absolute;bottom: 0;}
 .dkpt .dkpt_l .dkpt_l_o .lotot .anniu span a{ width:120px; height:50px; display:block; float:left; font-size:15px; font-weight:bold; padding-left:21px;color:#383838}
 .dkpt .dkpt_l .dkpt_l_o .lotot .anniu .s a{color:#ffffff}
 .dkpt .dkpt_r{ border:1px #d6d6d6 solid;border-top:2px #7f7f7f solid; width:258px; float:right; background:#ffffff;padding:20px; height:403px; position:relative}

@@ -11,11 +11,23 @@ return array(
     'URL_CASE_INSENSITIVE' => false,
     //数据库连接配置
     'DB_TYPE' => 'mysql', // 数据库类型
-    'DB_HOST' => 'localhost', // 服务器地址
-    'DB_NAME' => 'businessproject', // 数据库名
-    'DB_USER' => 'root', // 用户名
-    'DB_PWD' => '123456', // 密码
+
+
+    //云端数据库连接配置
+    'DB_HOST' => 'sql.m75.vhostgo.com', // 服务器地址
+    'DB_NAME' => 'cdyykwl', // 数据库名
+    'DB_USER' => 'cdyykwl', // 用户名
+    'DB_PWD' => 'b6r4a6t6', // 密码
     'DB_PORT' => '3306', // 端口
+    /*
+      //本地数据库连接配置
+      'DB_HOST' => 'localhost', // 服务器地址
+      'DB_NAME' => 'businessproject', // 数据库名
+      'DB_USER' => 'root', // 用户名
+      'DB_PWD' => '123456', // 密码
+      'DB_PORT' => '3306', // 端口
+  */
+
     'DB_PREFIX' => 'yw_', // 数据库表前缀
 	'DB_SQL_LOG'         =>  TRUE, // SQL执行日志记录
     'DB_FIELDTYPE_CHECK' => false, // 是否进行字段类型检查

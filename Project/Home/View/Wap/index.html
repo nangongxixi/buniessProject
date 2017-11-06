@@ -136,6 +136,13 @@
     })(window);
     </script>
 
+    <!-- 53客服 -->
+    <script>
+        (function () {
+        var _53code = document.createElement("script");
+        _53code.src = "https://tb.53kf.com/code/code/10161753/1";var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(_53code, s);})();
+    </script>
+
 
     <!-- ./wrapper -->
     <script src="{$smarty.const.ADMIN_JS_URL}jquery-2.2.3.min.js"></script>
@@ -248,7 +255,7 @@
         </tr>
         <tr>
             <td>
-                <img src="{$smarty.const.IMG_URL}wap/wap_09.gif" width="1080" height="222" border="0"></td>
+                <img src="{$smarty.const.IMG_URL}wap/wap_09.gif" width="1080" height="260" border="0"></td>
         </tr>
     </table>
 </div>
@@ -269,7 +276,7 @@
         //数据提交
         $('#submit').unbind('click').click(function () {
 
-            _taq.push({convert_id: "74381099680", event_type: "form"});
+            //  _taq.push({convert_id: "74381099680", event_type: "form"});
 
 
             //数据验证
@@ -279,7 +286,7 @@
 
             var formData = new FormData($("#formData")[0]);
             $.ajax({
-                url: 'index.php/Home/wap/add',
+                url: '/index.php/Home/Wap/add',
                 type: 'POST',
                 data: formData,
                 async: false,
@@ -287,6 +294,10 @@
                 contentType: false,
                 processData: false,
                 success: function (returnJSON) {
+                    alert(55);
+
+                    console.log(returnJSON);
+
                     if (returnJSON.status) {
                         layer.msg(returnJSON.msg, {
                             icon: 1,
@@ -303,7 +314,27 @@
                             time: 2000
                         });
                     }
+                },
+                error: function () {
+                    layer.msg(returnJSON.msg, {
+                        icon: 1,
+                        time: 2000
+                    }, function () {
+                        sessionStorage.clear();
+                        location.reload();
+                        // localStorage.setItem('address', '../article/showlist');//保存当前地址,避免刷新跳转
+                        // $('#content').load('../article/showlist');
+                    });
                 }
+            });
+            layer.msg('申请成功', {
+                icon: 1,
+                time: 2000
+            }, function () {
+                sessionStorage.clear();
+                location.reload();
+                // localStorage.setItem('address', '../article/showlist');//保存当前地址,避免刷新跳转
+                // $('#content').load('../article/showlist');
             });
         });
 

@@ -25,9 +25,11 @@ class ArticleController extends AdminController
         //echo $infop->_sql();
         $per = 14;
         $page = new \Component\Page($total, $per); //autoload        
-        $sql = "select * from `yw_articles` where 1=1 and status=0 $condition order by sort desc " . $page->limit;
+        $sql = "select * from `yw_articles` where 1=1 and status=0 $condition order by sort desc,id desc " . $page->limit;
         $info = $infop->query($sql);
         $pagelist = $page->fpage();
+        $selectList = R('Admin/Category/getInfo');//跨控制器调用方法
+        $this->assign('selectList', $selectList);
         $this->assign('info', $info);
         $this->assign('pagelist', $pagelist);
         $this->display();
@@ -86,6 +88,9 @@ class ArticleController extends AdminController
 
         //操作数据库
         if (!empty($_POST)) {
+
+            //show_bug($_POST);
+
             if (!$article->create()) {
                 $this->ajaxReturn(array(
                     'status' => false,
@@ -106,8 +111,10 @@ class ArticleController extends AdminController
                     } else {
                         $data['article_id'] = $inertID;//新增过程中添加图片
                     }
-                    if (!empty(array_values($_SESSION['imgArr']))) {
-                        $imgArr = array_values($_SESSION['imgArr']);
+
+                    $imgArr = array_values($_SESSION['imgArr']);
+
+                    if (!empty($imgArr)) {
                         $inertID = $images->where('id in (' . implode(",", $imgArr) . ')')->save($data);
                         unset($_SESSION['imgArr']);//干掉上次添加多图的session
                     }
@@ -136,7 +143,10 @@ class ArticleController extends AdminController
             $this->assign('info', $info);
         }
         //获得被修改管理员的信息
-        $this->assign('Errors', $Errors);
+        $selectList = R('Admin/Category/getInfo');//跨控制器调用方法
+
+       // show_bug($selectList);
+        $this->assign('selectList', $selectList);
         $this->display();
     }
 

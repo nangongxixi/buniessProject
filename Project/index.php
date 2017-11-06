@@ -12,7 +12,7 @@ function show_bug($msg) {
 //定义css、img、js常量
 define("SITE_URL", "/");
 define("CSS_URL", SITE_URL . "public/Home/css/"); //css
-define("IMG_URL", SITE_URL . "public/Home/img/"); //img
+define("IMG_URL", SITE_URL . "../../public/Home/img/"); //img
 define("JS_URL", SITE_URL . "public/Home/js/"); //js
 
 define("ADMIN_CSS_URL", SITE_URL . "public/Admin/css/"); //css

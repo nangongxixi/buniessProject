@@ -25,6 +25,7 @@ class WapController extends Controller
     //新增、修改
     function add()
     {
+        // echo 66;exit();
         $article = D('apply');
         //操作数据库
         if (!empty($_POST)) {
@@ -37,7 +38,7 @@ class WapController extends Controller
                 $_POST["createtime"] = date("Y-m-d H:i:s", time());
                 $_POST["website"] = $_SERVER['HTTP_HOST'];
 
-                if ($_SERVER['HTTP_HOST'] == 'www.yunwei.com') {
+                if ($_SERVER['HTTP_HOST'] == 'www.scmidai.com') {
                     $_POST["source"] = 1; //PC
                 } else {
                     $_POST["source"] = 2; //WAP
@@ -45,10 +46,9 @@ class WapController extends Controller
 
                 $inertID = $article->add($_POST);
                 if ($inertID) {
-                    $this->ajaxReturn(array(
-                        'status' => true,
-                        'msg' => '操作成功',
-                    ));
+                    // echo '{\'status\' => true,\'msg\' => \'操作成功\'}';
+                    //$this->ajaxReturn(['status' => true,'msg' => '操作成功']);
+                    $this->ajaxReturn(array('status' => true, 'msg' => '操作成功'));
                 } else {
                     $this->ajaxReturn(array(
                         'status' => false,
