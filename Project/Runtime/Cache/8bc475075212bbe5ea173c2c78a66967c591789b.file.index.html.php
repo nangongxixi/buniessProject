@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2017-11-06 09:42:48
+<?php /* Smarty version Smarty-3.1.6, created on 2017-11-06 16:16:08
          compiled from "D:/phpStudy/WWW/buniessProject/Project/Home/View\index\index.html" */ ?>
 <?php /*%%SmartyHeaderCode:3141259ffbe1801fa39-26674452%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '8bc475075212bbe5ea173c2c78a66967c591789b' => 
     array (
       0 => 'D:/phpStudy/WWW/buniessProject/Project/Home/View\\index\\index.html',
-      1 => 1509870504,
+      1 => 1509955392,
       2 => 'file',
     ),
   ),
@@ -15,36 +15,41 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.6',
+  'unifunc' => 'content_59ffbe1815058',
   'variables' => 
   array (
     'articleList' => 0,
     'v' => 0,
     'customer' => 0,
+    'caseList' => 0,
     'amount' => 0,
     'dkglList' => 0,
     'zxzxList' => 0,
     'askList' => 0,
     'links' => 0,
+    'footNav' => 0,
+    'k' => 0,
+    'vv' => 0,
     'footInfo' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.6',
-  'unifunc' => 'content_59ffbe1815058',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_59ffbe1815058')) {function content_59ffbe1815058($_smarty_tpl) {?><!DOCTYPE html>
 <!-- saved from url=(0050)http://cd.moerlong.com/?urlCode=wxoct4&fromSite=bd -->
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <script type="text/javascript" async="" src="./成都贷款公司_抵押贷款_低门槛快速办理_成都摩尔龙_files/vds.js.下载"></script>
     <script>window.BasicDomain = ".moerlong.com";</script>
 
-    <title>成都贷款公司_抵押贷款_低门槛快速办理_成都摩尔龙</title>
-    <meta content="成都贷款,成都贷款公司,抵押贷款" name="keywords">
-    <meta content="成都摩尔龙提供房产抵押、汽车抵押（不押车）、无抵押信用贷款，成都做生意资金周转能贷，个人购房、买车、装修缺钱也能贷。按揭放大超高额度，月薪3千即贷超低门槛，手续齐全当天放款! "
-          name="description">
+    <title>四川米袋金融服务外包有限公司</title>
+    <meta content="四川米袋金融服务外包有限公司" name="keywords">
+    <meta content="四川米袋金融服务外包有限公司" name="description">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <link rel="shortcut icon" href="http://image.moerlong.com/logo/favicon.ico?r=fc4c3ecbc35c5b977f76fb54a5b697fe">
+
+    <link rel="icon" href="<?php echo @IMG_URL;?>
+bitbug_favicon.ico" type="image/x-icon"/>
+
     <link rel="stylesheet" href="<?php echo @CSS_URL;?>
 edai-global.css">
     <link rel="stylesheet" href="<?php echo @CSS_URL;?>
@@ -85,10 +90,10 @@ layer/layer.js"></script>
         <ul>
             <li class="fl" style="display: inline-block;padding-top: 5px; position: relative;top:5px">您好！欢迎来到米袋金融!</li>
             <li class="fr">
-                <span style=" display: inline-block; padding-top: 8px">
+                <span style=" display: inline-block; padding-top: 2px">
                     <span class="iconfont icon-dianhua" style="font-size: 22px;position: relative;top:3px"></span>欢迎拨打咨询热线：
                 </span>
-                <span style="font-size: 22px; color:#fe6c00; display: inline-block;padding-top: 5px; position: relative;top:3px">18080889915</span>
+                <span style="font-size: 22px; color:#fe6c00; display: inline-block;position: relative;top:3px">18080889915</span>
             </li>
         </ul>
     </div>
@@ -101,7 +106,7 @@ layer/layer.js"></script>
 log.png" style="margin-top:-3px; width: 350px"><i class="logo-border"></i>
         </h1>
         <div class="nav fr">
-            <a href="/" class="nav-on">首页</a>
+            <a href="/index.php/Home/index" class="nav-on">首页</a>
             <a href="#">车贷</a>
             <a href="#">房贷</a>
             <a href="#">信用贷</a>
@@ -209,7 +214,8 @@ $_smarty_tpl->tpl_vars['v']->_loop = true;
                             <?php echo $_smarty_tpl->tpl_vars['v']->value['discript'];?>
 
                             <div class="anniu">
-                                <span class="s"><a href="#" target="_blank">我要贷款</a></span><span><a href="#">了解详情</a></span>
+                                <span class="s"><a href="#" target="_blank">我要贷款</a></span><span><a
+                                    href="#">了解详情</a></span>
                             </div>
                         </div>
 
@@ -318,6 +324,37 @@ sqlc_07.png"></a></div>
 ys.jpg">
             </div>
         </div>
+
+
+        <div class="ys container">
+            <div class="ystit ">
+                <em>西南地区最快捷的贷款定制平台</em>
+                <h4><span>成功案例</span>，他们通过米袋金融成功贷款</h4>
+            </div>
+            <hr width="1120" style="border:1px solid #ff8900;"/>
+            <ul>
+                <?php  $_smarty_tpl->tpl_vars['v'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['v']->_loop = false;
+ $_smarty_tpl->tpl_vars['k'] = new Smarty_Variable;
+ $_from = $_smarty_tpl->tpl_vars['caseList']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['v']->key => $_smarty_tpl->tpl_vars['v']->value){
+$_smarty_tpl->tpl_vars['v']->_loop = true;
+ $_smarty_tpl->tpl_vars['k']->value = $_smarty_tpl->tpl_vars['v']->key;
+?>
+                <li>
+                    <a href="#">
+                    <span> <img src="<?php echo $_smarty_tpl->tpl_vars['v']->value['img_url'];?>
+" width="60" height="60"></span>
+                    <h5 style="border-bottom:1px dotted #d2d2d2;"><?php echo $_smarty_tpl->tpl_vars['v']->value['title'];?>
+</h5>
+                    <p><?php if ((mb_strlen($_smarty_tpl->tpl_vars['v']->value['discript'],'utf-8'))>320){?><?php echo mb_substr($_smarty_tpl->tpl_vars['v']->value['discript'],0,320,'utf-8');?>
+…<?php }else{ ?><?php echo $_smarty_tpl->tpl_vars['v']->value['discript'];?>
+<?php }?></p>
+                    </a>
+                </li>
+                <?php } ?>
+            </ul>
+        </div>
+
 
         <div class="ggw">
             <img src="<?php echo @IMG_URL;?>
@@ -486,25 +523,28 @@ $_smarty_tpl->tpl_vars['v']->_loop = true;
 <div class="footer">
     <div class="ft">
         <div class="container footer-bg">
+            <?php  $_smarty_tpl->tpl_vars['v'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['v']->_loop = false;
+ $_smarty_tpl->tpl_vars['k'] = new Smarty_Variable;
+ $_from = $_smarty_tpl->tpl_vars['footNav']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['v']->key => $_smarty_tpl->tpl_vars['v']->value){
+$_smarty_tpl->tpl_vars['v']->_loop = true;
+ $_smarty_tpl->tpl_vars['k']->value = $_smarty_tpl->tpl_vars['v']->key;
+?>
             <ul class="footer-nav1">
-                <li class="footer-navtit">车贷</li>
-                <li>车辆抵押</li>
-                <li>车辆抵押</li>
+                <li class="footer-navtit"><?php echo $_smarty_tpl->tpl_vars['k']->value;?>
+</li>
+                <?php  $_smarty_tpl->tpl_vars['vv'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['vv']->_loop = false;
+ $_smarty_tpl->tpl_vars['kk'] = new Smarty_Variable;
+ $_from = $_smarty_tpl->tpl_vars['v']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['vv']->key => $_smarty_tpl->tpl_vars['vv']->value){
+$_smarty_tpl->tpl_vars['vv']->_loop = true;
+ $_smarty_tpl->tpl_vars['kk']->value = $_smarty_tpl->tpl_vars['vv']->key;
+?>
+                    <li><?php echo $_smarty_tpl->tpl_vars['vv']->value['category_name'];?>
+</li>
+                <?php } ?>
             </ul>
-            <ul class="footer-nav">
-                <li class="footer-navtit">房贷</li>
-                <li>车辆抵押</li>
-                <li>车辆抵押</li>
-            </ul>
-            <ul class="footer-nav">
-                <li class="footer-navtit">信用贷</li>
-                <li>公积金贷</li>
-                <li>社保贷</li>
-            </ul>
-            <ul class="footer-nav">
-                <li class="footer-navtit">保单贷</li>
-                <li>保单贷</li>
-            </ul>
+           <?php } ?>
             <ul class="footer-nav">
                 <li class="footer-navtit">扫码关注</li>
                 <li><img src="<?php echo @IMG_URL;?>
@@ -562,6 +602,8 @@ tel.jpg"></li>
                 contentType: false,
                 processData: false,
                 success: function (returnJSON) {
+                    alert(66)
+                    console.log(returnJSON);
                     if (returnJSON.status) {
                         layer.msg(returnJSON.msg, {
                             icon: 1,

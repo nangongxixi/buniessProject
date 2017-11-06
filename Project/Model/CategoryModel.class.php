@@ -47,10 +47,12 @@ class CategoryModel extends Model{
             'createtime'=>date("Y-m-d H:i:s", time())
         );
 
+        //修改
         $dtEdit = array(
             'category_id' => $category_id,
             'category_name'=>$auth['category_name'],
             'category_sort'=>$auth['category_sort'],
+            'category_pid'=>$auth['category_pid'],
             'category_path'=>$category_path,
             'category_level'=>$category_level,
             'createtime'=>date("Y-m-d H:i:s", time())

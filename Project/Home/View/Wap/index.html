@@ -273,11 +273,15 @@
 <script>
     $(function () {
 
+
         //数据提交
         $('#submit').unbind('click').click(function () {
 
+            var index = layer.load(1, {
+                shade: [0.1,'#fff'] //0.1透明度的白色背景
+            });
             //  _taq.push({convert_id: "74381099680", event_type: "form"});
-
+            $('#submit').removeAttr('id');
 
             //数据验证
             if (!validata()) {
@@ -294,10 +298,8 @@
                 contentType: false,
                 processData: false,
                 success: function (returnJSON) {
-                    alert(55);
-
-                    console.log(returnJSON);
-
+                    //alert(77);
+                    //console.log(returnJSON);
                     if (returnJSON.status) {
                         layer.msg(returnJSON.msg, {
                             icon: 1,
@@ -305,6 +307,7 @@
                         }, function () {
                             sessionStorage.clear();
                             location.reload();
+                            parent.layer.close(index);
                             // localStorage.setItem('address', '../article/showlist');//保存当前地址,避免刷新跳转
                             // $('#content').load('../article/showlist');
                         });
@@ -314,27 +317,7 @@
                             time: 2000
                         });
                     }
-                },
-                error: function () {
-                    layer.msg(returnJSON.msg, {
-                        icon: 1,
-                        time: 2000
-                    }, function () {
-                        sessionStorage.clear();
-                        location.reload();
-                        // localStorage.setItem('address', '../article/showlist');//保存当前地址,避免刷新跳转
-                        // $('#content').load('../article/showlist');
-                    });
                 }
-            });
-            layer.msg('申请成功', {
-                icon: 1,
-                time: 2000
-            }, function () {
-                sessionStorage.clear();
-                location.reload();
-                // localStorage.setItem('address', '../article/showlist');//保存当前地址,避免刷新跳转
-                // $('#content').load('../article/showlist');
             });
         });
 

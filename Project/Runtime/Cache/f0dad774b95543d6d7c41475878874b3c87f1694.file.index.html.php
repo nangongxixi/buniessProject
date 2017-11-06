@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2017-11-06 12:20:53
+<?php /* Smarty version Smarty-3.1.6, created on 2017-11-06 15:40:04
          compiled from "D:/phpStudy/WWW/buniessProject/Project/Home/View\Index\index.html" */ ?>
 <?php /*%%SmartyHeaderCode:2600759ffb6fa22e621-91345867%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'f0dad774b95543d6d7c41475878874b3c87f1694' => 
     array (
       0 => 'D:/phpStudy/WWW/buniessProject/Project/Home/View\\Index\\index.html',
-      1 => 1509936543,
+      1 => 1509954000,
       2 => 'file',
     ),
   ),
@@ -22,11 +22,15 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'articleList' => 0,
     'v' => 0,
     'customer' => 0,
+    'caseList' => 0,
     'amount' => 0,
     'dkglList' => 0,
     'zxzxList' => 0,
     'askList' => 0,
     'links' => 0,
+    'footNav' => 0,
+    'k' => 0,
+    'vv' => 0,
     'footInfo' => 0,
   ),
   'has_nocache_code' => false,
@@ -40,11 +44,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 
     <title>四川米袋金融服务外包有限公司</title>
     <meta content="四川米袋金融服务外包有限公司" name="keywords">
-    <meta content="四川米袋金融服务外包有限公司"  name="description">
+    <meta content="四川米袋金融服务外包有限公司" name="description">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
     <link rel="icon" href="<?php echo @IMG_URL;?>
-bitbug_favicon.ico" type="image/x-icon" />
+bitbug_favicon.ico" type="image/x-icon"/>
 
     <link rel="stylesheet" href="<?php echo @CSS_URL;?>
 edai-global.css">
@@ -102,7 +106,7 @@ layer/layer.js"></script>
 log.png" style="margin-top:-3px; width: 350px"><i class="logo-border"></i>
         </h1>
         <div class="nav fr">
-            <a href="/" class="nav-on">首页</a>
+            <a href="/index.php/Home/index" class="nav-on">首页</a>
             <a href="#">车贷</a>
             <a href="#">房贷</a>
             <a href="#">信用贷</a>
@@ -210,7 +214,8 @@ $_smarty_tpl->tpl_vars['v']->_loop = true;
                             <?php echo $_smarty_tpl->tpl_vars['v']->value['discript'];?>
 
                             <div class="anniu">
-                                <span class="s"><a href="#" target="_blank">我要贷款</a></span><span><a href="#">了解详情</a></span>
+                                <span class="s"><a href="#" target="_blank">我要贷款</a></span><span><a
+                                    href="#">了解详情</a></span>
                             </div>
                         </div>
 
@@ -319,6 +324,37 @@ sqlc_07.png"></a></div>
 ys.jpg">
             </div>
         </div>
+
+
+        <div class="ys container">
+            <div class="ystit ">
+                <em>西南地区最快捷的贷款定制平台</em>
+                <h4><span>成功案例</span>，他们通过米袋金融成功贷款</h4>
+            </div>
+            <hr width="1120" style="border:1px solid #ff8900;"/>
+            <ul>
+                <?php  $_smarty_tpl->tpl_vars['v'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['v']->_loop = false;
+ $_smarty_tpl->tpl_vars['k'] = new Smarty_Variable;
+ $_from = $_smarty_tpl->tpl_vars['caseList']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['v']->key => $_smarty_tpl->tpl_vars['v']->value){
+$_smarty_tpl->tpl_vars['v']->_loop = true;
+ $_smarty_tpl->tpl_vars['k']->value = $_smarty_tpl->tpl_vars['v']->key;
+?>
+                <li>
+                    <a href="#">
+                    <span> <img src="<?php echo $_smarty_tpl->tpl_vars['v']->value['img_url'];?>
+" width="60" height="60"></span>
+                    <h5 style="border-bottom:1px dotted #d2d2d2;"><?php echo $_smarty_tpl->tpl_vars['v']->value['title'];?>
+</h5>
+                    <p><?php if ((mb_strlen($_smarty_tpl->tpl_vars['v']->value['discript'],'utf-8'))>320){?><?php echo mb_substr($_smarty_tpl->tpl_vars['v']->value['discript'],0,320,'utf-8');?>
+…<?php }else{ ?><?php echo $_smarty_tpl->tpl_vars['v']->value['discript'];?>
+<?php }?></p>
+                    </a>
+                </li>
+                <?php } ?>
+            </ul>
+        </div>
+
 
         <div class="ggw">
             <img src="<?php echo @IMG_URL;?>
@@ -487,25 +523,28 @@ $_smarty_tpl->tpl_vars['v']->_loop = true;
 <div class="footer">
     <div class="ft">
         <div class="container footer-bg">
+            <?php  $_smarty_tpl->tpl_vars['v'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['v']->_loop = false;
+ $_smarty_tpl->tpl_vars['k'] = new Smarty_Variable;
+ $_from = $_smarty_tpl->tpl_vars['footNav']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['v']->key => $_smarty_tpl->tpl_vars['v']->value){
+$_smarty_tpl->tpl_vars['v']->_loop = true;
+ $_smarty_tpl->tpl_vars['k']->value = $_smarty_tpl->tpl_vars['v']->key;
+?>
             <ul class="footer-nav1">
-                <li class="footer-navtit">车贷</li>
-                <li>车辆抵押</li>
-                <li>车辆抵押</li>
+                <li class="footer-navtit"><?php echo $_smarty_tpl->tpl_vars['k']->value;?>
+</li>
+                <?php  $_smarty_tpl->tpl_vars['vv'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['vv']->_loop = false;
+ $_smarty_tpl->tpl_vars['kk'] = new Smarty_Variable;
+ $_from = $_smarty_tpl->tpl_vars['v']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['vv']->key => $_smarty_tpl->tpl_vars['vv']->value){
+$_smarty_tpl->tpl_vars['vv']->_loop = true;
+ $_smarty_tpl->tpl_vars['kk']->value = $_smarty_tpl->tpl_vars['vv']->key;
+?>
+                    <li><?php echo $_smarty_tpl->tpl_vars['vv']->value['category_name'];?>
+</li>
+                <?php } ?>
             </ul>
-            <ul class="footer-nav">
-                <li class="footer-navtit">房贷</li>
-                <li>车辆抵押</li>
-                <li>车辆抵押</li>
-            </ul>
-            <ul class="footer-nav">
-                <li class="footer-navtit">信用贷</li>
-                <li>公积金贷</li>
-                <li>社保贷</li>
-            </ul>
-            <ul class="footer-nav">
-                <li class="footer-navtit">保单贷</li>
-                <li>保单贷</li>
-            </ul>
+           <?php } ?>
             <ul class="footer-nav">
                 <li class="footer-navtit">扫码关注</li>
                 <li><img src="<?php echo @IMG_URL;?>

@@ -7,10 +7,10 @@
 
     <title>四川米袋金融服务外包有限公司</title>
     <meta content="四川米袋金融服务外包有限公司" name="keywords">
-    <meta content="四川米袋金融服务外包有限公司"  name="description">
+    <meta content="四川米袋金融服务外包有限公司" name="description">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-    <link rel="icon" href="{$smarty.const.IMG_URL}bitbug_favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="{$smarty.const.IMG_URL}bitbug_favicon.ico" type="image/x-icon"/>
 
     <link rel="stylesheet" href="{$smarty.const.CSS_URL}edai-global.css">
     <link rel="stylesheet" href="{$smarty.const.CSS_URL}edai-index.css">
@@ -56,7 +56,7 @@
             <img src="{$smarty.const.IMG_URL}log.png" style="margin-top:-3px; width: 350px"><i class="logo-border"></i>
         </h1>
         <div class="nav fr">
-            <a href="/" class="nav-on">首页</a>
+            <a href="/index.php/Home/index" class="nav-on">首页</a>
             <a href="#">车贷</a>
             <a href="#">房贷</a>
             <a href="#">信用贷</a>
@@ -146,7 +146,8 @@
 
                             {$v.discript}
                             <div class="anniu">
-                                <span class="s"><a href="#" target="_blank">我要贷款</a></span><span><a href="#">了解详情</a></span>
+                                <span class="s"><a href="#" target="_blank">我要贷款</a></span><span><a
+                                    href="#">了解详情</a></span>
                             </div>
                         </div>
 
@@ -240,6 +241,27 @@
                 <img src="{$smarty.const.IMG_URL}ys.jpg">
             </div>
         </div>
+
+
+        <div class="ys container">
+            <div class="ystit ">
+                <em>西南地区最快捷的贷款定制平台</em>
+                <h4><span>成功案例</span>，他们通过米袋金融成功贷款</h4>
+            </div>
+            <hr width="1120" style="border:1px solid #ff8900;"/>
+            <ul>
+                {foreach $caseList as $k => $v}
+                <li>
+                    <a href="#">
+                    <span> <img src="{$v.img_url}" width="60" height="60"></span>
+                    <h5 style="border-bottom:1px dotted #d2d2d2;">{$v.title}</h5>
+                    <p>{if (mb_strlen($v.discript,'utf-8'))>320}{mb_substr($v.discript,0,320,'utf-8')}…{else}{$v.discript}{/if}</p>
+                    </a>
+                </li>
+                {/foreach}
+            </ul>
+        </div>
+
 
         <div class="ggw">
             <img src="{$smarty.const.IMG_URL}ggw.jpg">
@@ -368,25 +390,14 @@
 <div class="footer">
     <div class="ft">
         <div class="container footer-bg">
+            {foreach $footNav as $k=>$v}
             <ul class="footer-nav1">
-                <li class="footer-navtit">车贷</li>
-                <li>车辆抵押</li>
-                <li>车辆抵押</li>
+                <li class="footer-navtit">{$k}</li>
+                {foreach $v as $kk=>$vv}
+                    <li>{$vv.category_name}</li>
+                {/foreach}
             </ul>
-            <ul class="footer-nav">
-                <li class="footer-navtit">房贷</li>
-                <li>车辆抵押</li>
-                <li>车辆抵押</li>
-            </ul>
-            <ul class="footer-nav">
-                <li class="footer-navtit">信用贷</li>
-                <li>公积金贷</li>
-                <li>社保贷</li>
-            </ul>
-            <ul class="footer-nav">
-                <li class="footer-navtit">保单贷</li>
-                <li>保单贷</li>
-            </ul>
+           {/foreach}
             <ul class="footer-nav">
                 <li class="footer-navtit">扫码关注</li>
                 <li><img src="{$smarty.const.IMG_URL}ewm.jpg"></li>
@@ -426,6 +437,10 @@
 
         //数据提交
         $('#submit').unbind('click').click(function () {
+            var index = layer.load(1, {
+                shade: [0.1,'#fff'] //0.1透明度的白色背景
+            });
+
             //数据验证
             if (!validata()) {
                 return false;
@@ -438,6 +453,7 @@
                 data: formData,
                 async: false,
                 cache: false,
+                dataType: 'json',
                 contentType: false,
                 processData: false,
                 success: function (returnJSON) {
@@ -448,6 +464,7 @@
                         }, function () {
                             sessionStorage.clear();
                             location.reload();
+                            parent.layer.close(index);
                             // localStorage.setItem('address', '../article/showlist');//保存当前地址,避免刷新跳转
                             // $('#content').load('../article/showlist');
                         });

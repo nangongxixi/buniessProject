@@ -46,13 +46,13 @@ class WapController extends Controller
 
                 $inertID = $article->add($_POST);
                 if ($inertID) {
-                    // echo '{\'status\' => true,\'msg\' => \'操作成功\'}';
-                    //$this->ajaxReturn(['status' => true,'msg' => '操作成功']);
-                    $this->ajaxReturn(array('status' => true, 'msg' => '操作成功'));
+                    $data = ['status' => true,'msg' => '申请成功'];
+                    ob_clean();//不加这个，前端收不到json数据
+                    $this->ajaxReturn($data);
                 } else {
                     $this->ajaxReturn(array(
                         'status' => false,
-                        'msg' => '请点“开始上传”',
+                        'msg' => '申请失败',
                     ));
                 }
             }
