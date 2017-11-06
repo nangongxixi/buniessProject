@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50717
 File Encoding         : 65001
 
-Date: 2017-11-05 21:50:36
+Date: 2017-11-06 17:09:40
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -30,7 +30,7 @@ CREATE TABLE `yw_apply` (
   `updatetime` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `status` tinyint(10) NOT NULL DEFAULT '0' COMMENT '是否删除（0未删除，1已删除）',
   PRIMARY KEY (`apply_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8mb4;
 
 -- ----------------------------
 -- Records of yw_apply
@@ -49,6 +49,10 @@ INSERT INTO `yw_apply` VALUES ('11', '45', '54.00', '12545454545', '1', 'www.yun
 INSERT INTO `yw_apply` VALUES ('12', '54', '12.00', '16546554787', '1', 'www.yunwei.com', '2017-11-05 11:58:23', '2017-11-05 11:58:23', '0');
 INSERT INTO `yw_apply` VALUES ('13', '', '0.00', '', '1', 'www.yunwei.com', '2017-11-05 12:29:09', '2017-11-05 12:29:09', '0');
 INSERT INTO `yw_apply` VALUES ('14', '愤怒地说', '53.33', '16479794646', '1', 'www.yunwei.com', '2017-11-05 12:40:17', '2017-11-05 12:40:17', '0');
+INSERT INTO `yw_apply` VALUES ('15', '3656', '545.00', '13545454545', '2', 'www.yunwei.com', '2017-11-06 16:16:16', '2017-11-06 16:16:16', '0');
+INSERT INTO `yw_apply` VALUES ('16', '6565', '4545.00', '15454655454', '2', 'www.yunwei.com', '2017-11-06 16:18:04', '2017-11-06 16:18:04', '0');
+INSERT INTO `yw_apply` VALUES ('17', '25', '54.00', '15456454545', '2', 'www.yunwei.com', '2017-11-06 16:18:20', '2017-11-06 16:18:20', '0');
+INSERT INTO `yw_apply` VALUES ('18', '455', '878.00', '15454545454', '2', 'www.yunwei.com', '2017-11-06 16:30:26', '2017-11-06 16:30:26', '0');
 
 -- ----------------------------
 -- Table structure for `yw_articles`
@@ -65,7 +69,7 @@ CREATE TABLE `yw_articles` (
   `updatetime` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `status` tinyint(10) NOT NULL DEFAULT '0' COMMENT '是否删除（0未删除，1已删除）',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=27 DEFAULT CHARSET=utf8mb4;
 
 -- ----------------------------
 -- Records of yw_articles
@@ -93,6 +97,9 @@ INSERT INTO `yw_articles` VALUES ('20', '10', '常见问题66797979防守对方�
 INSERT INTO `yw_articles` VALUES ('21', '14', '友情链接', '<p><a href=\"http://www.baidu.com\">百度</a>&nbsp; &nbsp;<a href=\"http://www.google.com\">谷歌</a>&nbsp; &nbsp; <a href=\"http://m.scmidai.com\">米袋金融</a></p>\r\n', '', '0', '2017-11-05 15:56:58', '2017-11-05 15:56:58', '0');
 INSERT INTO `yw_articles` VALUES ('22', '15', '资金支持', '<ul>\r\n	<li><img alt=\"中国银行\" src=\"../../public/Home/img/20150602174249_65386.jpg\" style=\"height:69px; width:192px\" /></li>\r\n	<li><img alt=\"中信银行\" src=\"../../public/Home/img/20150602174311_60283.jpg\" style=\"height:69px; width:192px\" /></li>\r\n	<li><img alt=\"招商银行\" src=\"../../public/Home/img/20150602174134_76051.jpg\" style=\"height:69px; width:192px\" /></li>\r\n	<li><img alt=\"中国人民银行\" src=\"../../public/Home/img/20150602174213_67602.jpg\" style=\"height:69px; width:192px\" /></li>\r\n	<li><img alt=\"中国邮政储蓄银行\" src=\"../../public/Home/img/20150602174027_79657.jpg\" style=\"height:69px; width:192px\" /></li>\r\n	<li><img alt=\"渣打银行\" src=\"../../public/Home/img/20150602174102_33723.jpg\" style=\"height:69px; width:192px\" /></li>\r\n	<li><img alt=\"上海银行\" src=\"../../public/Home/img/20150605133936_20495.jpg\" style=\"height:69px; width:192px\" /></li>\r\n	<li><img alt=\"深圳发展银行\" src=\"../../public/Home/img/20160429170842_51838.jpg\" style=\"height:69px; width:192px\" /></li>\r\n	<li><img alt=\"平安银行\" src=\"../../public/Home/img/20150602173834_62053.jpg\" style=\"height:69px; width:192px\" /></li>\r\n	<li><img alt=\"浦发银行\" src=\"../../public/Home/img/20150602173916_64763.jpg\" style=\"height:69px; width:192px\" /></li>\r\n	<li><img alt=\"中国民生银行\" src=\"../../public/Home/img/20150602173222_47992.jpg\" style=\"height:69px; width:192px\" /></li>\r\n	<li><img alt=\"兴业银行\" src=\"../../public/Home/img/20160429165822_51095.jpg\" style=\"height:69px; width:192px\" /></li>\r\n	<li><img alt=\"中国农业银行\" src=\"../../public/Home/img/20150602173309_15905.jpg\" style=\"height:69px; width:192px\" /></li>\r\n	<li><img alt=\"华夏银行\" src=\"../../public/Home/img/20150602173134_68988.jpg\" style=\"height:69px; width:192px\" /></li>\r\n	<li><img alt=\"交通银行\" src=\"../../public/Home/img/20150602173157_67471.jpg\" style=\"height:69px; width:192px\" /></li>\r\n	<li><img alt=\"光大银行\" src=\"../../public/Home/img/20150602173034_57002.jpg\" style=\"height:69px; width:192px\" /></li>\r\n	<li><img alt=\"广发银行\" src=\"../../public/Home/img/20150602173101_27347.jpg\" style=\"height:69px; width:192px\" /></li>\r\n	<li><img alt=\"北京银行\" src=\"../../public/Home/img/20150602172947_28223.jpg\" style=\"height:69px; width:192px\" /></li>\r\n</ul>\r\n', '', '0', '2017-11-05 16:21:28', '2017-11-05 16:21:28', '0');
 INSERT INTO `yw_articles` VALUES ('23', '16', '底部信息', '<p style=\"text-align:center\">底部信息底部信息底部信息底部信息底部信息底部信息底部信息底部信息底部信息底部信息底部信息底部信息</p>\r\n\r\n<p style=\"text-align:center\">555底部信息底部信息底部信息底部信息555</p>\r\n', '', '0', '2017-11-05 16:03:08', '2017-11-05 16:03:08', '0');
+INSERT INTO `yw_articles` VALUES ('24', '9', '王先生购车贷款', '', '<p><span style=\"font-size:18px\">贷款金额：22万</span></p>\r\n\r\n<p>王先生贷款王先生贷款王先生贷款王先生贷款王先生贷款王先生贷款王先生贷款王先生贷款王先生贷款王先生贷款王先生贷款王先生贷款王先生贷款王先生贷款王先生贷款王先生贷款王先生贷款王先生贷款王先生贷款王先生贷款王先生贷款王先生贷款王先生贷款王先生贷款王先生贷款</p>\r\n\r\n<p>&nbsp;</p>\r\n', '0', '2017-11-06 14:44:55', '2017-11-06 14:44:55', '0');
+INSERT INTO `yw_articles` VALUES ('25', '9', '张小姐购房贷款', '', '<p><span style=\"font-size:18px\">贷款金额：25万</span></p>\r\n\r\n<p>反对撒法发送王先生贷款王先生贷款王先生贷款王先生贷款王先生贷款王先生</p>\r\n\r\n<p>防撒旦法撒范德萨地方撒大撒旦撒的saDSADSA倒萨 大撒旦撒</p>\r\n', '10', '2017-11-06 14:44:45', '2017-11-06 14:44:45', '0');
+INSERT INTO `yw_articles` VALUES ('26', '9', '蔡虎买地皮', '', '<p><span style=\"font-size:18px\">贷款金额：32万</span></p>\r\n\r\n<p>反对撒反对撒发生大幅撒的发撒旦对撒反对撒发生对撒反对撒发生对撒反对撒发生对撒反对撒发生对撒反对撒发生对撒反对撒发生对撒反对撒发生对撒反对撒发生对撒反对撒发生</p>\r\n\r\n<p>对撒反对撒发生对撒反对撒发生对撒反对撒发生对撒反对撒发生对撒反对撒发生对撒反对撒发生对撒反对撒发生对撒反对撒发生</p>\r\n', '0', '2017-11-06 14:06:41', '2017-11-06 14:06:41', '0');
 
 -- ----------------------------
 -- Table structure for `yw_articles_category`
@@ -109,7 +116,7 @@ CREATE TABLE `yw_articles_category` (
   `updatetime` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `status` int(10) NOT NULL DEFAULT '0' COMMENT '0未删，1已删除',
   PRIMARY KEY (`category_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8mb4 COMMENT='文章分类表';
+) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=utf8mb4 COMMENT='文章分类表';
 
 -- ----------------------------
 -- Records of yw_articles_category
@@ -130,6 +137,14 @@ INSERT INTO `yw_articles_category` VALUES ('13', '其他信息', '1', '1-13', '1
 INSERT INTO `yw_articles_category` VALUES ('14', '友情连接', '13', '1-13-14', '2', '0', '2017-11-05 15:56:02', '2017-11-05 15:56:02', '0');
 INSERT INTO `yw_articles_category` VALUES ('15', '资金支持', '13', '1-13-15', '2', '0', '2017-11-05 15:56:27', '2017-11-05 15:56:27', '0');
 INSERT INTO `yw_articles_category` VALUES ('16', '底部信息', '13', '1-13-16', '2', '0', '2017-11-05 16:02:25', '2017-11-05 16:02:25', '0');
+INSERT INTO `yw_articles_category` VALUES ('17', '公积金贷', '5', '1-5-17', '2', '0', '2017-11-06 15:07:19', '2017-11-06 15:07:19', '0');
+INSERT INTO `yw_articles_category` VALUES ('18', '车辆抵押', '3', '1-3-18', '2', '0', '2017-11-06 15:19:50', '2017-11-06 15:19:50', '0');
+INSERT INTO `yw_articles_category` VALUES ('19', '车辆信贷', '3', '1-3-19', '2', '0', '2017-11-06 15:20:04', '2017-11-06 15:20:04', '0');
+INSERT INTO `yw_articles_category` VALUES ('20', '房屋抵押', '4', '1-4-20', '2', '0', '2017-11-06 15:20:22', '2017-11-06 15:20:22', '0');
+INSERT INTO `yw_articles_category` VALUES ('21', '房屋信贷', '4', '1-4-21', '2', '0', '2017-11-06 15:20:33', '2017-11-06 15:20:33', '0');
+INSERT INTO `yw_articles_category` VALUES ('22', '社保贷', '5', '1-5-22', '2', '0', '2017-11-06 15:25:07', '2017-11-06 15:25:07', '0');
+INSERT INTO `yw_articles_category` VALUES ('23', '流水贷', '5', '1-5-23', '2', '0', '2017-11-06 15:21:19', '2017-11-06 15:21:19', '0');
+INSERT INTO `yw_articles_category` VALUES ('24', '保单贷', '6', '1-6-24', '2', '0', '2017-11-06 15:21:38', '2017-11-06 15:21:38', '0');
 
 -- ----------------------------
 -- Table structure for `yw_auth`
@@ -190,7 +205,7 @@ CREATE TABLE `yw_images` (
   `createtime` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `updatetime` timestamp NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4;
 
 -- ----------------------------
 -- Records of yw_images
@@ -202,6 +217,9 @@ INSERT INTO `yw_images` VALUES ('4', '6', 'public/upload/u=2027952311,3645396534
 INSERT INTO `yw_images` VALUES ('5', '14', 'public/upload/defauhead.png', '', '0', '0', '0', '2017-11-05 13:46:35', '2017-11-05 13:46:37');
 INSERT INTO `yw_images` VALUES ('6', '15', 'public/upload/defaulthead.png', '', '0', '0', '0', '2017-11-05 14:38:42', '2017-11-05 14:38:44');
 INSERT INTO `yw_images` VALUES ('7', '17', 'public/upload/defauhead.png', '', '0', '0', '0', '2017-11-05 15:01:58', '2017-11-05 15:02:02');
+INSERT INTO `yw_images` VALUES ('8', '24', 'public/upload/u=846598781,1700184812&fm=27&gp=0.jpg', '', '0', '0', '0', '2017-11-06 13:54:53', '2017-11-06 13:56:16');
+INSERT INTO `yw_images` VALUES ('9', '25', 'public/upload/u=1146158479,1811960157&fm=27&gp=0.jpg', '', '0', '0', '0', '2017-11-06 13:56:38', '2017-11-06 13:57:10');
+INSERT INTO `yw_images` VALUES ('10', '26', 'public/upload/user7-128x128.jpg', '', '0', '0', '0', '2017-11-06 14:04:37', '2017-11-06 14:04:39');
 
 -- ----------------------------
 -- Table structure for `yw_log`
