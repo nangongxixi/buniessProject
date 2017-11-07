@@ -16,6 +16,38 @@ class CategoryController extends AdminController
 
     function add()
     {
+        $images = D('images');
+        //图片上传
+        if ($_FILES['mg_img']['size'] != 0) {
+            $config = array(
+                'rootPath' => './public/',  //根目录
+                'savePath' => 'upload/', //保存路径
+            );
+            //附件被上传到路径：根目录/保存目录路径/创建日期目录
+            $upload = new \Think\Upload($config);
+            //uploadOne会返回已经上传的附件信息
+            $z = $upload->uploadOne($_FILES['mg_img']);
+            if (!$z) {
+                $this->ajaxReturn(array(
+                    'status' => false,
+                    'msg' => $upload->getError(),
+                ));
+            } else {
+                //拼装图片的路径名
+                $bigimg = $z['savepath'] . $z['savename'];
+                $_POST['mg_big_img'] = $bigimg;
+                //把已经上传好的图片制作缩略图Image.class.php
+                $image = new \Think\Image();
+                //open();打开图像资源，通过路径名找到图像
+                $srcimg = $upload->rootPath . $bigimg;
+                $image->open($srcimg);
+                $image->thumb(150, 150);  //按照比例缩小
+                $smallimg = $z['savepath'] . "small_" . $z['savename'];
+                $image->save($upload->rootPath . $smallimg);
+                $_POST['mg_small_img'] = $smallimg;
+            }
+        }
+
         if (!empty($_POST)) {
             //在AuthModel里边通过一个指定方法实现权限添加
             $auth = new \Model\CategoryModel();
@@ -41,7 +73,17 @@ class CategoryController extends AdminController
             foreach ($info as $v) {
                 $categoryinfo[$v['category_id']] = $v['category_name'];
             }
-
+            if ($_GET['id']) {
+                //图片列表
+                $imgInfo = D('images')->where('status=0 and article_id='.$_GET['id'])->select();
+                $imgArr = [];
+                foreach ($imgInfo as $k=>$v){
+                    array_push($imgArr,$v['img_url']);
+                }
+               // show_bug($imgArr);
+                $categoryinfo[imgArr]=$imgArr;
+            }
+           // show_bug($categoryinfo);
             $this->assign('categoryinfo', $categoryinfo);
             $this->display();
         }

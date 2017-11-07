@@ -19,10 +19,20 @@ class CategoryModel extends Model{
 
         if($auth['id']){
             $category_id = $auth['id'];
+            $data['article_id'] = $auth['id'];
         }else{
             $category_id = $this -> add($auth);  //返回新记录的主键id值
+            $data['article_id'] = $category_id;//新增过程中添加图片
         }
-        
+
+        //获取新增的id回填到图片数据表
+        $imgArr = array_values($_SESSION['imgArr']);
+        if (!empty($imgArr)) {
+            $inertID = D('Admin/images')->where('id in (' . implode(",", $imgArr) . ')')->save($data);
+           // echo D('Admin/images')->_sql();
+            unset($_SESSION['imgArr']);//干掉上次添加多图的session
+        }
+
         //path的值分为两种情况
         //全路径：父级全路径与本身id的连接信息
         //① 当前权限是顶级权限，path=$new_id

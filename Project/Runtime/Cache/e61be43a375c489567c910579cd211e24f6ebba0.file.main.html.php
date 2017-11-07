@@ -1,22 +1,22 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2017-11-07 14:39:49
-         compiled from "D:/phpStudy/WWW/buniessProject/Project/Home/View\index\index.html" */ ?>
-<?php /*%%SmartyHeaderCode:3141259ffbe1801fa39-26674452%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /* Smarty version Smarty-3.1.6, created on 2017-11-07 13:34:34
+         compiled from "D:/phpStudy/WWW/buniessProject/Project/Home/View\index\main.html" */ ?>
+<?php /*%%SmartyHeaderCode:123995a0142755eb3a2-95025325%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
-    '8bc475075212bbe5ea173c2c78a66967c591789b' => 
+    'e61be43a375c489567c910579cd211e24f6ebba0' => 
     array (
-      0 => 'D:/phpStudy/WWW/buniessProject/Project/Home/View\\index\\index.html',
-      1 => 1510036732,
+      0 => 'D:/phpStudy/WWW/buniessProject/Project/Home/View\\index\\main.html',
+      1 => 1510032869,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '3141259ffbe1801fa39-26674452',
+  'nocache_hash' => '123995a0142755eb3a2-95025325',
   'function' => 
   array (
   ),
   'version' => 'Smarty-3.1.6',
-  'unifunc' => 'content_59ffbe1815058',
+  'unifunc' => 'content_5a0142756e53e',
   'variables' => 
   array (
     'articleList' => 0,
@@ -28,98 +28,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'zxzxList' => 0,
     'askList' => 0,
     'links' => 0,
-    'footNav' => 0,
-    'k' => 0,
-    'vv' => 0,
-    'footInfo' => 0,
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_59ffbe1815058')) {function content_59ffbe1815058($_smarty_tpl) {?><!DOCTYPE html>
-<!-- saved from url=(0050)http://cd.moerlong.com/?urlCode=wxoct4&fromSite=bd -->
-<html>
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <script>window.BasicDomain = ".moerlong.com";</script>
-
-    <title>四川米袋金融服务外包有限公司</title>
-    <meta content="四川米袋金融服务外包有限公司" name="keywords">
-    <meta content="四川米袋金融服务外包有限公司" name="description">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-
-    <meta HTTP-EQUIV="Page-Enter" CONTENT="revealtrans(duration=6.0, transition=23)">
-
-    <meta HTTP-EQUIV="Page-Exit" CONTENT="revealtrans(duration=6.0, transition=23)">
-
-    <link rel="icon" href="<?php echo @IMG_URL;?>
-bitbug_favicon.ico" type="image/x-icon"/>
-
-    <link rel="stylesheet" href="<?php echo @CSS_URL;?>
-edai-global.css">
-    <link rel="stylesheet" href="<?php echo @CSS_URL;?>
-edai-index.css">
-    <link rel="stylesheet" href="<?php echo @CSS_URL;?>
-alifont/iconfont.css">
-
-    <link rel="stylesheet" href="<?php echo @CSS_URL;?>
-yd-index.css">
-    <link rel="stylesheet" href="<?php echo @CSS_URL;?>
-yd-Common.css">
-    <link rel="stylesheet" href="<?php echo @CSS_URL;?>
-yd-reset.css">
-
-    <!-- ./wrapper -->
-    <script src="<?php echo @ADMIN_JS_URL;?>
-jquery-2.2.3.min.js"></script>
-    <!--banner-->
-    <script src="<?php echo @JS_URL;?>
-unslider.min.js"></script>
-    <!--客服-->
-    <script src="<?php echo @JS_URL;?>
-yd-ScrollPic.js" type="text/javascript"></script>
-    <!-- 问答 -->
-    <script src="<?php echo @JS_URL;?>
-yd-MSClass.js" type="text/javascript"></script>
-    <!-- layer -->
-    <script src="<?php echo @STATIC_URL;?>
-layer/layer.js"></script>
-
-
-</head>
-<body>
-
-<div class="top">
-    <div class="wrap">
-        <ul>
-            <li class="fl" style="display: inline-block;padding-top: 5px; position: relative;top:5px">您好！欢迎来到米袋金融!</li>
-            <li class="fr">
-                <span style=" display: inline-block; padding-top: 2px">
-                    <span class="iconfont icon-dianhua" style="font-size: 22px;position: relative;top:3px"></span>欢迎拨打咨询热线：
-                </span>
-                <span style="font-size: 22px; color:#fe6c00; display: inline-block;position: relative;top:3px">18080889915</span>
-            </li>
-        </ul>
-    </div>
-</div>
-<!-- 头部 -->
-<div class="header">
-    <div class="wrap">
-        <h1 class="logo fl">
-            <img src="<?php echo @IMG_URL;?>
-log.png" style="margin-top:-3px; width: 350px"><i class="logo-border"></i>
-        </h1>
-        <div class="nav fr">
-            <a href="javascript:;" class="nav-on">首页</a>
-            <a href="javascript:;">车贷</a>
-            <a href="javascript:;">房贷</a>
-            <a href="javascript:;">信用贷</a>
-            <a href="javascript:;">保单贷</a>
-            <a href="javascript:;">成功案例</a>
-            <a href="javascript:;" class="mr0">关于我们</a>
-        </div>
-    </div>
-</div>
-<span id="index" style="min-height: 500px">
+<?php if ($_valid && !is_callable('content_5a0142756e53e')) {function content_5a0142756e53e($_smarty_tpl) {?><span id="index">
 <!-- 切换 -->
 <div class="banner" id="b03">
     <ul>
@@ -522,109 +434,119 @@ $_smarty_tpl->tpl_vars['v']->_loop = true;
 </div>
 </span>
 
-<div class="footer">
-    <div class="ft">
-        <div class="container footer-bg">
-            <?php  $_smarty_tpl->tpl_vars['v'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['v']->_loop = false;
- $_smarty_tpl->tpl_vars['k'] = new Smarty_Variable;
- $_from = $_smarty_tpl->tpl_vars['footNav']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
-foreach ($_from as $_smarty_tpl->tpl_vars['v']->key => $_smarty_tpl->tpl_vars['v']->value){
-$_smarty_tpl->tpl_vars['v']->_loop = true;
- $_smarty_tpl->tpl_vars['k']->value = $_smarty_tpl->tpl_vars['v']->key;
-?>
-            <ul class="footer-nav1">
-                <li class="footer-navtit"><?php echo $_smarty_tpl->tpl_vars['k']->value;?>
-</li>
-                <?php  $_smarty_tpl->tpl_vars['vv'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['vv']->_loop = false;
- $_smarty_tpl->tpl_vars['kk'] = new Smarty_Variable;
- $_from = $_smarty_tpl->tpl_vars['v']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
-foreach ($_from as $_smarty_tpl->tpl_vars['vv']->key => $_smarty_tpl->tpl_vars['vv']->value){
-$_smarty_tpl->tpl_vars['vv']->_loop = true;
- $_smarty_tpl->tpl_vars['kk']->value = $_smarty_tpl->tpl_vars['vv']->key;
-?>
-                <li><?php echo $_smarty_tpl->tpl_vars['vv']->value['category_name'];?>
-</li>
-                <?php } ?>
-            </ul>
-            <?php } ?>
-            <ul class="footer-nav">
-                <li class="footer-navtit">扫码关注</li>
-                <li><img src="<?php echo @IMG_URL;?>
-ewm.jpg"></li>
-            </ul>
-            <ul class="footer-nav">
-                <li class="footer-navtit">客服电话</li>
-                <li><img src="<?php echo @IMG_URL;?>
-tel.jpg"></li>
-            </ul>
-        </div>
-
-    </div>
-    <div class="fb">
-        <div class="container" style="text-align: center; line-height: 160%"><?php echo $_smarty_tpl->tpl_vars['footInfo']->value[0]['content'];?>
-</div>
-    </div>
-</div>
-
-<div class="freecall" style="display: block;">
-    <div class="wrap">
-        <div class="fl">
-            <i class="tel24"></i>贷款热线：<b>180-8088-9915</b>
-        </div>
-        <form method="" action="" class="fr">
-            <input class="tel24-num" type="text" placeholder="请输入电话号码" maxlength="11"
-                   onkeyup="callback.replaceNoNum(this);"
-                   onfocus="callback.focusMsg(this); $(this).blur(function(){callback.blurMsg(this)})">
-            <input class="btn-freecall" id="huibo_tonglan" type="button" value="免费通话"
-                   onclick="callback.call(this, '18080889915');">
-        </form>
-    </div>
-</div>
-
 
 <script>
+
     $(function () {
+        //贷款项目 默认显示
+        $('.lo_ul li:first-child').addClass('cur');
+        $('.alConts').eq(0).show();
 
-        var homeSite = sessionStorage.getItem('homeSite');
-        var homeIndex = sessionStorage.getItem('homeIndex');
+        //贷款攻略第一条
+        var dkglOne = $('.ntot').eq(0);
+        firstInfo(dkglOne);
+        //资讯中心第一条
+        var zxzxOne = $('.ntot').eq(1);
+        firstInfo(zxzxOne);
 
-        if (homeSite) {
-            $('#index').load(homeSite);//默认加载首页
-        } else {
-            $('#index').load('/index.php/Home/index/main');//默认加载首页
-        }
-        $('.nav a').eq(homeIndex).addClass('nav-on').siblings().removeClass();//加载保存的样式
+        //数据提交
+        $('#submit').unbind('click').click(function () {
+            var index = layer.load(1, {
+                shade: [0.1, '#fff'] //0.1透明度的白色背景
+            });
 
-        $('.nav a').click(function () {
-            $('#index').html("");
-            $(this).addClass('nav-on').siblings().removeClass();
-            var index = $(this).index();
-
-            if (index == 1) {
-                $url = '/index.php/Home/Car/index/catid/3';
-            } else if (index == 2) {
-                $url = '/index.php/Home/Car/index/catid/3';
-            } else if (index == 3) {
-                $url = '/index.php/Home/Car/index/catid/3';
-            } else if (index == 4) {
-                $url = '/index.php/Home/Car/index/catid/3';
-            } else if (index == 5) {
-                $url = '/index.php/Home/Car/index/catid/3';
-            } else if (index == 6) {
-                $url = '/index.php/Home/Car/index/catid/3';
-            } else {
-                $url = '/index.php/Home/index/main';
+            //数据验证
+            if (!validata(index)) {
+                return false;
             }
 
-            $('#index').load($url);
-            sessionStorage.setItem('homeSite', $url);
-            sessionStorage.setItem('homeIndex', index);
+            var formData = new FormData($("#formData")[0]);
+            $.ajax({
+                url: 'wap/add',
+                type: 'POST',
+                data: formData,
+                async: false,
+                cache: false,
+                dataType: 'json',
+                contentType: false,
+                processData: false,
+                success: function (returnJSON) {
+                    if (returnJSON.status) {
+                        layer.msg(returnJSON.msg, {
+                            icon: 1,
+                            time: 2000
+                        }, function () {
+                            sessionStorage.clear();
+                            location.reload();
+                            parent.layer.close(index);
+                            // localStorage.setItem('address', '../article/showlist');//保存当前地址,避免刷新跳转
+                            // $('#content').load('../article/showlist');
+                        });
+                    } else {
+                        layer.msg(returnJSON.msg, {
+                            icon: 2,
+                            time: 2000
+                        });
+                    }
+                }
+            });
+        });
 
-        })
+        //数据验证
+        function validata(index) {
+            var formVal = $('form input,textarea');
+            //金额
+            if ($(formVal[0]).val() == '' || !$(formVal[0]).val().match(/^\d+.?\d{0,2}$/g)) {
+                layer.msg($(formVal[0]).attr("errorMsg"), {
+                    icon: 2,
+                    time: 2000
+                },function(){
+                    //alert(dd);
+                    parent.layer.close(index);
+                });
+                return false;
+            }
+
+            //姓名
+            if ($(formVal[1]).val() == '') {
+                layer.msg($(formVal[1]).attr("errorMsg"), {
+                    icon: 2,
+                    time: 2000
+                },function(){
+                    //alert(dd);
+                    parent.layer.close(index);
+                });
+                return false;
+            }
+
+            //电话
+            if ($(formVal[2]).val() == '' || !$(formVal[2]).val().match(/^1\d{10}$/g)) {
+                layer.msg($(formVal[2]).attr("errorMsg"), {
+                    icon: 2,
+                    time: 2000
+                },function(){
+                    //alert(dd);
+                    parent.layer.close(index);
+                });
+                return false;
+            }
+            return true;
+        }
 
 
+        //第一条信息
+        function firstInfo(Obj) {
+            var coverImg = Obj.find('li:first-child a').attr('imgurl');
+            var title = Obj.find('li:first-child a').html();
+            var discript = Obj.find('li:first-child a').attr('discript');
+
+            Obj.find('.one img').attr('src', '../../' + coverImg);
+            Obj.find('.one h5 a').html(title);
+            Obj.find('.one p').html(discript);
+            Obj.find('li:first-child').remove();
+        }
     });
-</script>
 
-</body>
-</html><?php }} ?>
+
+</script>
+<?php }} ?>

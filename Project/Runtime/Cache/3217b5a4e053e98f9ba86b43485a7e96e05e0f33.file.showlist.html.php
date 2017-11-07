@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2017-11-06 13:13:34
+<?php /* Smarty version Smarty-3.1.6, created on 2017-11-07 09:24:17
          compiled from "D:/phpStudy/WWW/buniessProject/Project/Admin/View\Apply\showlist.html" */ ?>
 <?php /*%%SmartyHeaderCode:194059ffef7e4d9694-89308107%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '3217b5a4e053e98f9ba86b43485a7e96e05e0f33' => 
     array (
       0 => 'D:/phpStudy/WWW/buniessProject/Project/Admin/View\\Apply\\showlist.html',
-      1 => 1509613677,
+      1 => 1510017854,
       2 => 'file',
     ),
   ),
@@ -15,6 +15,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.6',
+  'unifunc' => 'content_59ffef7e5b814',
   'variables' => 
   array (
     'info' => 0,
@@ -22,8 +24,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'pagelist' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.6',
-  'unifunc' => 'content_59ffef7e5b814',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_59ffef7e5b814')) {function content_59ffef7e5b814($_smarty_tpl) {?><div class="col-xs-12">
     <div class="box">
@@ -79,7 +79,7 @@ $_smarty_tpl->tpl_vars['v']->_loop = true;
 </td>
                     <td><?php echo $_smarty_tpl->tpl_vars['v']->value['name'];?>
 </td>
-                    <td><span class="badge bg-green" style="font-size: 16px"><?php echo $_smarty_tpl->tpl_vars['v']->value['amount'];?>
+                    <td><span class="badge bg-green" style="font-size: 14px"><?php echo $_smarty_tpl->tpl_vars['v']->value['amount'];?>
 </span></td>
                     <td><?php echo $_smarty_tpl->tpl_vars['v']->value['phone'];?>
 </td>

@@ -280,7 +280,7 @@
             var index = layer.load(1, {
                 shade: [0.1,'#fff'] //0.1透明度的白色背景
             });
-            //  _taq.push({convert_id: "74381099680", event_type: "form"});
+
             $('#submit').removeAttr('id');
 
             //数据验证
@@ -305,6 +305,7 @@
                             icon: 1,
                             time: 2000
                         }, function () {
+                            _taq.push({convert_id: "74381099680", event_type: "form"});
                             sessionStorage.clear();
                             location.reload();
                             parent.layer.close(index);

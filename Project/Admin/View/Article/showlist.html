@@ -33,7 +33,7 @@
                     <td>{$v.id}</td>
                     <td title="{$v.title}">{if (mb_strlen($v.title,'utf-8'))>20}{mb_substr($v.title,0,20,'utf-8')}…{else}{$v.title}{/if}</td>
                     <td>
-                        <span class="badge bg-green" style="font-size: 16px">
+                        <span class="badge bg-green" style="font-size: 14px">
                         {foreach $selectList as $kk=>$vv}
                             {if $vv.category_id == $v.category_id}{ltrim($vv.category_name,"&nbsp;")  } {/if}
                         {/foreach}

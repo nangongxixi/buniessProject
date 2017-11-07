@@ -57,11 +57,13 @@ class ApplyController extends AdminController
             $data["status"] = 1;
             $inertID = $manager->where('apply_id=' . $id)->save($data);
             if ($inertID) {
+                ob_clean();//不加这个，前端收不到json数据
                 $this->ajaxReturn(array(
                     'status' => true,
                     'msg' => '操作成功',
                 ));
             } else {
+                ob_clean();//不加这个，前端收不到json数据
                 $this->ajaxReturn(array(
                     'status' => false,
                     'msg' => '操作失败',

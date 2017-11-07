@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2017-11-06 15:40:04
+<?php /* Smarty version Smarty-3.1.6, created on 2017-11-07 13:11:18
          compiled from "D:/phpStudy/WWW/buniessProject/Project/Home/View\Index\index.html" */ ?>
 <?php /*%%SmartyHeaderCode:2600759ffb6fa22e621-91345867%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'f0dad774b95543d6d7c41475878874b3c87f1694' => 
     array (
       0 => 'D:/phpStudy/WWW/buniessProject/Project/Home/View\\Index\\index.html',
-      1 => 1509954000,
+      1 => 1510031470,
       2 => 'file',
     ),
   ),
@@ -106,8 +106,8 @@ layer/layer.js"></script>
 log.png" style="margin-top:-3px; width: 350px"><i class="logo-border"></i>
         </h1>
         <div class="nav fr">
-            <a href="/index.php/Home/index" class="nav-on">首页</a>
-            <a href="#">车贷</a>
+            <a href="javascript:;" class="nav-on">首页</a>
+            <a href="javascript:;">车贷</a>
             <a href="#">房贷</a>
             <a href="#">信用贷</a>
             <a href="#">保单贷</a>
@@ -116,6 +116,7 @@ log.png" style="margin-top:-3px; width: 350px"><i class="logo-border"></i>
         </div>
     </div>
 </div>
+<span id="index">
 <!-- 切换 -->
 <div class="banner" id="b03">
     <ul>
@@ -175,7 +176,7 @@ applybg.png); width: 330px; height: 290px;top:-360px; right:0"
     });
 </script>
 
-<!-- 主体 -->
+    <!-- 主体 -->
 <div class="main">
     <div class="container">
 
@@ -510,15 +511,13 @@ $_smarty_tpl->tpl_vars['v']->_loop = true;
 
                 new Marquee("dingdan", 0, 1, 349, 308, 40, 0, 1000, 22);
             </script>
-
         </div>
-
-
         <div class="link container"><?php echo $_smarty_tpl->tpl_vars['links']->value[0]['content'];?>
 </div>
 
     </div>
 </div>
+</span>
 
 <div class="footer">
     <div class="ft">
@@ -540,11 +539,11 @@ foreach ($_from as $_smarty_tpl->tpl_vars['vv']->key => $_smarty_tpl->tpl_vars['
 $_smarty_tpl->tpl_vars['vv']->_loop = true;
  $_smarty_tpl->tpl_vars['kk']->value = $_smarty_tpl->tpl_vars['vv']->key;
 ?>
-                    <li><?php echo $_smarty_tpl->tpl_vars['vv']->value['category_name'];?>
+                <li><?php echo $_smarty_tpl->tpl_vars['vv']->value['category_name'];?>
 </li>
                 <?php } ?>
             </ul>
-           <?php } ?>
+            <?php } ?>
             <ul class="footer-nav">
                 <li class="footer-navtit">扫码关注</li>
                 <li><img src="<?php echo @IMG_URL;?>
@@ -579,7 +578,6 @@ tel.jpg"></li>
     </div>
 </div>
 
-
 <script>
     $(function () {
 
@@ -587,6 +585,10 @@ tel.jpg"></li>
 
         //数据提交
         $('#submit').unbind('click').click(function () {
+            var index = layer.load(1, {
+                shade: [0.1, '#fff'] //0.1透明度的白色背景
+            });
+
             //数据验证
             if (!validata()) {
                 return false;
@@ -599,6 +601,7 @@ tel.jpg"></li>
                 data: formData,
                 async: false,
                 cache: false,
+                dataType: 'json',
                 contentType: false,
                 processData: false,
                 success: function (returnJSON) {
@@ -609,6 +612,7 @@ tel.jpg"></li>
                         }, function () {
                             sessionStorage.clear();
                             location.reload();
+                            parent.layer.close(index);
                             // localStorage.setItem('address', '../article/showlist');//保存当前地址,避免刷新跳转
                             // $('#content').load('../article/showlist');
                         });
@@ -621,6 +625,38 @@ tel.jpg"></li>
                 }
             });
         });
+
+        //初始化
+        function init() {
+
+            //贷款项目 默认显示
+            $('.lo_ul li:first-child').addClass('cur');
+            $('.alConts').eq(0).show();
+
+            //贷款攻略第一条
+            var dkglOne = $('.ntot').eq(0);
+            firstInfo(dkglOne);
+            //资讯中心第一条
+            var zxzxOne = $('.ntot').eq(1);
+            firstInfo(zxzxOne);
+
+            /*
+            *  点击交互
+            * */
+            $('.nav a').click(function () {
+
+                $('#index').hide();
+                var index = $(this).index();
+
+                if (index == 0) {
+                    $('#index').load('/index.php/Home/index');
+                }else if(index==1){
+                    $('#index').load('/index.php/Home/Car/index/catid/3');
+                }
+
+            });
+
+        }
 
         //数据验证
         function validata() {
@@ -654,21 +690,6 @@ tel.jpg"></li>
             return true;
         }
 
-        //初始化
-        function init() {
-
-            //贷款项目 默认显示
-            $('.lo_ul li:first-child').addClass('cur');
-            $('.alConts').eq(0).show();
-
-            //贷款攻略第一条
-            var dkglOne = $('.ntot').eq(0);
-            firstInfo(dkglOne);
-            //资讯中心第一条
-            var zxzxOne = $('.ntot').eq(1);
-            firstInfo(zxzxOne);
-
-        }
 
         //第一条信息
         function firstInfo(Obj) {

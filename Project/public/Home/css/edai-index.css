@@ -25,7 +25,7 @@
 .header .area img{position: relative;top: 4px;}
 .header .nav{height: 95px;/*margin-right: 125px;*/line-height:95px;}
 .header .nav a{font-size: 18px; color: #333;margin-right: 30px;}
-.header .nav .nav-on{font-weight: 800;color: #ff8d09}
+.header .nav .nav-on{color: #ff8d09}
 /*城市弹出层*/
 .main-city { width: 525px; border: solid 1px #ccc; position: absolute; left: 0; top: 65px; z-index: 15; background: #fff; color: #555;   display: none; }
 .main-city a { color: #666; }

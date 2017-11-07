@@ -1,33 +1,34 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2017-11-07 11:31:22
+<?php /* Smarty version Smarty-3.1.6, created on 2017-11-07 10:40:04
          compiled from "D:/phpStudy/WWW/buniessProject/Project/Admin/View\category\add.html" */ ?>
-<?php /*%%SmartyHeaderCode:98125a011d064fbaa8-75455190%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:23645a000a14e85ca4-90955550%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '15dd393c66ff39650bd278f66ae121dd9a1357e8' => 
     array (
       0 => 'D:/phpStudy/WWW/buniessProject/Project/Admin/View\\category\\add.html',
-      1 => 1510025480,
+      1 => 1510022339,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '98125a011d064fbaa8-75455190',
+  'nocache_hash' => '23645a000a14e85ca4-90955550',
   'function' => 
   array (
   ),
   'version' => 'Smarty-3.1.6',
-  'unifunc' => 'content_5a011d065758a',
+  'unifunc' => 'content_5a000a150743a',
   'variables' => 
   array (
-    'categoryinfo' => 0,
+    'info' => 0,
     'v' => 0,
     'categoryDetail' => 0,
+    'categoryinfo' => 0,
     'k' => 0,
     'parentDetail' => 0,
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5a011d065758a')) {function content_5a011d065758a($_smarty_tpl) {?><?php if (!is_callable('smarty_function_html_options')) include 'D:\\phpStudy\\WWW\\buniessProject\\Firame\\Library\\Vendor\\Smarty\\plugins\\function.html_options.php';
+<?php if ($_valid && !is_callable('content_5a000a150743a')) {function content_5a000a150743a($_smarty_tpl) {?><?php if (!is_callable('smarty_function_html_options')) include 'D:\\phpStudy\\WWW\\buniessProject\\Firame\\Library\\Vendor\\Smarty\\plugins\\function.html_options.php';
 ?><!--图片上传-->
 <link rel="stylesheet" href="<?php echo @STATIC_URL;?>
 upImage/zyupload/skins/zyupload-1.0.0.min.css " type="text/css">
@@ -41,12 +42,12 @@ upImage/zyupload/zyupload.basic-1.0.0.min.js"></script>
                 <table class="table table-bordered">
                     <tbody>
                     <tr>
-                        <th class="detail-title">封面图</th>
+                        <th class="detail-title">banner图</th>
                         <td>
                             <span id="imgArr" style="display: none; ">
                             <?php  $_smarty_tpl->tpl_vars['v'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['v']->_loop = false;
  $_smarty_tpl->tpl_vars['k'] = new Smarty_Variable;
- $_from = $_smarty_tpl->tpl_vars['categoryinfo']->value['imgArr']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+ $_from = $_smarty_tpl->tpl_vars['info']->value['imgArr']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
 foreach ($_from as $_smarty_tpl->tpl_vars['v']->key => $_smarty_tpl->tpl_vars['v']->value){
 $_smarty_tpl->tpl_vars['v']->_loop = true;
  $_smarty_tpl->tpl_vars['k']->value = $_smarty_tpl->tpl_vars['v']->key;
@@ -146,7 +147,6 @@ $_smarty_tpl->tpl_vars['v']->_loop = true;
                 return false;
             }
 
-
             //判断是否有选择上传文件
             var formData = new FormData($("#formData")[0]);
             $.ajax({
@@ -242,8 +242,8 @@ $_smarty_tpl->tpl_vars['v']->_loop = true;
             var formVal = $('form input,textarea');
 
             //标题
-            if ($(formVal[2]).val() == '') {
-                layer.msg($(formVal[2]).attr("errorMsg"), {
+            if ($(formVal[1]).val() == '') {
+                layer.msg($(formVal[1]).attr("errorMsg"), {
                     icon: 2,
                     time: 2000
                 });
@@ -271,16 +271,6 @@ $_smarty_tpl->tpl_vars['v']->_loop = true;
                 inputVal[name] = val;
                 sessionStorage.setItem('inputVal', JSON.stringify(inputVal));
             });
-        }
-
-        //相册图片张数限制
-        $(document).on('click','.upload_image',function(){
-            if ($('#preview img').length >= 3) {
-                $(this).parent().parent().hide();
-            }
-        });
-        if ($('#preview img').length >= 3) {
-            $("#rapidAddImg").hide();
         }
 
     });

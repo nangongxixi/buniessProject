@@ -12,7 +12,7 @@ q:before , q:after{content:'';}
 abbr , acronym{border:0;}
 a {color:#666; text-decoration:none;}  /*for ie f6n.net*/
 a:focus{outline:none;} /*for ff f6n.net*/
-a:hover {text-decoration:underline;}
+a:hover {text-decoration:none;}
 
 /*定位*/
 .tl {text-align:left;}

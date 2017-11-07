@@ -9,6 +9,29 @@ class IndexController extends Controller
     public function index()
     {
         $articles = D('Articles');
+        //底部信息
+        $footInfo =  $articles->where('category_id=16')->select();
+
+        //底部菜单
+        $cart = D('articles_category')->where('category_pid=3')->select();//车贷
+        $house = D('articles_category')->where('category_pid=4')->select();//房贷
+        $car = D('articles_category')->where('category_pid=5')->select();//信用贷
+        $baod = D('articles_category')->where('category_pid=6')->select();//保单贷
+        $footNav = [
+            '车贷'=>$cart,
+            '房贷'=>$house,
+            '信用贷'=>$car,
+            '保单贷'=>$baod,
+        ];
+        $this->assign('footInfo', $footInfo);
+        $this->assign('footNav', $footNav);
+        $this->display();
+    }
+
+
+    public function main()
+    {
+        $articles = D('Articles');
         //贷款项目
         $articleList = $articles->where('category_id in (3,4,5,6)')->select();
         //客服列表
@@ -28,21 +51,7 @@ class IndexController extends Controller
         $askList =  $articles->where('category_id=10')->select();
         //友情连接
         $links =  $articles->where('category_id=14')->select();
-        //底部信息
-        $footInfo =  $articles->where('category_id=16')->select();
 
-        //底部菜单
-        $cart = D('articles_category')->where('category_pid=3')->select();//车贷
-        $house = D('articles_category')->where('category_pid=4')->select();//房贷
-        $car = D('articles_category')->where('category_pid=5')->select();//信用贷
-        $baod = D('articles_category')->where('category_pid=6')->select();//保单贷
-        $footNav = [
-            '车贷'=>$cart,
-            '房贷'=>$house,
-            '信用贷'=>$car,
-            '保单贷'=>$baod,
-        ];
-        $this->assign('footNav', $footNav);
         //show_bug($footNav);
 
         //echo $articles->_sql();
@@ -55,13 +64,9 @@ class IndexController extends Controller
         $this->assign('zxzxList', $zxzxList);
         $this->assign('askList', $askList);
         $this->assign('links', $links);
-        $this->assign('footInfo', $footInfo);
+
 
         $this->display();
     }
 
-    public function hello()
-    {
-        echo "nihao";
-    }
 }
