@@ -70,7 +70,7 @@ body {
 	font-weight:100;
 	color:#000
 }
-#myscroll a .intro p {
+#myscroll a .intro .youshi {
 	font-size: 13px;
 	line-height: 20px;
 	margin: 5px 20px;
@@ -105,7 +105,7 @@ body {
 }
 
 .pro-intro{
-	float: left; width: 340px; overflow: hidden;text-align: center; padding: 30px;font-size: 14px; line-height: 25px;
+	float: left; width: 340px; overflow: hidden;text-align: center; padding: 0 30px 15px;font-size: 14px; line-height: 25px;
 }
 
 

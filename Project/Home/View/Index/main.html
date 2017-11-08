@@ -185,7 +185,7 @@
                 {foreach $caseList as $k => $v}
                 <li>
                     <a href="#">
-                    <span> <img src="{$v.img_url}" width="60" height="60"></span>
+                    <span> <img src="../../{$v.img_url}" width="60" height="60"></span>
                     <h5 style="border-bottom:1px dotted #d2d2d2;">{$v.title}</h5>
                     <p>{if (mb_strlen($v.discript,'utf-8'))>320}{mb_substr($v.discript,0,320,'utf-8')}…{else}{$v.discript}{/if}</p>
                     </a>

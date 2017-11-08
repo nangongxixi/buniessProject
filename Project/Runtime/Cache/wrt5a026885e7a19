@@ -1,4 +1,41 @@
-<!DOCTYPE html>
+<?php /* Smarty version Smarty-3.1.6, created on 2017-11-08 10:14:29
+         compiled from "D:/phpStudy/WWW/buniessProject/Project/Home/View\Index\index.html" */ ?>
+<?php /*%%SmartyHeaderCode:2600759ffb6fa22e621-91345867%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_valid = $_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    'f0dad774b95543d6d7c41475878874b3c87f1694' => 
+    array (
+      0 => 'D:/phpStudy/WWW/buniessProject/Project/Home/View\\Index\\index.html',
+      1 => 1510036732,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '2600759ffb6fa22e621-91345867',
+  'function' => 
+  array (
+  ),
+  'version' => 'Smarty-3.1.6',
+  'unifunc' => 'content_59ffb6fa34f76',
+  'variables' => 
+  array (
+    'articleList' => 0,
+    'v' => 0,
+    'customer' => 0,
+    'caseList' => 0,
+    'amount' => 0,
+    'dkglList' => 0,
+    'zxzxList' => 0,
+    'askList' => 0,
+    'links' => 0,
+    'footNav' => 0,
+    'k' => 0,
+    'vv' => 0,
+    'footInfo' => 0,
+  ),
+  'has_nocache_code' => false,
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_59ffb6fa34f76')) {function content_59ffb6fa34f76($_smarty_tpl) {?><!DOCTYPE html>
 <!-- saved from url=(0050)http://cd.moerlong.com/?urlCode=wxoct4&fromSite=bd -->
 <html>
 <head>
@@ -14,26 +51,38 @@
 
     <meta HTTP-EQUIV="Page-Exit" CONTENT="revealtrans(duration=6.0, transition=23)">
 
-    <link rel="icon" href="{$smarty.const.IMG_URL}bitbug_favicon.ico" type="image/x-icon"/>
+    <link rel="icon" href="<?php echo @IMG_URL;?>
+bitbug_favicon.ico" type="image/x-icon"/>
 
-    <link rel="stylesheet" href="{$smarty.const.CSS_URL}edai-global.css">
-    <link rel="stylesheet" href="{$smarty.const.CSS_URL}edai-index.css">
-    <link rel="stylesheet" href="{$smarty.const.CSS_URL}alifont/iconfont.css">
+    <link rel="stylesheet" href="<?php echo @CSS_URL;?>
+edai-global.css">
+    <link rel="stylesheet" href="<?php echo @CSS_URL;?>
+edai-index.css">
+    <link rel="stylesheet" href="<?php echo @CSS_URL;?>
+alifont/iconfont.css">
 
-    <link rel="stylesheet" href="{$smarty.const.CSS_URL}yd-index.css">
-    <link rel="stylesheet" href="{$smarty.const.CSS_URL}yd-Common.css">
-    <link rel="stylesheet" href="{$smarty.const.CSS_URL}yd-reset.css">
+    <link rel="stylesheet" href="<?php echo @CSS_URL;?>
+yd-index.css">
+    <link rel="stylesheet" href="<?php echo @CSS_URL;?>
+yd-Common.css">
+    <link rel="stylesheet" href="<?php echo @CSS_URL;?>
+yd-reset.css">
 
     <!-- ./wrapper -->
-    <script src="{$smarty.const.ADMIN_JS_URL}jquery-2.2.3.min.js"></script>
+    <script src="<?php echo @ADMIN_JS_URL;?>
+jquery-2.2.3.min.js"></script>
     <!--banner-->
-    <script src="{$smarty.const.JS_URL}unslider.min.js"></script>
+    <script src="<?php echo @JS_URL;?>
+unslider.min.js"></script>
     <!--客服-->
-    <script src="{$smarty.const.JS_URL}yd-ScrollPic.js" type="text/javascript"></script>
+    <script src="<?php echo @JS_URL;?>
+yd-ScrollPic.js" type="text/javascript"></script>
     <!-- 问答 -->
-    <script src="{$smarty.const.JS_URL}yd-MSClass.js" type="text/javascript"></script>
+    <script src="<?php echo @JS_URL;?>
+yd-MSClass.js" type="text/javascript"></script>
     <!-- layer -->
-    <script src="{$smarty.const.STATIC_URL}layer/layer.js"></script>
+    <script src="<?php echo @STATIC_URL;?>
+layer/layer.js"></script>
 
 
 </head>
@@ -56,7 +105,8 @@
 <div class="header">
     <div class="wrap">
         <h1 class="logo fl">
-            <img src="{$smarty.const.IMG_URL}log.png" style="margin-top:-3px; width: 350px"><i class="logo-border"></i>
+            <img src="<?php echo @IMG_URL;?>
+log.png" style="margin-top:-3px; width: 350px"><i class="logo-border"></i>
         </h1>
         <div class="nav fr">
             <a href="javascript:;" class="nav-on">首页</a>
@@ -73,17 +123,21 @@
 <!-- 切换 -->
 <div class="banner" id="b03">
     <ul>
-        <li><img src="{$smarty.const.IMG_URL}01.jpg" style="max-width:100%;overflow:hidden;" alt="" height="430"
+        <li><img src="<?php echo @IMG_URL;?>
+01.jpg" style="max-width:100%;overflow:hidden;" alt="" height="430"
                  border="0"></li>
 
-        <li><img src="{$smarty.const.IMG_URL}02.jpg" style="max-width:100%;overflow:hidden;" alt="" height="430"
+        <li><img src="<?php echo @IMG_URL;?>
+02.jpg" style="max-width:100%;overflow:hidden;" alt="" height="430"
                  border="0"></li>
-        <li><img src="{$smarty.const.IMG_URL}02.jpg" style="max-width:100%;overflow:hidden;" alt="" height="430"
+        <li><img src="<?php echo @IMG_URL;?>
+02.jpg" style="max-width:100%;overflow:hidden;" alt="" height="430"
                  border="0"></li>
     </ul>
 </div>
 <div style="position: relative; width: 1200px; margin: 0 auto">
-    <div style=" position:absolute; background-image: url({$smarty.const.IMG_URL}applybg.png); width: 330px; height: 290px;top:-360px; right:0"
+    <div style=" position:absolute; background-image: url(<?php echo @IMG_URL;?>
+applybg.png); width: 330px; height: 290px;top:-360px; right:0"
          class="apply">
         <div class="content">
             <h3 style="margin:30px 0 25px 0; font-size: 24px; color: #fff; text-align: center; letter-spacing: 3px">
@@ -138,17 +192,31 @@
                     <span>高效•快捷•安全</span></div>
                 <div class="dkpt_l_o">
                     <ul class="lo_ul">
-                        {foreach $articleList as $k => $v}
+                        <?php  $_smarty_tpl->tpl_vars['v'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['v']->_loop = false;
+ $_smarty_tpl->tpl_vars['k'] = new Smarty_Variable;
+ $_from = $_smarty_tpl->tpl_vars['articleList']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['v']->key => $_smarty_tpl->tpl_vars['v']->value){
+$_smarty_tpl->tpl_vars['v']->_loop = true;
+ $_smarty_tpl->tpl_vars['k']->value = $_smarty_tpl->tpl_vars['v']->key;
+?>
                         <li class=""><a class="a3" href="#">
-                            {$v.title}</a></li>
-                        {/foreach}
+                            <?php echo $_smarty_tpl->tpl_vars['v']->value['title'];?>
+</a></li>
+                        <?php } ?>
                     </ul>
-                    {foreach $articleList as $k => $v}
+                    <?php  $_smarty_tpl->tpl_vars['v'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['v']->_loop = false;
+ $_smarty_tpl->tpl_vars['k'] = new Smarty_Variable;
+ $_from = $_smarty_tpl->tpl_vars['articleList']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['v']->key => $_smarty_tpl->tpl_vars['v']->value){
+$_smarty_tpl->tpl_vars['v']->_loop = true;
+ $_smarty_tpl->tpl_vars['k']->value = $_smarty_tpl->tpl_vars['v']->key;
+?>
                     <div class="alConts" style="display: none;">
 
                         <div class="lotot">
 
-                            {$v.discript}
+                            <?php echo $_smarty_tpl->tpl_vars['v']->value['discript'];?>
+
                             <div class="anniu">
                                 <span class="s"><a href="#" target="_blank">我要贷款</a></span><span><a
                                     href="#">了解详情</a></span>
@@ -156,7 +224,7 @@
                         </div>
 
                     </div>
-                    {/foreach}
+                    <?php } ?>
 
 
                 </div>
@@ -179,19 +247,31 @@
                 <ul id="tuand" style="width: 258px; overflow: hidden;">
                     <div style="overflow: hidden; zoom: 1">
                         <div style="float: left;">
-                            {foreach $customer as $k => $v}
+                            <?php  $_smarty_tpl->tpl_vars['v'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['v']->_loop = false;
+ $_smarty_tpl->tpl_vars['k'] = new Smarty_Variable;
+ $_from = $_smarty_tpl->tpl_vars['customer']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['v']->key => $_smarty_tpl->tpl_vars['v']->value){
+$_smarty_tpl->tpl_vars['v']->_loop = true;
+ $_smarty_tpl->tpl_vars['k']->value = $_smarty_tpl->tpl_vars['v']->key;
+?>
                             <li>
-                                <a href="#" title="{$v.title}">
-                                    <img alt="{$v.title}" _src="../../{$v.img_url}" width="258"
-                                         height="239" src="../../{$v.img_url}"></a>
+                                <a href="#" title="<?php echo $_smarty_tpl->tpl_vars['v']->value['title'];?>
+">
+                                    <img alt="<?php echo $_smarty_tpl->tpl_vars['v']->value['title'];?>
+" _src="../../<?php echo $_smarty_tpl->tpl_vars['v']->value['img_url'];?>
+" width="258"
+                                         height="239" src="../../<?php echo $_smarty_tpl->tpl_vars['v']->value['img_url'];?>
+"></a>
                                 <h5>
-                                    <a href="#" title="{$v.title}">
-                                        {$v.title}</a></h5>
+                                    <a href="#" title="<?php echo $_smarty_tpl->tpl_vars['v']->value['title'];?>
+">
+                                        <?php echo $_smarty_tpl->tpl_vars['v']->value['title'];?>
+</a></h5>
                                 <a target="_blank"
                                    href="http://www16.53kf.com/webCompany.php?arg=10161753&amp;style=1&amp;language=cn&amp;charset=GBK&amp;kflist=off&amp;kf=&amp;zdkf_type=1&amp;referer=http%3A%2F%2Fwww.scmidai.com%2F&amp;keyword=&amp;tfrom=1&amp;tpl=crystal_blue&amp;uid=9469d95cc13f1e69b1a27b8527c440bf&amp;timeStamp=1502931683656&amp;ucust_id="
                                    class="ljzx">立即咨询</a>
                             </li>
-                            {/foreach}
+                            <?php } ?>
                         </div>
                     </div>
                 </ul>
@@ -221,8 +301,10 @@
             <div class="sq_l">
                 <a href="#"
                    target="_blank">
-                    <img _src="{$smarty.const.IMG_URL}sqlc_07.png"
-                         src="{$smarty.const.IMG_URL}sqlc_07.png"></a></div>
+                    <img _src="<?php echo @IMG_URL;?>
+sqlc_07.png"
+                         src="<?php echo @IMG_URL;?>
+sqlc_07.png"></a></div>
             <div class="sq_r">
                 <p class="p1">
                     米袋金融</p>
@@ -242,7 +324,8 @@
 
         <div class="jg">
             <div class="jgtit">
-                <img src="{$smarty.const.IMG_URL}ys.jpg">
+                <img src="<?php echo @IMG_URL;?>
+ys.jpg">
             </div>
         </div>
 
@@ -254,28 +337,40 @@
             </div>
             <hr width="1120" style="border:1px solid #ff8900;"/>
             <ul>
-                {foreach $caseList as $k => $v}
+                <?php  $_smarty_tpl->tpl_vars['v'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['v']->_loop = false;
+ $_smarty_tpl->tpl_vars['k'] = new Smarty_Variable;
+ $_from = $_smarty_tpl->tpl_vars['caseList']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['v']->key => $_smarty_tpl->tpl_vars['v']->value){
+$_smarty_tpl->tpl_vars['v']->_loop = true;
+ $_smarty_tpl->tpl_vars['k']->value = $_smarty_tpl->tpl_vars['v']->key;
+?>
                 <li>
                     <a href="#">
-                    <span> <img src="{$v.img_url}" width="60" height="60"></span>
-                    <h5 style="border-bottom:1px dotted #d2d2d2;">{$v.title}</h5>
-                    <p>{if (mb_strlen($v.discript,'utf-8'))>320}{mb_substr($v.discript,0,320,'utf-8')}…{else}{$v.discript}{/if}</p>
+                    <span> <img src="<?php echo $_smarty_tpl->tpl_vars['v']->value['img_url'];?>
+" width="60" height="60"></span>
+                    <h5 style="border-bottom:1px dotted #d2d2d2;"><?php echo $_smarty_tpl->tpl_vars['v']->value['title'];?>
+</h5>
+                    <p><?php if ((mb_strlen($_smarty_tpl->tpl_vars['v']->value['discript'],'utf-8'))>320){?><?php echo mb_substr($_smarty_tpl->tpl_vars['v']->value['discript'],0,320,'utf-8');?>
+…<?php }else{ ?><?php echo $_smarty_tpl->tpl_vars['v']->value['discript'];?>
+<?php }?></p>
                     </a>
                 </li>
-                {/foreach}
+                <?php } ?>
             </ul>
         </div>
 
 
         <div class="ggw">
-            <img src="{$smarty.const.IMG_URL}ggw.jpg">
+            <img src="<?php echo @IMG_URL;?>
+ggw.jpg">
         </div>
 
 
         <div class="gl">
             <a href="#"
                target="_blank">
-                <img src="{$smarty.const.IMG_URL}gl.jpg"></a></div>
+                <img src="<?php echo @IMG_URL;?>
+gl.jpg"></a></div>
 
 
         <div class="jg">
@@ -285,7 +380,8 @@
                 <em>Thanks to the following organizations to provide financial support for the Express
                     Loan</em>
             </div>
-            {$amount[0].content}
+            <?php echo $_smarty_tpl->tpl_vars['amount']->value[0]['content'];?>
+
         </div>
 
 
@@ -298,27 +394,40 @@
                         <a target="_blank" href="#">
                             贷款攻略</a><span>/Loan Raiders</span></h4>
                     <a href="#">
-                        <img src="{$smarty.const.IMG_URL}more_03.png"></a></div>
+                        <img src="<?php echo @IMG_URL;?>
+more_03.png"></a></div>
                 <div class="ntot">
 
                     <div class="one">
                         <a href="#">
-                            <img src="{$smarty.const.IMG_URL}20160124205149_67478.jpg" width="111" height="111"></a>
+                            <img src="<?php echo @IMG_URL;?>
+20160124205149_67478.jpg" width="111" height="111"></a>
                         <h5><a href="#">暂无...</a></h5>
                         <p>暂无...</p>
                     </div>
 
                     <ul>
-                        {foreach $dkglList as $k => $v}
+                        <?php  $_smarty_tpl->tpl_vars['v'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['v']->_loop = false;
+ $_smarty_tpl->tpl_vars['k'] = new Smarty_Variable;
+ $_from = $_smarty_tpl->tpl_vars['dkglList']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['v']->key => $_smarty_tpl->tpl_vars['v']->value){
+$_smarty_tpl->tpl_vars['v']->_loop = true;
+ $_smarty_tpl->tpl_vars['k']->value = $_smarty_tpl->tpl_vars['v']->key;
+?>
                         <li>
                             <h5>
-                                <a href="#" title="{$v.title}" imgurl="{$v.img_url}"
-                                   discript="{if (mb_strlen($v.discript,'utf-8'))>50}{mb_substr($v.discript,0,50,'utf-8')}…{else}{$v.discript}{/if}">
-                                    {if
-                                    (mb_strlen($v.title,'utf-8'))>20}{mb_substr($v.title,0,20,'utf-8')}…{else}{$v.title}{/if}
+                                <a href="#" title="<?php echo $_smarty_tpl->tpl_vars['v']->value['title'];?>
+" imgurl="<?php echo $_smarty_tpl->tpl_vars['v']->value['img_url'];?>
+"
+                                   discript="<?php if ((mb_strlen($_smarty_tpl->tpl_vars['v']->value['discript'],'utf-8'))>50){?><?php echo mb_substr($_smarty_tpl->tpl_vars['v']->value['discript'],0,50,'utf-8');?>
+…<?php }else{ ?><?php echo $_smarty_tpl->tpl_vars['v']->value['discript'];?>
+<?php }?>">
+                                    <?php if ((mb_strlen($_smarty_tpl->tpl_vars['v']->value['title'],'utf-8'))>20){?><?php echo mb_substr($_smarty_tpl->tpl_vars['v']->value['title'],0,20,'utf-8');?>
+…<?php }else{ ?><?php echo $_smarty_tpl->tpl_vars['v']->value['title'];?>
+<?php }?>
                                 </a></h5>
                         </li>
-                        {/foreach}
+                        <?php } ?>
 
 
                     </ul>
@@ -329,25 +438,38 @@
             <div class="lc">
                 <div class="ntit">
                     <h4><a href="#">资讯中心</a><span>/Information Center</span></h4>
-                    <a href="#"><img src="{$smarty.const.IMG_URL}more_03.png"></a>
+                    <a href="#"><img src="<?php echo @IMG_URL;?>
+more_03.png"></a>
                 </div>
                 <div class="ntot">
                     <div class="one">
-                        <a href="#"><img src="{$smarty.const.IMG_URL}20170327192616_26378.jpg" width="111" height="111"></a>
+                        <a href="#"><img src="<?php echo @IMG_URL;?>
+20170327192616_26378.jpg" width="111" height="111"></a>
                         <h5><a href="#">暂无...</a></h5>
                         <p>暂无...</p>
                     </div>
                     <ul>
-                        {foreach $zxzxList as $k => $v}
+                        <?php  $_smarty_tpl->tpl_vars['v'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['v']->_loop = false;
+ $_smarty_tpl->tpl_vars['k'] = new Smarty_Variable;
+ $_from = $_smarty_tpl->tpl_vars['zxzxList']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['v']->key => $_smarty_tpl->tpl_vars['v']->value){
+$_smarty_tpl->tpl_vars['v']->_loop = true;
+ $_smarty_tpl->tpl_vars['k']->value = $_smarty_tpl->tpl_vars['v']->key;
+?>
                         <li>
                             <h5>
-                                <a href="#" title="{$v.title}" imgurl="{$v.img_url}"
-                                   discript="{if (mb_strlen($v.discript,'utf-8'))>50}{mb_substr($v.discript,0,50,'utf-8')}…{else}{$v.discript}{/if}">
-                                    {if
-                                    (mb_strlen($v.title,'utf-8'))>20}{mb_substr($v.title,0,20,'utf-8')}…{else}{$v.title}{/if}
+                                <a href="#" title="<?php echo $_smarty_tpl->tpl_vars['v']->value['title'];?>
+" imgurl="<?php echo $_smarty_tpl->tpl_vars['v']->value['img_url'];?>
+"
+                                   discript="<?php if ((mb_strlen($_smarty_tpl->tpl_vars['v']->value['discript'],'utf-8'))>50){?><?php echo mb_substr($_smarty_tpl->tpl_vars['v']->value['discript'],0,50,'utf-8');?>
+…<?php }else{ ?><?php echo $_smarty_tpl->tpl_vars['v']->value['discript'];?>
+<?php }?>">
+                                    <?php if ((mb_strlen($_smarty_tpl->tpl_vars['v']->value['title'],'utf-8'))>20){?><?php echo mb_substr($_smarty_tpl->tpl_vars['v']->value['title'],0,20,'utf-8');?>
+…<?php }else{ ?><?php echo $_smarty_tpl->tpl_vars['v']->value['title'];?>
+<?php }?>
                                 </a></h5>
                         </li>
-                        {/foreach}
+                        <?php } ?>
                     </ul>
                 </div>
             </div>
@@ -355,22 +477,32 @@
             <div class="faq">
                 <div class="ntit">
                     <h4><a href="#">常见问题</a><span>/Frequently Asked Questions</span></h4>
-                    <a href="#"><img src="{$smarty.const.IMG_URL}more_03.png"></a>
+                    <a href="#"><img src="<?php echo @IMG_URL;?>
+more_03.png"></a>
                 </div>
                 <div class="faqtot">
                     <div class="search">
                         <input type="text" name="" id="seachkeywords" class="txt">
-                        <a href="javascript:" onclick="xuanze()"><img src="{$smarty.const.IMG_URL}search_06.png"></a>
+                        <a href="javascript:" onclick="xuanze()"><img src="<?php echo @IMG_URL;?>
+search_06.png"></a>
                     </div>
                     <dl id="dingdan" style="overflow: hidden; width: 349px; height: 308px;">
                         <table cellspacing="0" cellpadding="0" style="border-collapse:collapse;">
                             <tbody>
                             <tr>
                                 <td>
-                                    {foreach $askList as $k => $v}
-                                    <dt><a href="#">{$v.title}</a></dt>
-                                    <dd>{$v.content}</dd>
-                                    {/foreach}
+                                    <?php  $_smarty_tpl->tpl_vars['v'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['v']->_loop = false;
+ $_smarty_tpl->tpl_vars['k'] = new Smarty_Variable;
+ $_from = $_smarty_tpl->tpl_vars['askList']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['v']->key => $_smarty_tpl->tpl_vars['v']->value){
+$_smarty_tpl->tpl_vars['v']->_loop = true;
+ $_smarty_tpl->tpl_vars['k']->value = $_smarty_tpl->tpl_vars['v']->key;
+?>
+                                    <dt><a href="#"><?php echo $_smarty_tpl->tpl_vars['v']->value['title'];?>
+</a></dt>
+                                    <dd><?php echo $_smarty_tpl->tpl_vars['v']->value['content'];?>
+</dd>
+                                    <?php } ?>
                                 </td>
                             </tr>
                             </tbody>
@@ -383,7 +515,8 @@
                 new Marquee("dingdan", 0, 1, 349, 308, 40, 0, 1000, 22);
             </script>
         </div>
-        <div class="link container">{$links[0].content}</div>
+        <div class="link container"><?php echo $_smarty_tpl->tpl_vars['links']->value[0]['content'];?>
+</div>
 
     </div>
 </div>
@@ -392,30 +525,47 @@
 <div class="footer">
     <div class="ft">
         <div class="container footer-bg">
-            {foreach $footNav as $k=>$v}
+            <?php  $_smarty_tpl->tpl_vars['v'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['v']->_loop = false;
+ $_smarty_tpl->tpl_vars['k'] = new Smarty_Variable;
+ $_from = $_smarty_tpl->tpl_vars['footNav']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['v']->key => $_smarty_tpl->tpl_vars['v']->value){
+$_smarty_tpl->tpl_vars['v']->_loop = true;
+ $_smarty_tpl->tpl_vars['k']->value = $_smarty_tpl->tpl_vars['v']->key;
+?>
             <ul class="footer-nav1">
-                <li class="footer-navtit">{$k}</li>
-                {foreach $v as $kk=>$vv}
-                <li>{$vv.category_name}</li>
-                {/foreach}
+                <li class="footer-navtit"><?php echo $_smarty_tpl->tpl_vars['k']->value;?>
+</li>
+                <?php  $_smarty_tpl->tpl_vars['vv'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['vv']->_loop = false;
+ $_smarty_tpl->tpl_vars['kk'] = new Smarty_Variable;
+ $_from = $_smarty_tpl->tpl_vars['v']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['vv']->key => $_smarty_tpl->tpl_vars['vv']->value){
+$_smarty_tpl->tpl_vars['vv']->_loop = true;
+ $_smarty_tpl->tpl_vars['kk']->value = $_smarty_tpl->tpl_vars['vv']->key;
+?>
+                <li><?php echo $_smarty_tpl->tpl_vars['vv']->value['category_name'];?>
+</li>
+                <?php } ?>
             </ul>
-            {/foreach}
+            <?php } ?>
             <ul class="footer-nav">
                 <li class="footer-navtit">扫码关注</li>
-                <li><img src="{$smarty.const.IMG_URL}ewm.jpg"></li>
+                <li><img src="<?php echo @IMG_URL;?>
+ewm.jpg"></li>
             </ul>
             <ul class="footer-nav">
                 <li class="footer-navtit">客服电话</li>
-                <li><img src="{$smarty.const.IMG_URL}tel.jpg"></li>
+                <li><img src="<?php echo @IMG_URL;?>
+tel.jpg"></li>
             </ul>
         </div>
 
     </div>
     <div class="fb">
-        <div class="container" style="text-align: center; line-height: 160%">{$footInfo[0].content}</div>
+        <div class="container" style="text-align: center; line-height: 160%"><?php echo $_smarty_tpl->tpl_vars['footInfo']->value[0]['content'];?>
+</div>
     </div>
 </div>
-{literal}
+
 <div class="freecall" style="display: block;">
     <div class="wrap">
         <div class="fl">
@@ -451,17 +601,17 @@
             var index = $(this).index();
 
             if (index == 1) {
-                $url = '/index.php/Home/Car/index/catid/3/catname/车贷'; //车贷
+                $url = '/index.php/Home/Car/index/catid/3';
             } else if (index == 2) {
-                $url = '/index.php/Home/Car/index/catid/4/catname/房贷'; //房贷
+                $url = '/index.php/Home/Car/index/catid/3';
             } else if (index == 3) {
-                $url = '/index.php/Home/Car/index/catid/5/catname/信用贷';//信用贷
+                $url = '/index.php/Home/Car/index/catid/3';
             } else if (index == 4) {
-                $url = '/index.php/Home/Car/index/catid/6/catname/保单贷';//保单贷
+                $url = '/index.php/Home/Car/index/catid/3';
             } else if (index == 5) {
-                $url = '/index.php/Home/Case/index/catid/9';//成功案例
+                $url = '/index.php/Home/Car/index/catid/3';
             } else if (index == 6) {
-                $url = '/index.php/Home/About/index/catid/11';//关于我们
+                $url = '/index.php/Home/Car/index/catid/3';
             } else {
                 $url = '/index.php/Home/index/main';
             }
@@ -475,6 +625,6 @@
 
     });
 </script>
-{/literal}
+
 </body>
-</html>
+</html><?php }} ?>

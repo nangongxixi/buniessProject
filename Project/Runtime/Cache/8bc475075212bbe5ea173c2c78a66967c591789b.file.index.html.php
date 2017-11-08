@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2017-11-07 14:39:49
+<?php /* Smarty version Smarty-3.1.6, created on 2017-11-08 15:54:16
          compiled from "D:/phpStudy/WWW/buniessProject/Project/Home/View\index\index.html" */ ?>
 <?php /*%%SmartyHeaderCode:3141259ffbe1801fa39-26674452%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '8bc475075212bbe5ea173c2c78a66967c591789b' => 
     array (
       0 => 'D:/phpStudy/WWW/buniessProject/Project/Home/View\\index\\index.html',
-      1 => 1510036732,
+      1 => 1510127603,
       2 => 'file',
     ),
   ),
@@ -601,17 +601,17 @@ tel.jpg"></li>
             var index = $(this).index();
 
             if (index == 1) {
-                $url = '/index.php/Home/Car/index/catid/3';
+                $url = '/index.php/Home/Car/index/catid/3/catname/车贷'; //车贷
             } else if (index == 2) {
-                $url = '/index.php/Home/Car/index/catid/3';
+                $url = '/index.php/Home/Car/index/catid/4/catname/房贷'; //房贷
             } else if (index == 3) {
-                $url = '/index.php/Home/Car/index/catid/3';
+                $url = '/index.php/Home/Car/index/catid/5/catname/信用贷';//信用贷
             } else if (index == 4) {
-                $url = '/index.php/Home/Car/index/catid/3';
+                $url = '/index.php/Home/Car/index/catid/6/catname/保单贷';//保单贷
             } else if (index == 5) {
-                $url = '/index.php/Home/Car/index/catid/3';
+                $url = '/index.php/Home/Case/index/catid/9';//成功案例
             } else if (index == 6) {
-                $url = '/index.php/Home/Car/index/catid/3';
+                $url = '/index.php/Home/About/index/catid/11';//关于我们
             } else {
                 $url = '/index.php/Home/index/main';
             }

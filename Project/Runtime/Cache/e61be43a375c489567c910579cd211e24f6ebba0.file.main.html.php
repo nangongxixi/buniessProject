@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2017-11-07 13:34:34
+<?php /* Smarty version Smarty-3.1.6, created on 2017-11-08 13:33:57
          compiled from "D:/phpStudy/WWW/buniessProject/Project/Home/View\index\main.html" */ ?>
 <?php /*%%SmartyHeaderCode:123995a0142755eb3a2-95025325%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'e61be43a375c489567c910579cd211e24f6ebba0' => 
     array (
       0 => 'D:/phpStudy/WWW/buniessProject/Project/Home/View\\index\\main.html',
-      1 => 1510032869,
+      1 => 1510119236,
       2 => 'file',
     ),
   ),
@@ -190,7 +190,6 @@ $_smarty_tpl->tpl_vars['v']->_loop = true;
                 <a href="javascript:" class="l" id="tleft"></a><a href="javascript:" class="r" id="tright"></a>
             </div>
             <script language="javascript" type="text/javascript">
-
                 var scrollPic_02 = new ScrollPic();
                 scrollPic_02.scrollContId = "tuand"; // 内容容器ID
                 scrollPic_02.arrLeftId = "tleft"; //左箭头ID
@@ -258,7 +257,7 @@ $_smarty_tpl->tpl_vars['v']->_loop = true;
 ?>
                 <li>
                     <a href="#">
-                    <span> <img src="<?php echo $_smarty_tpl->tpl_vars['v']->value['img_url'];?>
+                    <span> <img src="../../<?php echo $_smarty_tpl->tpl_vars['v']->value['img_url'];?>
 " width="60" height="60"></span>
                     <h5 style="border-bottom:1px dotted #d2d2d2;"><?php echo $_smarty_tpl->tpl_vars['v']->value['title'];?>
 </h5>
@@ -500,7 +499,7 @@ $_smarty_tpl->tpl_vars['v']->_loop = true;
                 layer.msg($(formVal[0]).attr("errorMsg"), {
                     icon: 2,
                     time: 2000
-                },function(){
+                }, function () {
                     //alert(dd);
                     parent.layer.close(index);
                 });
@@ -512,7 +511,7 @@ $_smarty_tpl->tpl_vars['v']->_loop = true;
                 layer.msg($(formVal[1]).attr("errorMsg"), {
                     icon: 2,
                     time: 2000
-                },function(){
+                }, function () {
                     //alert(dd);
                     parent.layer.close(index);
                 });
@@ -524,7 +523,7 @@ $_smarty_tpl->tpl_vars['v']->_loop = true;
                 layer.msg($(formVal[2]).attr("errorMsg"), {
                     icon: 2,
                     time: 2000
-                },function(){
+                }, function () {
                     //alert(dd);
                     parent.layer.close(index);
                 });

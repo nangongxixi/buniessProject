@@ -1,0 +1,173 @@
+<link href="{$smarty.const.CSS_URL}zzsc.css" rel="stylesheet" type="text/css">
+
+<div class="banner" id="b03">
+    <ul style="background-color: #fbfbfb">
+        {foreach $carList['bannerImg'] as $k=>$v}
+        <li><img src="../../{$v.img_url}" style="max-width:1200px;overflow:hidden;" alt="" height="430"
+                 border="0" width="1200"></li>
+        {/foreach}
+    </ul>
+</div>
+<div class="main" style="padding-top: 0 !important; padding-bottom: 20px; background-color: #fff!important;">
+
+    <div class="container">
+        <div class="nei">
+            <div class="nav">
+                <span class="ico"></span>
+                <span class="tit">车贷</span>
+            </div>
+            <div id="myscroll">
+                <div id="myscrollbox">
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <img src="{$smarty.const.IMG_URL}20150704101912_56928.jpg" width="380" height="240">
+                                <span class="intro">
+                                    <h5>产品优势</h5>
+                                    <p>反对撒反对撒反对撒反对撒对撒反对撒反对撒反对
+                                        对撒反对撒反对撒反对撒反对撒反对撒反对撒反对撒反对撒反对撒反
+                                        撒反对撒反对撒反对撒反对撒反发生大幅度撒
+                                        <span class="ask">立即咨询</span>
+                                    </p>
+                                </span>
+                            </a>
+                            <div style="width: 100%;">fsafdsafdsafdsadfs</div>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="{$smarty.const.IMG_URL}20150704101912_56928.jpg" width="380" height="240">
+                                <span class="intro">
+                                    <h5>产品优势</h5>
+                                    <p>反对撒反对撒反对撒反对撒对撒反对撒反对撒反对
+                                        对撒反对撒反对撒反对撒反对撒反对撒反对撒反对撒反对撒反对撒反
+                                        撒反对撒反对撒反对撒反对撒反发生大幅度撒
+                                        <span class="ask">立即咨询</span>
+                                    </p>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="{$smarty.const.IMG_URL}20150704101912_56928.jpg" width="380" height="240">
+                                <span class="intro">
+                                    <h5>产品优势</h5>
+                                    <p>反对撒反对撒反对撒反对撒对撒反对撒反对撒反对
+                                        对撒反对撒反对撒反对撒反对撒反对撒反对撒反对撒反对撒反对撒反
+                                        撒反对撒反对撒反对撒反对撒反发生大幅度撒
+                                        <span class="ask">立即咨询</span>
+                                    </p>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="pro-introbox">
+                <div class="pro-intro">
+                    新车零首付<br>大法师范德萨反对撒反对撒范德萨飞洒的范德萨富士达反对撒反对撒反对撒反对撒反对撒反对撒
+                </div>
+                <div class="pro-intro">fsdafsda</div>
+                <div class="pro-intro">fsdafsda</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="nei-liuc">
+        <div class="nei nei-liuc">
+            <div class="nav ">
+                <span class="ico"></span>
+                <span class="tit nei-liuc">申请流程</span>
+            </div>
+            <div class="liuc-img">
+                <img src="{$smarty.const.IMG_URL}51.png">
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="nei">
+            <img src="{$smarty.const.IMG_UPLOAD}upload/3901.png" width="1200" height="100">
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="nei">
+            <div class="nav">
+                <span class="ico"></span>
+                <span class="tit">贷款顾问</span>
+            </div>
+            <div class="dkpt container">
+
+
+                <script type="text/javascript">
+
+                    $('.dkpt_l_o ul li').mouseover(function () {
+                        $(this).addClass("cur").siblings().removeClass("cur");
+                        $(".dkpt_l_o .alConts").eq($('.dkpt_l_o ul li').index(this)).show().siblings(".alConts").hide();
+                    });
+                </script>
+
+
+                <div class="dkpt_r">
+                    <div class="dkpt_r_t">
+                        <h4>
+                            <a href="#">
+                                信贷经理</a></h4>
+                    </div>
+                    <ul id="tuand" style="width: 258px; overflow: hidden;">
+                        <div style="overflow: hidden; zoom: 1">
+                            <div style="float: left;">
+                                {foreach $customer as $k => $v}
+                                <li>
+                                    <a href="#" title="{$v.title}">
+                                        <img alt="{$v.title}" _src="../../{$v.img_url}" width="258"
+                                             height="239" src="../../{$v.img_url}"></a>
+                                    <h5>
+                                        <a href="#" title="{$v.title}">
+                                            {$v.title}</a></h5>
+                                    <a target="_blank"
+                                       href="http://www16.53kf.com/webCompany.php?arg=10161753&amp;style=1&amp;language=cn&amp;charset=GBK&amp;kflist=off&amp;kf=&amp;zdkf_type=1&amp;referer=http%3A%2F%2Fwww.scmidai.com%2F&amp;keyword=&amp;tfrom=1&amp;tpl=crystal_blue&amp;uid=9469d95cc13f1e69b1a27b8527c440bf&amp;timeStamp=1502931683656&amp;ucust_id="
+                                       class="ljzx">立即咨询</a>
+                                </li>
+                                {/foreach}
+                            </div>
+                        </div>
+                    </ul>
+                    <a href="javascript:" class="l" id="tleft"></a><a href="javascript:" class="r" id="tright"></a>
+                </div>
+                <script language="javascript" type="text/javascript">
+                    var scrollPic_02 = new ScrollPic();
+                    scrollPic_02.scrollContId = "tuand"; // 内容容器ID
+                    scrollPic_02.arrLeftId = "tleft"; //左箭头ID
+                    scrollPic_02.arrRightId = "tright"; //右箭头ID
+                    scrollPic_02.frameWidth = 1200; //显示框宽度
+                    scrollPic_02.pageWidth = 258; //翻页宽度
+                    scrollPic_02.speed = 8; //移动速度(单位毫秒，越小越快)
+                    scrollPic_02.space = 5; //每次移动像素(单位px，越大越快)
+                    scrollPic_02.autoPlay = true; //自动播放
+                    scrollPic_02.autoPlayTime = 4; //自动播放间隔时间(秒)
+
+                    scrollPic_02.initialize(); //初始化
+
+                </script>
+                <div class="clear">
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+</div>
+
+<script>
+    $(document).ready(function (e) {
+        $('#b03').unslider({
+            dots: true
+        });
+        //打开咨询窗口
+        $('.ask').click(function () {
+            window.open("http://www16.53kf.com/webCompany.php?arg=10161753&amp;style=1&amp;language=cn&amp;charset=GBK&amp;kflist=off&amp;kf=&amp;zdkf_type=1&amp;referer=http%3A%2F%2Fwww.scmidai.com%2F&amp;keyword=&amp;tfrom=1&amp;tpl=crystal_blue&amp;uid=9469d95cc13f1e69b1a27b8527c440bf&amp;timeStamp=1502931683656&amp;ucust_id=");
+        });
+    });
+</script>

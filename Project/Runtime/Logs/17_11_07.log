@@ -747,3 +747,115 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTrace [ RunTime:0.000000s ]
 INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
 
+[ 2017-11-07T17:06:29+08:00 ] 127.0.0.1 /index.php/Home/Car/index/catid/3
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLang [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\phpStudy\WWW\buniessProject\Firame\Library\Think\Db\Driver\Mysql.class.php 第 53 行.
+SQL: SHOW COLUMNS FROM `yw_articles` [ RunTime:0.001000s ]
+SQL: SELECT * FROM yw_articles as a LEFT JOIN yw_images as b ON ( a.id=b.article_id  ) WHERE (a.category_id=3) ORDER BY a.sort desc,a.id desc LIMIT 7 [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `yw_images` [ RunTime:0.001000s ]
+SQL: SELECT `img_url` FROM `yw_images` WHERE ( article_id=3 )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM yw_articles as a INNER JOIN yw_images as b WHERE ( a.id=b.article_id and a.category_id=12 )  [ RunTime:0.001000s ]
+INFO: [ view_begin ] --START--
+INFO: [ view_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplate [ RunTime:0.011000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-11-07T17:06:30+08:00 ] 127.0.0.1 /index.php/Home/Car/index/catid/3
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLang [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\phpStudy\WWW\buniessProject\Firame\Library\Think\Db\Driver\Mysql.class.php 第 53 行.
+SQL: SHOW COLUMNS FROM `yw_articles` [ RunTime:0.001000s ]
+SQL: SELECT * FROM yw_articles as a LEFT JOIN yw_images as b ON ( a.id=b.article_id  ) WHERE (a.category_id=3) ORDER BY a.sort desc,a.id desc LIMIT 7 [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `yw_images` [ RunTime:0.001000s ]
+SQL: SELECT `img_url` FROM `yw_images` WHERE ( article_id=3 )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM yw_articles as a INNER JOIN yw_images as b WHERE ( a.id=b.article_id and a.category_id=12 )  [ RunTime:0.001000s ]
+INFO: [ view_begin ] --START--
+INFO: [ view_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplate [ RunTime:0.007000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-11-07T17:06:31+08:00 ] 127.0.0.1 /index.php/Home/Car/index/catid/3
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLang [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\phpStudy\WWW\buniessProject\Firame\Library\Think\Db\Driver\Mysql.class.php 第 53 行.
+SQL: SHOW COLUMNS FROM `yw_articles` [ RunTime:0.001000s ]
+SQL: SELECT * FROM yw_articles as a LEFT JOIN yw_images as b ON ( a.id=b.article_id  ) WHERE (a.category_id=3) ORDER BY a.sort desc,a.id desc LIMIT 7 [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `yw_images` [ RunTime:0.001000s ]
+SQL: SELECT `img_url` FROM `yw_images` WHERE ( article_id=3 )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM yw_articles as a INNER JOIN yw_images as b WHERE ( a.id=b.article_id and a.category_id=12 )  [ RunTime:0.001000s ]
+INFO: [ view_begin ] --START--
+INFO: [ view_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplate [ RunTime:0.007000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-11-07T17:06:33+08:00 ] 127.0.0.1 /index.php/Home/Car/index/catid/3
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLang [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\phpStudy\WWW\buniessProject\Firame\Library\Think\Db\Driver\Mysql.class.php 第 53 行.
+SQL: SHOW COLUMNS FROM `yw_articles` [ RunTime:0.001000s ]
+SQL: SELECT * FROM yw_articles as a LEFT JOIN yw_images as b ON ( a.id=b.article_id  ) WHERE (a.category_id=3) ORDER BY a.sort desc,a.id desc LIMIT 7 [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `yw_images` [ RunTime:0.001000s ]
+SQL: SELECT `img_url` FROM `yw_images` WHERE ( article_id=3 )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM yw_articles as a INNER JOIN yw_images as b WHERE ( a.id=b.article_id and a.category_id=12 )  [ RunTime:0.000000s ]
+INFO: [ view_begin ] --START--
+INFO: [ view_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplate [ RunTime:0.006000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+

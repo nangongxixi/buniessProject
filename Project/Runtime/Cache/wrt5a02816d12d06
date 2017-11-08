@@ -1,22 +1,22 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2017-11-08 12:01:16
+<?php /* Smarty version Smarty-3.1.6, created on 2017-11-08 12:00:45
          compiled from "D:/phpStudy/WWW/buniessProject/Project/Admin/View\article\add.html" */ ?>
-<?php /*%%SmartyHeaderCode:185675a0281755dbf66-31854902%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:1134759fff849845051-32764552%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '27a3ccc445768961011a70130dd7a4d73add2a19' => 
     array (
       0 => 'D:/phpStudy/WWW/buniessProject/Project/Admin/View\\article\\add.html',
-      1 => 1510113674,
+      1 => 1510113635,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '185675a0281755dbf66-31854902',
+  'nocache_hash' => '1134759fff849845051-32764552',
   'function' => 
   array (
   ),
   'version' => 'Smarty-3.1.6',
-  'unifunc' => 'content_5a028175692c6',
+  'unifunc' => 'content_59fff849938c5',
   'variables' => 
   array (
     'info' => 0,
@@ -26,7 +26,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5a028175692c6')) {function content_5a028175692c6($_smarty_tpl) {?><!--图片上传-->
+<?php if ($_valid && !is_callable('content_59fff849938c5')) {function content_59fff849938c5($_smarty_tpl) {?><!--图片上传-->
 <link rel="stylesheet" href="<?php echo @STATIC_URL;?>
 upImage/zyupload/skins/zyupload-1.0.0.min.css " type="text/css">
 <script type="text/javascript" src="<?php echo @STATIC_URL;?>
@@ -284,9 +284,6 @@ $_smarty_tpl->tpl_vars['v']->_loop = true;
             filebrowserImageUploadUrl: '../manager/ck_upload'
         });
         var editor2 = CKEDITOR.replace('TextArea2', {
-            filebrowserImageUploadUrl: '../manager/ck_upload'
-        });
-        var editor3 = CKEDITOR.replace('TextArea3', {
             filebrowserImageUploadUrl: '../manager/ck_upload'
         });
 

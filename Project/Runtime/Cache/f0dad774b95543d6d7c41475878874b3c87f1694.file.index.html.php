@@ -1,22 +1,22 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2017-11-07 13:11:18
+<?php /* Smarty version Smarty-3.1.6, created on 2017-11-08 13:43:55
          compiled from "D:/phpStudy/WWW/buniessProject/Project/Home/View\Index\index.html" */ ?>
-<?php /*%%SmartyHeaderCode:2600759ffb6fa22e621-91345867%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:33705a0268eeeeb946-24137944%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'f0dad774b95543d6d7c41475878874b3c87f1694' => 
     array (
       0 => 'D:/phpStudy/WWW/buniessProject/Project/Home/View\\Index\\index.html',
-      1 => 1510031470,
+      1 => 1510119453,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '2600759ffb6fa22e621-91345867',
+  'nocache_hash' => '33705a0268eeeeb946-24137944',
   'function' => 
   array (
   ),
   'version' => 'Smarty-3.1.6',
-  'unifunc' => 'content_59ffb6fa34f76',
+  'unifunc' => 'content_5a0268ef254f6',
   'variables' => 
   array (
     'articleList' => 0,
@@ -35,7 +35,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_59ffb6fa34f76')) {function content_59ffb6fa34f76($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_5a0268ef254f6')) {function content_5a0268ef254f6($_smarty_tpl) {?><!DOCTYPE html>
 <!-- saved from url=(0050)http://cd.moerlong.com/?urlCode=wxoct4&fromSite=bd -->
 <html>
 <head>
@@ -46,6 +46,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     <meta content="四川米袋金融服务外包有限公司" name="keywords">
     <meta content="四川米袋金融服务外包有限公司" name="description">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <meta HTTP-EQUIV="Page-Enter" CONTENT="revealtrans(duration=6.0, transition=23)">
+
+    <meta HTTP-EQUIV="Page-Exit" CONTENT="revealtrans(duration=6.0, transition=23)">
 
     <link rel="icon" href="<?php echo @IMG_URL;?>
 bitbug_favicon.ico" type="image/x-icon"/>
@@ -63,7 +67,6 @@ yd-index.css">
 yd-Common.css">
     <link rel="stylesheet" href="<?php echo @CSS_URL;?>
 yd-reset.css">
-
 
     <!-- ./wrapper -->
     <script src="<?php echo @ADMIN_JS_URL;?>
@@ -108,15 +111,15 @@ log.png" style="margin-top:-3px; width: 350px"><i class="logo-border"></i>
         <div class="nav fr">
             <a href="javascript:;" class="nav-on">首页</a>
             <a href="javascript:;">车贷</a>
-            <a href="#">房贷</a>
-            <a href="#">信用贷</a>
-            <a href="#">保单贷</a>
-            <a href="#">成功案例</a>
-            <a href="#" class="mr0">关于我们</a>
+            <a href="javascript:;">房贷</a>
+            <a href="javascript:;">信用贷</a>
+            <a href="javascript:;">保单贷</a>
+            <a href="javascript:;">成功案例</a>
+            <a href="javascript:;" class="mr0">关于我们</a>
         </div>
     </div>
 </div>
-<span id="index">
+<span id="index" style="min-height: 500px">
 <!-- 切换 -->
 <div class="banner" id="b03">
     <ul>
@@ -578,130 +581,47 @@ tel.jpg"></li>
     </div>
 </div>
 
+
 <script>
     $(function () {
 
-        init();
+        var homeSite = sessionStorage.getItem('homeSite');
+        var homeIndex = sessionStorage.getItem('homeIndex');
 
-        //数据提交
-        $('#submit').unbind('click').click(function () {
-            var index = layer.load(1, {
-                shade: [0.1, '#fff'] //0.1透明度的白色背景
-            });
-
-            //数据验证
-            if (!validata()) {
-                return false;
-            }
-
-            var formData = new FormData($("#formData")[0]);
-            $.ajax({
-                url: 'wap/add',
-                type: 'POST',
-                data: formData,
-                async: false,
-                cache: false,
-                dataType: 'json',
-                contentType: false,
-                processData: false,
-                success: function (returnJSON) {
-                    if (returnJSON.status) {
-                        layer.msg(returnJSON.msg, {
-                            icon: 1,
-                            time: 2000
-                        }, function () {
-                            sessionStorage.clear();
-                            location.reload();
-                            parent.layer.close(index);
-                            // localStorage.setItem('address', '../article/showlist');//保存当前地址,避免刷新跳转
-                            // $('#content').load('../article/showlist');
-                        });
-                    } else {
-                        layer.msg(returnJSON.msg, {
-                            icon: 2,
-                            time: 2000
-                        });
-                    }
-                }
-            });
-        });
-
-        //初始化
-        function init() {
-
-            //贷款项目 默认显示
-            $('.lo_ul li:first-child').addClass('cur');
-            $('.alConts').eq(0).show();
-
-            //贷款攻略第一条
-            var dkglOne = $('.ntot').eq(0);
-            firstInfo(dkglOne);
-            //资讯中心第一条
-            var zxzxOne = $('.ntot').eq(1);
-            firstInfo(zxzxOne);
-
-            /*
-            *  点击交互
-            * */
-            $('.nav a').click(function () {
-
-                $('#index').hide();
-                var index = $(this).index();
-
-                if (index == 0) {
-                    $('#index').load('/index.php/Home/index');
-                }else if(index==1){
-                    $('#index').load('/index.php/Home/Car/index/catid/3');
-                }
-
-            });
-
+        if (homeSite) {
+            $('#index').load(homeSite);//默认加载首页
+        } else {
+            $('#index').load('/index.php/Home/index/main');//默认加载首页
         }
+        $('.nav a').eq(homeIndex).addClass('nav-on').siblings().removeClass();//加载保存的样式
 
-        //数据验证
-        function validata() {
-            var formVal = $('form input,textarea');
-            //金额
-            if ($(formVal[0]).val() == '' || !$(formVal[0]).val().match(/^\d+.?\d{0,2}$/g)) {
-                layer.msg($(formVal[0]).attr("errorMsg"), {
-                    icon: 2,
-                    time: 2000
-                });
-                return false;
+        $('.nav a').click(function () {
+            $('#index').html("");
+            $(this).addClass('nav-on').siblings().removeClass();
+            var index = $(this).index();
+
+            if (index == 1) {
+                $url = '/index.php/Home/Car/index/catid/3/catname/车贷'; //车贷
+            } else if (index == 2) {
+                $url = '/index.php/Home/Car/index/catid/4/catname/房贷'; //房贷
+            } else if (index == 3) {
+                $url = '/index.php/Home/Car/index/catid/5/catname/信用贷';//信用贷
+            } else if (index == 4) {
+                $url = '/index.php/Home/Car/index/catid/6/catname/保单贷';//保单贷
+            } else if (index == 5) {
+                $url = '/index.php/Home/Case/index';//成功案例
+            } else if (index == 6) {
+                $url = '/index.php/Home/About/index';//关于我们
+            } else {
+                $url = '/index.php/Home/index/main';
             }
 
-            //姓名
-            if ($(formVal[1]).val() == '') {
-                layer.msg($(formVal[1]).attr("errorMsg"), {
-                    icon: 2,
-                    time: 2000
-                });
-                return false;
-            }
+            $('#index').load($url);
+            sessionStorage.setItem('homeSite', $url);
+            sessionStorage.setItem('homeIndex', index);
 
-            //电话
-            if ($(formVal[2]).val() == '' || !$(formVal[2]).val().match(/^1\d{10}$/g)) {
-                layer.msg($(formVal[2]).attr("errorMsg"), {
-                    icon: 2,
-                    time: 2000
-                });
-                return false;
-            }
-            return true;
-        }
+        })
 
-
-        //第一条信息
-        function firstInfo(Obj) {
-            var coverImg = Obj.find('li:first-child a').attr('imgurl');
-            var title = Obj.find('li:first-child a').html();
-            var discript = Obj.find('li:first-child a').attr('discript');
-
-            Obj.find('.one img').attr('src', '../../' + coverImg);
-            Obj.find('.one h5 a').html(title);
-            Obj.find('.one p').html(discript);
-            Obj.find('li:first-child').remove();
-        }
 
     });
 </script>

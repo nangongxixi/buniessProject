@@ -64,6 +64,16 @@
                         </td>
                     </tr>
                     <tr>
+                        <th class="detail-title">产品优势（内页有效）</th>
+                        <td>
+                            <!-- <textarea class="form-control" name="discript" rows="3"
+                                       placeholder="请填写描述" errorMsg="描述不能为空">{$info.discript}</textarea>-->
+                            <div>
+                                <textarea id="TextArea3" name="discript" cols="20" rows="2" class="ckeditor">{$info.advantage}</textarea>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
                         <th class="detail-title">内容</th>
                         <td>
                             <div>
@@ -93,6 +103,7 @@
         init();//初始化
 
         var discript = $.parseHTML(sessionStorage.getItem('editorcontent2'));//把html转换成实体
+        var advantage = $.parseHTML(sessionStorage.getItem('editorcontent3'));//把html转换成实体
         var content = $.parseHTML(sessionStorage.getItem('editorcontent'));//把html转换成实体
         // editor.setData(content);//给富文本区域赋值
 
@@ -115,10 +126,12 @@
             var formData = new FormData($("#formData")[0]);
 
             var discript =  CKEDITOR.instances.TextArea2.getData();
+            var advantage =  CKEDITOR.instances.TextArea3.getData();
            //var editorcontent =  $(window.frames["yuliu_ckedtor"].document).find("body").html();
             var editorcontent = CKEDITOR.instances.TextArea1.getData();
 
             formData.append('discript', discript);
+            formData.append('advantage', advantage);
             formData.append('content', editorcontent);
             $.ajax({
                 url: '../article/add',
@@ -216,6 +229,9 @@
             filebrowserImageUploadUrl: '../manager/ck_upload'
         });
         var editor2 = CKEDITOR.replace('TextArea2', {
+            filebrowserImageUploadUrl: '../manager/ck_upload'
+        });
+        var editor3 = CKEDITOR.replace('TextArea3', {
             filebrowserImageUploadUrl: '../manager/ck_upload'
         });
 
