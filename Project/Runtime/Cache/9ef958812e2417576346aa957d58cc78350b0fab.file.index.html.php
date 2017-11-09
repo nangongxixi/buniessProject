@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2017-11-06 09:43:20
+<?php /* Smarty version Smarty-3.1.6, created on 2017-11-09 13:09:11
          compiled from "D:/phpStudy/WWW/buniessProject/Project/Home/View\wap\index.html" */ ?>
 <?php /*%%SmartyHeaderCode:3249159ffbe21c13b11-06454873%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '9ef958812e2417576346aa957d58cc78350b0fab' => 
     array (
       0 => 'D:/phpStudy/WWW/buniessProject/Project/Home/View\\wap\\index.html',
-      1 => 1509932596,
+      1 => 1510204149,
       2 => 'file',
     ),
   ),
@@ -17,6 +17,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'version' => 'Smarty-3.1.6',
   'unifunc' => 'content_59ffbe21cc764',
+  'variables' => 
+  array (
+    'picList' => 0,
+  ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_59ffbe21cc764')) {function content_59ffbe21cc764($_smarty_tpl) {?><!DOCTYPE html>
@@ -164,6 +168,13 @@ alifont/iconfont.css">
     })(window);
     </script>
 
+    <!-- 53客服 -->
+    <script>
+        (function () {
+        var _53code = document.createElement("script");
+        _53code.src = "https://tb.53kf.com/code/code/10161753/1";var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(_53code, s);})();
+    </script>
+
 
     <!-- ./wrapper -->
     <script src="<?php echo @ADMIN_JS_URL;?>
@@ -176,26 +187,10 @@ layer/layer.js"></script>
 <body class="skin-blue sidebar-mini">
 <div class="wrapper" style="background-color: #fff">
     <table id="__01" width="100%" height="100%" border="0" cellpadding="0" cellspacing="0"
-           style="margin: 0 auto 8% !important;">
+           style="margin: 0 auto 8% !important; max-width: 1080px">
         <tr>
-            <td>
-                <img src="<?php echo @IMG_URL;?>
-wap/wap_01.gif" width="1080" height="132" border="0"></td>
-        </tr>
-        <tr>
-            <td>
-                <img src="<?php echo @IMG_URL;?>
-wap/wap_02.gif" width="1080" height="573" border="0">
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a target="_blank"
-                   href="http://www16.53kf.com/webCompany.php?arg=10161753&amp;style=1&amp;language=cn&amp;charset=GBK&amp;kflist=off&amp;kf=&amp;zdkf_type=1&amp;referer=http%3A%2F%2Fwww.scmidai.com%2F&amp;keyword=&amp;tfrom=1&amp;tpl=crystal_blue&amp;uid=9469d95cc13f1e69b1a27b8527c440bf&amp;timeStamp=1502931683656&amp;ucust_id=">
-                    <img src="<?php echo @IMG_URL;?>
-wap/wap_03.gif" width="1080" height="473" border="0">
-                </a>
-            </td>
+            <td><?php echo $_smarty_tpl->tpl_vars['picList']->value['discript'];?>
+</td>
         </tr>
         <tr>
             <td>
@@ -275,19 +270,8 @@ wap/wap_06.gif" width="1080"
                          height="1081" border="0"></a></td>
         </tr>
         <tr>
-            <td>
-                <img src="<?php echo @IMG_URL;?>
-wap/wap_07.gif" width="1080" height="1147" border="0"></td>
-        </tr>
-        <tr>
-            <td>
-                <img src="<?php echo @IMG_URL;?>
-wap/wap_08.gif" width="1080" height="1215" border="0"></td>
-        </tr>
-        <tr>
-            <td>
-                <img src="<?php echo @IMG_URL;?>
-wap/wap_09.gif" width="1080" height="222" border="0"></td>
+            <td style="padding-bottom: 27px"><?php echo $_smarty_tpl->tpl_vars['picList']->value['advantage'];?>
+</td>
         </tr>
     </table>
 </div>
@@ -305,11 +289,21 @@ wap/wap_09.gif" width="1080" height="222" border="0"></td>
 <script>
     $(function () {
 
+        $('img').removeAttr('style');
+        $('p').find('br').remove();
+        $('img').click(function(){
+            window.open('http://www16.53kf.com/webCompany.php?arg=10161753&amp;style=1&amp;language=cn&amp;charset=GBK&amp;kflist=off&amp;kf=&amp;zdkf_type=1&amp;referer=http%3A%2F%2Fwww.scmidai.com%2F&amp;keyword=&amp;tfrom=1&amp;tpl=crystal_blue&amp;uid=9469d95cc13f1e69b1a27b8527c440bf&amp;timeStamp=1502931683656&amp;ucust_id=');
+        });
+
+
         //数据提交
         $('#submit').unbind('click').click(function () {
 
-          //  _taq.push({convert_id: "74381099680", event_type: "form"});
+            var index = layer.load(1, {
+                shade: [0.1,'#fff'] //0.1透明度的白色背景
+            });
 
+            $('#submit').removeAttr('id');
 
             //数据验证
             if (!validata()) {
@@ -318,7 +312,7 @@ wap/wap_09.gif" width="1080" height="222" border="0"></td>
 
             var formData = new FormData($("#formData")[0]);
             $.ajax({
-                url: '/index.php/Home/add',
+                url: '/index.php/Home/Wap/add',
                 type: 'POST',
                 data: formData,
                 async: false,
@@ -326,13 +320,17 @@ wap/wap_09.gif" width="1080" height="222" border="0"></td>
                 contentType: false,
                 processData: false,
                 success: function (returnJSON) {
+                    //alert(77);
+                    //console.log(returnJSON);
                     if (returnJSON.status) {
                         layer.msg(returnJSON.msg, {
                             icon: 1,
                             time: 2000
                         }, function () {
+                            _taq.push({convert_id: "74381099680", event_type: "form"});
                             sessionStorage.clear();
                             location.reload();
+                            parent.layer.close(index);
                             // localStorage.setItem('address', '../article/showlist');//保存当前地址,避免刷新跳转
                             // $('#content').load('../article/showlist');
                         });

@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2017-11-08 17:11:32
+<?php /* Smarty version Smarty-3.1.6, created on 2017-11-09 16:48:30
          compiled from "D:/phpStudy/WWW/buniessProject/Project/Home/View\About\index.html" */ ?>
 <?php /*%%SmartyHeaderCode:121915a02b82a164824-42406428%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '7143bc3cb88521c46141127eae5a51ec04fbc4fc' => 
     array (
       0 => 'D:/phpStudy/WWW/buniessProject/Project/Home/View\\About\\index.html',
-      1 => 1510132201,
+      1 => 1510217300,
       2 => 'file',
     ),
   ),
@@ -92,6 +92,9 @@ $_smarty_tpl->tpl_vars['v']->_loop = true;
             </div>
         </div>
     </div>
+    <div id="map" style="background-color: #f3f3f3; display: none">
+            <iframe id="content_frame" width="100%" height="430" scrolling="no" src="http://www.yunwei.com/index.php/Home/about/map" frameborder="0"></iframe>
+        </div>
 </div>
 
 <script>
@@ -104,9 +107,6 @@ $_smarty_tpl->tpl_vars['v']->_loop = true;
         $('.list-se p[class=title]').clickup();
         $('.list>ul>li').ad();
 
-
-        $('#title').html(sessionStorage.getItem('about-tit'));
-        $('#content').html(sessionStorage.getItem('about-con'));
         $('.list li').eq(sessionStorage.getItem('about-index')).find('p').css('border-bottom','2px solid #ac6a00');
         //点击左侧菜单的时候
         $('.list li').click(function(){
@@ -119,6 +119,27 @@ $_smarty_tpl->tpl_vars['v']->_loop = true;
             sessionStorage.setItem('about-con',$(this).next().html());
             sessionStorage.setItem('about-index',$(this).index());
         });
+
+        //默认显示
+        if(sessionStorage.getItem('about-tit')){
+            $('#title').html(sessionStorage.getItem('about-tit'));
+        }else{
+            $('#title').html($('.list').find('li').eq(0).find('p').html());
+        }
+        if(sessionStorage.getItem('about-con')){
+            $('#content').html(sessionStorage.getItem('about-con'));
+        }else{
+            $('#content').html($('.list').find('li').eq(1).html());
+        }
+
+        //地图
+        $('.list .about-title:last').click(function(){
+            $('#map').show();
+        });
+        $('.list .about-title:not(":last")').click(function(){
+            $('#map').hide();
+        });
+
 
     });
 </script><?php }} ?>

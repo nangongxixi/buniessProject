@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2017-11-08 17:10:08
+<?php /* Smarty version Smarty-3.1.6, created on 2017-11-09 17:03:52
          compiled from "D:/phpStudy/WWW/buniessProject/Project/Home/View\Case\index.html" */ ?>
 <?php /*%%SmartyHeaderCode:285045a02999b5c0316-12071771%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'bf8b2899c519538ff61d4dbe966b9877f40cce17' => 
     array (
       0 => 'D:/phpStudy/WWW/buniessProject/Project/Home/View\\Case\\index.html',
-      1 => 1510132201,
+      1 => 1510217292,
       2 => 'file',
     ),
   ),
@@ -113,6 +113,7 @@ $_smarty_tpl->tpl_vars['vv']->_loop = true;
             dots: true
         });
 
+
         $('.list ul li p').clickdown();
         $('.list-se p[class=title]').clickup();
         $('.list>ul>li').ad();
@@ -127,6 +128,21 @@ $_smarty_tpl->tpl_vars['vv']->_loop = true;
             sessionStorage.setItem('nei-tit',$(this).find('p').html());
             sessionStorage.setItem('nei-con',$(this).next().html());
         });
+
+
+        //默认显示
+        //默认显示
+        if(sessionStorage.getItem('nei-tit')){
+            $('#title').html(sessionStorage.getItem('nei-tit'));
+        }else{
+            $('#title').html($('.list-se').find('li').eq(0).find('p').html());
+        }
+        if(sessionStorage.getItem('nei-con')){
+            $('#content').html(sessionStorage.getItem('nei-con'));
+        }else{
+            $('#content').html($('.list-se').find('li').eq(1).html());
+        }
+
 
     });
 </script><?php }} ?>

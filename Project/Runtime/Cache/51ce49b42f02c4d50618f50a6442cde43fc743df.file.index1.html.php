@@ -1,4 +1,29 @@
-<!DOCTYPE html>
+<?php /* Smarty version Smarty-3.1.6, created on 2017-11-09 11:50:07
+         compiled from "D:/phpStudy/WWW/buniessProject/Project/Home/View\wap\index1.html" */ ?>
+<?php /*%%SmartyHeaderCode:302065a03bc0c681a37-44967617%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_valid = $_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    '51ce49b42f02c4d50618f50a6442cde43fc743df' => 
+    array (
+      0 => 'D:/phpStudy/WWW/buniessProject/Project/Home/View\\wap\\index1.html',
+      1 => 1510199406,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '302065a03bc0c681a37-44967617',
+  'function' => 
+  array (
+  ),
+  'version' => 'Smarty-3.1.6',
+  'unifunc' => 'content_5a03bc0c7316e',
+  'variables' => 
+  array (
+    'picList' => 0,
+  ),
+  'has_nocache_code' => false,
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_5a03bc0c7316e')) {function content_5a03bc0c7316e($_smarty_tpl) {?><!DOCTYPE html>
 <!-- saved from url=(0030)http://m.fkgg22.icoc.me/?_sc=2 -->
 <html style="font-size: 32px;">
 <head>
@@ -21,19 +46,26 @@
     <meta http-equiv="Pragma" content="no-cache">
 
     <!-- Bootstrap 3.3.6 -->
-    <link rel="stylesheet" href="{$smarty.const.STATIC_URL}bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="<?php echo @STATIC_URL;?>
+bootstrap/css/bootstrap.min.css">
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="{$smarty.const.STATIC_URL}font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="<?php echo @STATIC_URL;?>
+font-awesome/css/font-awesome.min.css">
     <!-- Ionicons -->
-    <link rel="stylesheet" href="{$smarty.const.STATIC_URL}ionicons/css/ionicons.min.css">
+    <link rel="stylesheet" href="<?php echo @STATIC_URL;?>
+ionicons/css/ionicons.min.css">
     <!-- Theme style -->
-    <link rel="stylesheet" href="{$smarty.const.STATIC_URL}dist/css/AdminLTE.min.css">
-    <link rel="stylesheet" href="{$smarty.const.STATIC_URL}dist/css/skins/skin-blue.min.css">
+    <link rel="stylesheet" href="<?php echo @STATIC_URL;?>
+dist/css/AdminLTE.min.css">
+    <link rel="stylesheet" href="<?php echo @STATIC_URL;?>
+dist/css/skins/skin-blue.min.css">
 
-    <link rel="stylesheet" href="{$smarty.const.CSS_URL}wap.css">
+    <link rel="stylesheet" href="<?php echo @CSS_URL;?>
+wap.css">
 
 
-    <link rel="stylesheet" href="{$smarty.const.CSS_URL}alifont/iconfont.css">
+    <link rel="stylesheet" href="<?php echo @CSS_URL;?>
+alifont/iconfont.css">
 
     <meta name="keywords" content=""/>
     <meta name="description" content=""/>
@@ -63,6 +95,7 @@
             width: 100%;
             background-color: #FFF;
             font-size: 0;
+            display: none;
         }
 
         .footer-nav a {
@@ -139,15 +172,19 @@
     <!-- 53客服 -->
     <script>
         (function () {
-        var _53code = document.createElement("script");
-        _53code.src = "https://tb.53kf.com/code/code/10161753/1";var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(_53code, s);})();
+            var _53code = document.createElement("script");
+            _53code.src = "https://tb.53kf.com/code/code/10161753/1";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(_53code, s);
+        })();
     </script>
 
-
     <!-- ./wrapper -->
-    <script src="{$smarty.const.ADMIN_JS_URL}jquery-2.2.3.min.js"></script>
+    <script src="<?php echo @ADMIN_JS_URL;?>
+jquery-2.2.3.min.js"></script>
     <!-- layer -->
-    <script src="{$smarty.const.STATIC_URL}layer/layer.js"></script>
+    <script src="<?php echo @STATIC_URL;?>
+layer/layer.js"></script>
 
 </head>
 <body class="skin-blue sidebar-mini">
@@ -155,7 +192,8 @@
     <table id="__01" width="100%" height="100%" border="0" cellpadding="0" cellspacing="0"
            style="margin: 0 auto 8% !important; max-width: 1080px">
         <tr>
-            <td>{$picList.discript}</td>
+            <td><?php echo $_smarty_tpl->tpl_vars['picList']->value['discript'];?>
+</td>
         </tr>
         <tr>
             <td>
@@ -207,7 +245,8 @@
                                    placeholder="请输入验证码" style="font-size: 16px !important;">
 
                             <span style="margin-left: 15px;    margin-left: 15px;    position: absolute;">
-                        <img class="yanzm" src="{$smarty.const.__CONTROLLER__}/verifyImg"
+                        <img class="yanzm" src="<?php echo @__CONTROLLER__;?>
+/verifyImg"
                              onclick="this.src=this.src+'?'"/>
                     </span>
                         </div>
@@ -220,22 +259,12 @@
             </td>
         </tr>
         <tr>
-            <td>
-                <a href="tel:18080889915"><img src="{$smarty.const.IMG_URL}wap/wap_05.gif" width="1080" height="1066"
-                                               border="0"></a></td>
-        </tr>
-        <tr>
-            <td>
-                <a target="_blank"
-                   href="http://www16.53kf.com/webCompany.php?arg=10161753&amp;style=1&amp;language=cn&amp;charset=GBK&amp;kflist=off&amp;kf=&amp;zdkf_type=1&amp;referer=http%3A%2F%2Fwww.scmidai.com%2F&amp;keyword=&amp;tfrom=1&amp;tpl=crystal_blue&amp;uid=9469d95cc13f1e69b1a27b8527c440bf&amp;timeStamp=1502931683656&amp;ucust_id=">
-                    <img src="{$smarty.const.IMG_URL}wap/wap_06.gif" width="1080"
-                         height="1081" border="0"></a></td>
-        </tr>
-        <tr>
-            <td style="padding-bottom: 27px">{$picList.advantage}</td>
+            <td style="padding-bottom: 27px"><?php echo $_smarty_tpl->tpl_vars['picList']->value['advantage'];?>
+</td>
         </tr>
     </table>
 </div>
+
 <div class="footer">
     <div class="footer-nav">
         <a href="tel:18080889915" class="default-nav"><span class="iconfont icon-dianhua"></span>免费电话咨询</a>
@@ -246,7 +275,7 @@
     </div>
 </div>
 
-{literal}
+
 <script>
     $(function () {
 
@@ -257,11 +286,12 @@
         });
 
 
+
         //数据提交
         $('#submit').unbind('click').click(function () {
 
             var index = layer.load(1, {
-                shade: [0.1,'#fff'] //0.1透明度的白色背景
+                shade: [0.1, '#fff'] //0.1透明度的白色背景
             });
 
             $('#submit').removeAttr('id');
@@ -338,6 +368,7 @@
         }
     });
 </script>
-{/literal}
+
 </body>
 </html>
+<?php }} ?>

@@ -66,6 +66,7 @@ class ArticleController extends AdminController
             //uploadOne会返回已经上传的附件信息
             $z = $upload->uploadOne($_FILES['mg_img']);
             if (!$z) {
+                ob_clean();//不加这个，前端收不到json数据
                 $this->ajaxReturn(array(
                     'status' => false,
                     'msg' => $upload->getError(),
@@ -118,15 +119,15 @@ class ArticleController extends AdminController
                         $inertID = $images->where('id in (' . implode(",", $imgArr) . ')')->save($data);
                         unset($_SESSION['imgArr']);//干掉上次添加多图的session
                     }
-                    $this->ajaxReturn(array(
-                        'status' => true,
-                        'msg' => '操作成功',
-                    ));
+
+                    $data = ['status' => true, 'msg' => '操作成功'];
+                    ob_clean();//不加这个，前端收不到json数据
+                    $this->ajaxReturn($data);
+
                 } else {
-                    $this->ajaxReturn(array(
-                        'status' => false,
-                        'msg' => '请点“开始上传”',
-                    ));
+                    $data = ['status' => false, 'msg' => '请点“开始上传”'];
+                    ob_clean();//不加这个，前端收不到json数据
+                    $this->ajaxReturn($data);
                 }
             }
         }
@@ -140,6 +141,8 @@ class ArticleController extends AdminController
                 array_push($imgArr,$v['img_url']);
             }
             $info[imgArr]=$imgArr;
+
+           // show_bug($info['advantage']);
             $this->assign('info', $info);
         }
         //获得被修改管理员的信息
@@ -159,15 +162,13 @@ class ArticleController extends AdminController
             $data["status"] = 1;
             $inertID = $manager->where('id=' . $id)->save($data);
             if ($inertID) {
-                $this->ajaxReturn(array(
-                    'status' => true,
-                    'msg' => '操作成功',
-                ));
+                $data = ['status' => true, 'msg' => '操作成功'];
+                ob_clean();//不加这个，前端收不到json数据
+                $this->ajaxReturn($data);
             } else {
-                $this->ajaxReturn(array(
-                    'status' => false,
-                    'msg' => '操作失败',
-                ));
+                $data = ['status' => false, 'msg' => '操作失败'];
+                ob_clean();//不加这个，前端收不到json数据
+                $this->ajaxReturn($data);
             }
         }
         $this->display();

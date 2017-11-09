@@ -58,6 +58,7 @@
             dots: true
         });
 
+
         $('.list ul li p').clickdown();
         $('.list-se p[class=title]').clickup();
         $('.list>ul>li').ad();
@@ -72,6 +73,21 @@
             sessionStorage.setItem('nei-tit',$(this).find('p').html());
             sessionStorage.setItem('nei-con',$(this).next().html());
         });
+
+
+        //默认显示
+        //默认显示
+        if(sessionStorage.getItem('nei-tit')){
+            $('#title').html(sessionStorage.getItem('nei-tit'));
+        }else{
+            $('#title').html($('.list-se').find('li').eq(0).find('p').html());
+        }
+        if(sessionStorage.getItem('nei-con')){
+            $('#content').html(sessionStorage.getItem('nei-con'));
+        }else{
+            $('#content').html($('.list-se').find('li').eq(1).html());
+        }
+
 
     });
 </script>

@@ -63,6 +63,7 @@
             width: 100%;
             background-color: #FFF;
             font-size: 0;
+            display: none;
         }
 
         .footer-nav a {
@@ -139,10 +140,12 @@
     <!-- 53客服 -->
     <script>
         (function () {
-        var _53code = document.createElement("script");
-        _53code.src = "https://tb.53kf.com/code/code/10161753/1";var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(_53code, s);})();
+            var _53code = document.createElement("script");
+            _53code.src = "https://tb.53kf.com/code/code/10161753/1";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(_53code, s);
+        })();
     </script>
-
 
     <!-- ./wrapper -->
     <script src="{$smarty.const.ADMIN_JS_URL}jquery-2.2.3.min.js"></script>
@@ -220,22 +223,11 @@
             </td>
         </tr>
         <tr>
-            <td>
-                <a href="tel:18080889915"><img src="{$smarty.const.IMG_URL}wap/wap_05.gif" width="1080" height="1066"
-                                               border="0"></a></td>
-        </tr>
-        <tr>
-            <td>
-                <a target="_blank"
-                   href="http://www16.53kf.com/webCompany.php?arg=10161753&amp;style=1&amp;language=cn&amp;charset=GBK&amp;kflist=off&amp;kf=&amp;zdkf_type=1&amp;referer=http%3A%2F%2Fwww.scmidai.com%2F&amp;keyword=&amp;tfrom=1&amp;tpl=crystal_blue&amp;uid=9469d95cc13f1e69b1a27b8527c440bf&amp;timeStamp=1502931683656&amp;ucust_id=">
-                    <img src="{$smarty.const.IMG_URL}wap/wap_06.gif" width="1080"
-                         height="1081" border="0"></a></td>
-        </tr>
-        <tr>
             <td style="padding-bottom: 27px">{$picList.advantage}</td>
         </tr>
     </table>
 </div>
+
 <div class="footer">
     <div class="footer-nav">
         <a href="tel:18080889915" class="default-nav"><span class="iconfont icon-dianhua"></span>免费电话咨询</a>
@@ -257,11 +249,12 @@
         });
 
 
+
         //数据提交
         $('#submit').unbind('click').click(function () {
 
             var index = layer.load(1, {
-                shade: [0.1,'#fff'] //0.1透明度的白色背景
+                shade: [0.1, '#fff'] //0.1透明度的白色背景
             });
 
             $('#submit').removeAttr('id');

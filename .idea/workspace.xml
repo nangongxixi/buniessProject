@@ -1,23 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="432c10fc-2d2f-4156-80cc-02354ab2cc00" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Project/Home.7z" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Project/Admin/View/Article/add.html" afterPath="$PROJECT_DIR$/Project/Admin/View/Article/add.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Project/Home/Controller/CarController.class.php" afterPath="$PROJECT_DIR$/Project/Home/Controller/CarController.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Project/Home/View/Car/index.html" afterPath="$PROJECT_DIR$/Project/Home/View/Car/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Project/Home/View/Index/index.html" afterPath="$PROJECT_DIR$/Project/Home/View/Index/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Project/Home/View/Index/main.html" afterPath="$PROJECT_DIR$/Project/Home/View/Index/main.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Project/Runtime/Cache/0de80bfcf7aa7a06e376dfb94a87733e0db9d5ad.file.index.html.php" afterPath="$PROJECT_DIR$/Project/Runtime/Cache/0de80bfcf7aa7a06e376dfb94a87733e0db9d5ad.file.index.html.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Project/Runtime/Cache/27a3ccc445768961011a70130dd7a4d73add2a19.file.add.html.php" afterPath="$PROJECT_DIR$/Project/Runtime/Cache/27a3ccc445768961011a70130dd7a4d73add2a19.file.add.html.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Project/Runtime/Cache/8bc475075212bbe5ea173c2c78a66967c591789b.file.index.html.php" afterPath="$PROJECT_DIR$/Project/Runtime/Cache/8bc475075212bbe5ea173c2c78a66967c591789b.file.index.html.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Project/Runtime/Cache/e61be43a375c489567c910579cd211e24f6ebba0.file.main.html.php" afterPath="$PROJECT_DIR$/Project/Runtime/Cache/e61be43a375c489567c910579cd211e24f6ebba0.file.main.html.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Project/Runtime/Cache/f0dad774b95543d6d7c41475878874b3c87f1694.file.index.html.php" afterPath="$PROJECT_DIR$/Project/Runtime/Cache/f0dad774b95543d6d7c41475878874b3c87f1694.file.index.html.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Project/Runtime/Logs/17_11_07.log" afterPath="$PROJECT_DIR$/Project/Runtime/Logs/17_11_07.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Project/public/Home/css/yd-Index.css" afterPath="$PROJECT_DIR$/Project/public/Home/css/yd-Index.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Project/public/Home/css/zzsc.css" afterPath="$PROJECT_DIR$/Project/public/Home/css/zzsc.css" />
-    </list>
+    <list default="true" id="432c10fc-2d2f-4156-80cc-02354ab2cc00" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -212,7 +196,7 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1616" />
@@ -352,15 +336,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1509931983420</updated>
-      <workItem from="1509931985811" duration="76326000" />
+      <workItem from="1509931985811" duration="76923000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="76326000" />
+    <option name="totallyTimeSpent" value="76923000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
+    <frame x="-8" y="-8" width="1616" height="876" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21907216" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />

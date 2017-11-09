@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2017-11-08 13:43:55
+<?php /* Smarty version Smarty-3.1.6, created on 2017-11-09 16:57:29
          compiled from "D:/phpStudy/WWW/buniessProject/Project/Home/View\Index\index.html" */ ?>
 <?php /*%%SmartyHeaderCode:33705a0268eeeeb946-24137944%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'f0dad774b95543d6d7c41475878874b3c87f1694' => 
     array (
       0 => 'D:/phpStudy/WWW/buniessProject/Project/Home/View\\Index\\index.html',
-      1 => 1510119453,
+      1 => 1510217844,
       2 => 'file',
     ),
   ),
@@ -595,11 +595,11 @@ tel.jpg"></li>
         }
         $('.nav a').eq(homeIndex).addClass('nav-on').siblings().removeClass();//加载保存的样式
 
+        //导航
         $('.nav a').click(function () {
             $('#index').html("");
             $(this).addClass('nav-on').siblings().removeClass();
             var index = $(this).index();
-
             if (index == 1) {
                 $url = '/index.php/Home/Car/index/catid/3/catname/车贷'; //车贷
             } else if (index == 2) {
@@ -609,18 +609,21 @@ tel.jpg"></li>
             } else if (index == 4) {
                 $url = '/index.php/Home/Car/index/catid/6/catname/保单贷';//保单贷
             } else if (index == 5) {
-                $url = '/index.php/Home/Case/index';//成功案例
+                $url = '/index.php/Home/Case/index/catid/9';//成功案例
             } else if (index == 6) {
-                $url = '/index.php/Home/About/index';//关于我们
+                $url = '/index.php/Home/About/index/catid/11';//关于我们
             } else {
                 $url = '/index.php/Home/index/main';
             }
-
             $('#index').load($url);
             sessionStorage.setItem('homeSite', $url);
             sessionStorage.setItem('homeIndex', index);
-
         })
+
+        //子页面
+        $(document).on('click','#myscrollbox li',function(){
+            $('#index').load('/index.php/Home/Car/detail');
+        });
 
 
     });

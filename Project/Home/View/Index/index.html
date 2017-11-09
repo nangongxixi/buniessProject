@@ -445,11 +445,11 @@
         }
         $('.nav a').eq(homeIndex).addClass('nav-on').siblings().removeClass();//加载保存的样式
 
+        //导航
         $('.nav a').click(function () {
             $('#index').html("");
             $(this).addClass('nav-on').siblings().removeClass();
             var index = $(this).index();
-
             if (index == 1) {
                 $url = '/index.php/Home/Car/index/catid/3/catname/车贷'; //车贷
             } else if (index == 2) {
@@ -465,12 +465,15 @@
             } else {
                 $url = '/index.php/Home/index/main';
             }
-
             $('#index').load($url);
             sessionStorage.setItem('homeSite', $url);
             sessionStorage.setItem('homeIndex', index);
-
         })
+
+        //子页面
+        $(document).on('click','#myscrollbox li',function(){
+            $('#index').load('/index.php/Home/Car/detail');
+        });
 
 
     });

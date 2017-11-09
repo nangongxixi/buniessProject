@@ -33,9 +33,9 @@ class IndexController extends Controller
     {
         $articles = D('Articles');
         //贷款项目
-        $articleList = $articles->where('category_id in (3,4,5,6)')->select();
+        $articleList = $articles->where('category_id in (3,4,5,6) and status=0')->order('sort desc')->limit(7)->select();
         //客服列表
-        $customer = $articles->table("yw_articles as a")->join("yw_images as b")->where("a.id=b.article_id and a.category_id=12")->select();
+        $customer = $articles->table("yw_articles as a")->join("yw_images as b")->where("a.id=b.article_id and a.category_id=12 and b.type=0 and b.status=0")->select();
         //成功案例
         $sql = "SELECT * FROM yw_articles as a LEFT JOIN yw_images as b ON ( a.id=b.article_id  ) WHERE (a.category_id=9) ORDER BY a.sort desc,a.id desc LIMIT 7";
         $caseList = $articles->query($sql);

@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2017-11-08 12:01:16
+<?php /* Smarty version Smarty-3.1.6, created on 2017-11-09 14:32:11
          compiled from "D:/phpStudy/WWW/buniessProject/Project/Admin/View\article\add.html" */ ?>
 <?php /*%%SmartyHeaderCode:185675a0281755dbf66-31854902%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '27a3ccc445768961011a70130dd7a4d73add2a19' => 
     array (
       0 => 'D:/phpStudy/WWW/buniessProject/Project/Admin/View\\article\\add.html',
-      1 => 1510113674,
+      1 => 1510209120,
       2 => 'file',
     ),
   ),
@@ -31,6 +31,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 upImage/zyupload/skins/zyupload-1.0.0.min.css " type="text/css">
 <script type="text/javascript" src="<?php echo @STATIC_URL;?>
 upImage/zyupload/zyupload.basic-1.0.0.min.js"></script>
+
 <div class="col-xs-12">
     <div class="box">
         <div class="box-body">
@@ -122,7 +123,7 @@ $_smarty_tpl->tpl_vars['v']->_loop = true;
                                        placeholder="请填写描述" errorMsg="描述不能为空"><?php echo $_smarty_tpl->tpl_vars['info']->value['discript'];?>
 </textarea>-->
                             <div>
-                                <textarea id="TextArea3" name="discript" cols="20" rows="2" class="ckeditor"><?php echo $_smarty_tpl->tpl_vars['info']->value['advantage'];?>
+                                <textarea id="TextArea3" name="advantage" cols="20" rows="2" class="ckeditor"><?php echo $_smarty_tpl->tpl_vars['info']->value['advantage'];?>
 </textarea>
                             </div>
                         </td>
@@ -160,7 +161,8 @@ $_smarty_tpl->tpl_vars['v']->_loop = true;
         var discript = $.parseHTML(sessionStorage.getItem('editorcontent2'));//把html转换成实体
         var advantage = $.parseHTML(sessionStorage.getItem('editorcontent3'));//把html转换成实体
         var content = $.parseHTML(sessionStorage.getItem('editorcontent'));//把html转换成实体
-        // editor.setData(content);//给富文本区域赋值
+
+       // editor3.setData(advantage);//给富文本区域赋值
 
         //数据提交
         $('#submit').unbind('click').click(function () {
@@ -204,7 +206,7 @@ $_smarty_tpl->tpl_vars['v']->_loop = true;
                         }, function () {
                             sessionStorage.clear();
                             localStorage.setItem('address', '../article/showlist');//保存当前地址,避免刷新跳转
-                            $('#content').load('../article/showlist');
+                           // $('#content').load('../article/showlist');
                         });
                     } else {
                         layer.msg(returnJSON.msg, {
@@ -302,6 +304,7 @@ $_smarty_tpl->tpl_vars['v']->_loop = true;
         });
         editor.setData(sessionStorage.getItem("editorcontent"));//回填富文本区域
         editor2.setData(sessionStorage.getItem("editorcontent2"));//回填富文本区域
+        editor3.setData(sessionStorage.getItem("editorcontent3"));//回填富文本区域
 
 
         //保存输入
@@ -317,6 +320,9 @@ $_smarty_tpl->tpl_vars['v']->_loop = true;
         });
         editor2.on('change', function (event) {
             sessionStorage.setItem('editorcontent2', this.getData());
+        });
+        editor3.on('change', function (event) {
+            sessionStorage.setItem('editorcontent3', this.getData());
         });
     }
 

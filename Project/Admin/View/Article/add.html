@@ -1,6 +1,7 @@
 <!--图片上传-->
 <link rel="stylesheet" href="{$smarty.const.STATIC_URL}upImage/zyupload/skins/zyupload-1.0.0.min.css " type="text/css">
 <script type="text/javascript" src="{$smarty.const.STATIC_URL}upImage/zyupload/zyupload.basic-1.0.0.min.js"></script>
+
 <div class="col-xs-12">
     <div class="box">
         <div class="box-body">
@@ -69,7 +70,7 @@
                             <!-- <textarea class="form-control" name="discript" rows="3"
                                        placeholder="请填写描述" errorMsg="描述不能为空">{$info.discript}</textarea>-->
                             <div>
-                                <textarea id="TextArea3" name="discript" cols="20" rows="2" class="ckeditor">{$info.advantage}</textarea>
+                                <textarea id="TextArea3" name="advantage" cols="20" rows="2" class="ckeditor">{$info.advantage}</textarea>
                             </div>
                         </td>
                     </tr>
@@ -96,7 +97,6 @@
     </div>
 </div>
 
-
 <script>
     $(function () {
 
@@ -105,10 +105,12 @@
         var discript = $.parseHTML(sessionStorage.getItem('editorcontent2'));//把html转换成实体
         var advantage = $.parseHTML(sessionStorage.getItem('editorcontent3'));//把html转换成实体
         var content = $.parseHTML(sessionStorage.getItem('editorcontent'));//把html转换成实体
-        // editor.setData(content);//给富文本区域赋值
+
+       // editor3.setData(advantage);//给富文本区域赋值
 
         //数据提交
         $('#submit').unbind('click').click(function () {
+
             //检查图片是否保存
             if ($('#preview').find('.file_success:hidden').length != 0) {
                 layer.msg('您有图片没保存', {
@@ -143,7 +145,12 @@
                 processData: false,
                 success: function (returnJSON) {
                     if (returnJSON.status) {
-                        layer.msg(returnJSON.msg, {
+                        alert('操作成功！');
+                        sessionStorage.clear();
+                        localStorage.setItem('address', '../article/showlist');//保存当前地址,避免刷新跳转
+                        $('#content').load('../article/showlist');
+                        return false;
+                       layer.msg(returnJSON.msg, {
                             icon: 1,
                             time: 2000
                         }, function () {
@@ -247,6 +254,7 @@
         });
         editor.setData(sessionStorage.getItem("editorcontent"));//回填富文本区域
         editor2.setData(sessionStorage.getItem("editorcontent2"));//回填富文本区域
+        editor3.setData(sessionStorage.getItem("editorcontent3"));//回填富文本区域
 
 
         //保存输入
@@ -262,6 +270,9 @@
         });
         editor2.on('change', function (event) {
             sessionStorage.setItem('editorcontent2', this.getData());
+        });
+        editor3.on('change', function (event) {
+            sessionStorage.setItem('editorcontent3', this.getData());
         });
     }
 

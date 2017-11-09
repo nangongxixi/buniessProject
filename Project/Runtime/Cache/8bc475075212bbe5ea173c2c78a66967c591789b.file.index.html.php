@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2017-11-08 15:54:16
+<?php /* Smarty version Smarty-3.1.6, created on 2017-11-09 16:57:25
          compiled from "D:/phpStudy/WWW/buniessProject/Project/Home/View\index\index.html" */ ?>
 <?php /*%%SmartyHeaderCode:3141259ffbe1801fa39-26674452%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '8bc475075212bbe5ea173c2c78a66967c591789b' => 
     array (
       0 => 'D:/phpStudy/WWW/buniessProject/Project/Home/View\\index\\index.html',
-      1 => 1510127603,
+      1 => 1510217844,
       2 => 'file',
     ),
   ),
@@ -595,11 +595,11 @@ tel.jpg"></li>
         }
         $('.nav a').eq(homeIndex).addClass('nav-on').siblings().removeClass();//加载保存的样式
 
+        //导航
         $('.nav a').click(function () {
             $('#index').html("");
             $(this).addClass('nav-on').siblings().removeClass();
             var index = $(this).index();
-
             if (index == 1) {
                 $url = '/index.php/Home/Car/index/catid/3/catname/车贷'; //车贷
             } else if (index == 2) {
@@ -615,12 +615,15 @@ tel.jpg"></li>
             } else {
                 $url = '/index.php/Home/index/main';
             }
-
             $('#index').load($url);
             sessionStorage.setItem('homeSite', $url);
             sessionStorage.setItem('homeIndex', index);
-
         })
+
+        //子页面
+        $(document).on('click','#myscrollbox li',function(){
+            $('#index').load('/index.php/Home/Car/detail');
+        });
 
 
     });

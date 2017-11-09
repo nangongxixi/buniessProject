@@ -18,7 +18,7 @@ class CaseController extends Controller
         }
 
         //banner图
-        $other['bannerImg'] = D('images')->field('img_url')->where('status=0 and article_id=' . $catid)->select();
+        $other['bannerImg'] = D('images')->field('img_url')->where('type=1 and status=0 and article_id=' . $catid)->select();
 
         $this->assign('caseList', $caseList);//列表
         $this->assign('other', $other);//列表
