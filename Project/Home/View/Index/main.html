@@ -236,7 +236,7 @@
 
                     <ul>
                         {foreach $dkglList as $k => $v}
-                        <li>
+                        <li class="manual-li" manualid="{$v.id}">
                             <h5>
                                 <a href="#" title="{$v.title}" imgurl="{$v.img_url}"
                                    discript="{if (mb_strlen($v.discript,'utf-8'))>50}{mb_substr($v.discript,0,50,'utf-8')}…{else}{$v.discript}{/if}">
@@ -264,13 +264,13 @@
                         <p>暂无...</p>
                     </div>
                     <ul>
-                        {foreach $zxzxList as $k => $v}
-                        <li>
+                        {foreach $zxzxList as $kk => $vv}
+                        <li class="manual-li" manualid="{$vv.id}">
                             <h5>
-                                <a href="#" title="{$v.title}" imgurl="{$v.img_url}"
-                                   discript="{if (mb_strlen($v.discript,'utf-8'))>50}{mb_substr($v.discript,0,50,'utf-8')}…{else}{$v.discript}{/if}">
+                                <a href="#" title="{$vv.title}" imgurl="{$vv.img_url}"
+                                   discript="{if (mb_strlen($vv.discript,'utf-8'))>50}{mb_substr($vv.discript,0,50,'utf-8')}…{else}{$vv.discript}{/if}">
                                     {if
-                                    (mb_strlen($v.title,'utf-8'))>20}{mb_substr($v.title,0,20,'utf-8')}…{else}{$v.title}{/if}
+                                    (mb_strlen($vv.title,'utf-8'))>20}{mb_substr($vv.title,0,20,'utf-8')}…{else}{$vv.title}{/if}
                                 </a></h5>
                         </li>
                         {/foreach}

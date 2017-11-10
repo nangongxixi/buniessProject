@@ -42,17 +42,20 @@ class IndexController extends Controller
         //资金支持
         $amount =  $articles->where('category_id=15')->select();
         //贷款攻略
-        $sql = "SELECT * FROM yw_articles as a LEFT JOIN yw_images as b ON ( a.id=b.article_id  ) WHERE (a.category_id=7) ORDER BY a.sort desc,a.id desc LIMIT 7";
+        $sql = "SELECT a.*,b.img_url FROM yw_articles as a LEFT JOIN yw_images as b ON ( a.id=b.article_id  ) WHERE (a.category_id=7) ORDER BY a.sort desc,a.id desc LIMIT 7";
         $dkglList = $articles->query($sql);
         //资讯中心
-        $sql = "SELECT * FROM yw_articles as a LEFT JOIN yw_images as b ON ( a.id=b.article_id  ) WHERE (a.category_id=8) ORDER BY a.sort desc,a.id desc LIMIT 7";
+        $sql = "SELECT a.*,b.img_url FROM yw_articles as a LEFT JOIN yw_images as b ON ( a.id=b.article_id  ) WHERE (a.category_id=8) ORDER BY a.sort desc,a.id desc LIMIT 7";
         $zxzxList = $articles->query($sql);
+
+        //echo $articles->_sql();
+
         //常见问答
         $askList =  $articles->where('category_id=10')->select();
         //友情连接
         $links =  $articles->where('category_id=14')->select();
 
-        //show_bug($footNav);
+        //show_bug($zxzxList);
 
         //echo $articles->_sql();
         //show_bug($footNav);

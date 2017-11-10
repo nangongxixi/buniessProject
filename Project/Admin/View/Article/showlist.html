@@ -4,15 +4,25 @@
         <div class="box-header" style="/*padding: 27px !important;*/">
             <button type="button" class="btn btn-success addItem"><i class="fa fa-plus"></i> 新增</button>
             <div class="box-tools">
+                <div class="col-xs-3 input-group-sm" style="width: 200px;padding-right: 0 !important; margin-right: 15px">
+                    <select class="form-control" name="category_id">
+                        <option value="">-- 请选择来源 --</option>
+                        {foreach $selectList as $kk=>$vv}
+                            <option value="{$vv.category_id}">{$vv.category_name}</option>
+                        {/foreach}
+                    </select>
+                </div>
                 <div class="input-group input-group-sm" style="width: 200px;">
                     <input type="text" name="title" class="form-control pull-right"
                            placeholder="请输入文章标题" style="font-size: 14px">
                     <div class="input-group-btn" id="search" href="{$smarty.const.__MODULE__}/article/showlist">
                         <button type="submit" class="btn btn-default"><i class="fa fa-search"></i>
                         </button>
+                        <button type="button" class="btn btn-block btn-default btn-flat">Default</button>
                     </div>
                 </div>
             </div>
+
         </div>
 
 
@@ -71,7 +81,7 @@
         //保持搜索条件
         var searArr = JSON.parse(localStorage.getItem('searArr'));
         $.each(searArr, function (index, item) {
-            $("input[name='" + index + "']").val(item);
+            $("input[name='" + index + "'],select[name='" + index + "']").val(item);
         });
 
         //详情

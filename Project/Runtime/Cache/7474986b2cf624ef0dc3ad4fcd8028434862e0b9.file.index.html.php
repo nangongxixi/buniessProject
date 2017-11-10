@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2017-11-06 13:13:32
+<?php /* Smarty version Smarty-3.1.6, created on 2017-11-10 15:17:58
          compiled from "D:/phpStudy/WWW/buniessProject/Project/Admin/View\Index\index.html" */ ?>
 <?php /*%%SmartyHeaderCode:1209659ffef7cd3a877-72262509%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '7474986b2cf624ef0dc3ad4fcd8028434862e0b9' => 
     array (
       0 => 'D:/phpStudy/WWW/buniessProject/Project/Admin/View\\Index\\index.html',
-      1 => 1509935551,
+      1 => 1510298161,
       2 => 'file',
     ),
   ),
@@ -15,9 +15,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
-  'has_nocache_code' => false,
   'version' => 'Smarty-3.1.6',
   'unifunc' => 'content_59ffef7cdb788',
+  'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_59ffef7cdb788')) {function content_59ffef7cdb788($_smarty_tpl) {?><!DOCTYPE html>
 <!--
@@ -237,24 +237,32 @@ dist/js/app.min.js"></script>
         });
 
         //点击列表上的搜索的时候
+
         $(document).on('click', '#search', function () {
             var address = $(this).attr('href');
-            var inputName = $(this).prev().attr('name');
-            var inputVal = $(this).prev().val();
+            var obj = $('.box-tools').find('select,input');
 
             //保存搜索条件
-            var searArr = {};
-            searArr[inputName] = inputVal;
-            localStorage.setItem('searArr', JSON.stringify(searArr));
+            var inputVal = {};
+            var searAddress = '';
+            for(var i=0; i<obj.length;i++){
+                var name = obj.eq(i).attr('name');
+                var val = obj.eq(i).val();
+                if(val){
+                    inputVal[name] = val;
+                    searAddress+=name+'/'+val+'/';
+                }
+            }
 
-            var href = address + '?' + inputName + '=' + inputVal;//拼接查询地址 index.php/Admin/Manager/showlist?name=XXX&age=25
-
+            localStorage.setItem('searArr', JSON.stringify(inputVal));
+            var href = address + '/' +searAddress.substring(0,searAddress.length-1);//拼接查询地址 index.php/Admin/Manager/showlist?name=XXX&age=25
             localStorage.setItem('address', href);//子页面地址
             $('#content').load(href);
         });
 
     });
 </script>
+
 </body>
 </html>
 <?php }} ?>

@@ -159,7 +159,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
         type: 'datetime'
     });
 </script>
-
+{literal}
 <script>
     $(function () {
 
@@ -199,23 +199,31 @@ scratch. This page gets rid of all links and provides the needed markup only.
         });
 
         //点击列表上的搜索的时候
+
         $(document).on('click', '#search', function () {
             var address = $(this).attr('href');
-            var inputName = $(this).prev().attr('name');
-            var inputVal = $(this).prev().val();
+            var obj = $('.box-tools').find('select,input');
 
             //保存搜索条件
-            var searArr = {};
-            searArr[inputName] = inputVal;
-            localStorage.setItem('searArr', JSON.stringify(searArr));
+            var inputVal = {};
+            var searAddress = '';
+            for(var i=0; i<obj.length;i++){
+                var name = obj.eq(i).attr('name');
+                var val = obj.eq(i).val();
+                if(val){
+                    inputVal[name] = val;
+                    searAddress+=name+'/'+val+'/';
+                }
+            }
 
-            var href = address + '?' + inputName + '=' + inputVal;//拼接查询地址 index.php/Admin/Manager/showlist?name=XXX&age=25
-
+            localStorage.setItem('searArr', JSON.stringify(inputVal));
+            var href = address + '/' +searAddress.substring(0,searAddress.length-1);//拼接查询地址 index.php/Admin/Manager/showlist?name=XXX&age=25
             localStorage.setItem('address', href);//子页面地址
             $('#content').load(href);
         });
 
     });
 </script>
+{/literal}
 </body>
 </html>

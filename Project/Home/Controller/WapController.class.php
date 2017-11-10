@@ -11,7 +11,7 @@ class WapController extends Controller
 
     function index()
     {
-       // $url = $_SERVER['HTTP_HOST'];
+        // $url = $_SERVER['HTTP_HOST'];
         //获取网页地址
         $url = $_SERVER['PHP_SELF'];
         $parm = substr($url, $url . length - 2, 2);//截取最后的'm2'或者'2/'
@@ -21,6 +21,8 @@ class WapController extends Controller
             $picList = $articles->where('category_id=42')->select();
         } else if ($parm == 'm4' || $parm == '4/') {
             $picList = $articles->where('category_id=43')->select();
+        } else if ($parm == '11' || $parm == '1/') {
+            $picList = $articles->where('category_id=44')->select();
         } else {
             $picList = $articles->where('category_id=41')->select();
         }

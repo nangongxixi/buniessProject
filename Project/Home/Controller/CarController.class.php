@@ -31,6 +31,7 @@ class CarController extends Controller
         //常见问答
         $askList = $articles->where('category_id=10')->select();
 
+        $catname =  iconv("gb2312","UTF-8",$catname); //解决从url获取的中文乱码
         $this->assign('catname', $catname);//标题
         $this->assign('carList', $carList);//车贷
         $this->assign('other', $other);//其他

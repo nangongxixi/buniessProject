@@ -167,7 +167,7 @@
         <tr>
             <td>{$picList.discript}</td>
         </tr>
-        <tr>
+        <tr id="bgimg" style="background-image: url({$smarty.const.IMG_URL}wap/11_02.jpg) ; background-position: top right; background-size: 100% 100%">
             <td>
                 <form method="post" enctype="multipart/form-data" id="formData" style="width: 90%; margin: 30px auto">
                     <div class="form-group">
@@ -230,18 +230,6 @@
             </td>
         </tr>
         <tr>
-            <td>
-                <a href="tel:18080889915"><img src="{$smarty.const.IMG_URL}wap/wap_05.gif" width="1080" height="1066"
-                                               border="0"></a></td>
-        </tr>
-        <tr>
-            <td>
-                <a target="_blank"
-                   href="http://www16.53kf.com/webCompany.php?arg=10161753&amp;style=1&amp;language=cn&amp;charset=GBK&amp;kflist=off&amp;kf=&amp;zdkf_type=1&amp;referer=http%3A%2F%2Fwww.scmidai.com%2F&amp;keyword=&amp;tfrom=1&amp;tpl=crystal_blue&amp;uid=9469d95cc13f1e69b1a27b8527c440bf&amp;timeStamp=1502931683656&amp;ucust_id=">
-                    <img src="{$smarty.const.IMG_URL}wap/wap_06.gif" width="1080"
-                         height="1081" border="0"></a></td>
-        </tr>
-        <tr>
             <td style="padding-bottom: 27px">{$picList.advantage}</td>
         </tr>
     </table>
@@ -266,6 +254,12 @@
             window.open('http://www16.53kf.com/webCompany.php?arg=10161753&amp;style=1&amp;language=cn&amp;charset=GBK&amp;kflist=off&amp;kf=&amp;zdkf_type=1&amp;referer=http%3A%2F%2Fwww.scmidai.com%2F&amp;keyword=&amp;tfrom=1&amp;tpl=crystal_blue&amp;uid=9469d95cc13f1e69b1a27b8527c440bf&amp;timeStamp=1502931683656&amp;ucust_id=');
         });
 
+        //获取当前页面的url
+        var url = window.location.href;
+        var urlLast = url.substr(url.length-2,2);
+        if(urlLast!='11'){
+            $('#bgimg').removeAttr('style') ;
+        }
 
         //数据提交
         $('#submit').unbind('click').click(function () {
@@ -278,6 +272,7 @@
 
             //数据验证
             if (!validata()) {
+                parent.layer.close(index);
                 return false;
             }
 

@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2017-11-09 13:09:11
+<?php /* Smarty version Smarty-3.1.6, created on 2017-11-10 16:24:47
          compiled from "D:/phpStudy/WWW/buniessProject/Project/Home/View\wap\index.html" */ ?>
 <?php /*%%SmartyHeaderCode:3249159ffbe21c13b11-06454873%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '9ef958812e2417576346aa957d58cc78350b0fab' => 
     array (
       0 => 'D:/phpStudy/WWW/buniessProject/Project/Home/View\\wap\\index.html',
-      1 => 1510204149,
+      1 => 1510302286,
       2 => 'file',
     ),
   ),
@@ -26,6 +26,16 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 <?php if ($_valid && !is_callable('content_59ffbe21cc764')) {function content_59ffbe21cc764($_smarty_tpl) {?><!DOCTYPE html>
 <!-- saved from url=(0030)http://m.fkgg22.icoc.me/?_sc=2 -->
 <html style="font-size: 32px;">
+<!-- 百度统计代码 -->
+<script>
+    var _hmt = _hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?fac27b95fadfacb57cc78408cacd8ab2";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>米袋金融</title>
@@ -192,7 +202,8 @@ layer/layer.js"></script>
             <td><?php echo $_smarty_tpl->tpl_vars['picList']->value['discript'];?>
 </td>
         </tr>
-        <tr>
+        <tr id="bgimg" style="background-image: url(<?php echo @IMG_URL;?>
+wap/11_02.jpg) ; background-position: top right; background-size: 100% 100%">
             <td>
                 <form method="post" enctype="multipart/form-data" id="formData" style="width: 90%; margin: 30px auto">
                     <div class="form-group">
@@ -256,20 +267,6 @@ layer/layer.js"></script>
             </td>
         </tr>
         <tr>
-            <td>
-                <a href="tel:18080889915"><img src="<?php echo @IMG_URL;?>
-wap/wap_05.gif" width="1080" height="1066"
-                                               border="0"></a></td>
-        </tr>
-        <tr>
-            <td>
-                <a target="_blank"
-                   href="http://www16.53kf.com/webCompany.php?arg=10161753&amp;style=1&amp;language=cn&amp;charset=GBK&amp;kflist=off&amp;kf=&amp;zdkf_type=1&amp;referer=http%3A%2F%2Fwww.scmidai.com%2F&amp;keyword=&amp;tfrom=1&amp;tpl=crystal_blue&amp;uid=9469d95cc13f1e69b1a27b8527c440bf&amp;timeStamp=1502931683656&amp;ucust_id=">
-                    <img src="<?php echo @IMG_URL;?>
-wap/wap_06.gif" width="1080"
-                         height="1081" border="0"></a></td>
-        </tr>
-        <tr>
             <td style="padding-bottom: 27px"><?php echo $_smarty_tpl->tpl_vars['picList']->value['advantage'];?>
 </td>
         </tr>
@@ -295,6 +292,12 @@ wap/wap_06.gif" width="1080"
             window.open('http://www16.53kf.com/webCompany.php?arg=10161753&amp;style=1&amp;language=cn&amp;charset=GBK&amp;kflist=off&amp;kf=&amp;zdkf_type=1&amp;referer=http%3A%2F%2Fwww.scmidai.com%2F&amp;keyword=&amp;tfrom=1&amp;tpl=crystal_blue&amp;uid=9469d95cc13f1e69b1a27b8527c440bf&amp;timeStamp=1502931683656&amp;ucust_id=');
         });
 
+        //获取当前页面的url
+        var url = window.location.href;
+        var urlLast = url.substr(url.length-2,2);
+        if(urlLast!='11'){
+            $('#bgimg').removeAttr('style') ;
+        }
 
         //数据提交
         $('#submit').unbind('click').click(function () {
@@ -307,6 +310,7 @@ wap/wap_06.gif" width="1080"
 
             //数据验证
             if (!validata()) {
+                parent.layer.close(index);
                 return false;
             }
 

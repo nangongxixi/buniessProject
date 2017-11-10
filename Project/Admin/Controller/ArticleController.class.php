@@ -12,16 +12,18 @@ class ArticleController extends AdminController
     {
         $infop = D('Articles');
         $_SESSION['sear'] = [
-            'title' => [' like \'%', $_GET['title'], '%\'']
+            'title' => [' like \'%', $_GET['title'], '%\''],
+            'category_id' => ['= \'', $_GET['category_id'], '\'']
         ];
         foreach ($_SESSION['sear'] as $k => $v) {
             if (!empty($v[1])) {
                 $condition .= ' and ' . $k . $v[0] . $v[1] . $v[2];
             }
         }
+
         //重置分页条件
         $conditionSear = ltrim($condition, " and");
-        $total = $infop->where($conditionSear . 'status=0')->count();
+        $total = $infop->where($conditionSear . 'and status=0')->count();
         //echo $infop->_sql();
         $per = 14;
         $page = new \Component\Page($total, $per); //autoload        
@@ -33,6 +35,7 @@ class ArticleController extends AdminController
         $this->assign('info', $info);
         $this->assign('pagelist', $pagelist);
         $this->display();
+
     }
 
     //详情

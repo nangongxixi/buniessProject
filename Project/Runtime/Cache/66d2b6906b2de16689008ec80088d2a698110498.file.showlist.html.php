@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2017-11-07 09:21:48
+<?php /* Smarty version Smarty-3.1.6, created on 2017-11-10 15:29:31
          compiled from "D:/phpStudy/WWW/buniessProject/Project/Admin/View\Article\showlist.html" */ ?>
 <?php /*%%SmartyHeaderCode:2594259fff8478bf538-60973687%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '66d2b6906b2de16689008ec80088d2a698110498' => 
     array (
       0 => 'D:/phpStudy/WWW/buniessProject/Project/Admin/View\\Article\\showlist.html',
-      1 => 1510017705,
+      1 => 1510298968,
       2 => 'file',
     ),
   ),
@@ -19,10 +19,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'unifunc' => 'content_59fff8479386c',
   'variables' => 
   array (
-    'info' => 0,
-    'v' => 0,
     'selectList' => 0,
     'vv' => 0,
+    'info' => 0,
+    'v' => 0,
     'pagelist' => 0,
   ),
   'has_nocache_code' => false,
@@ -33,6 +33,22 @@ $_valid = $_smarty_tpl->decodeProperties(array (
         <div class="box-header" style="/*padding: 27px !important;*/">
             <button type="button" class="btn btn-success addItem"><i class="fa fa-plus"></i> 新增</button>
             <div class="box-tools">
+                <div class="col-xs-3 input-group-sm" style="width: 200px;padding-right: 0 !important; margin-right: 15px">
+                    <select class="form-control" name="category_id">
+                        <option value="">-- 请选择来源 --</option>
+                        <?php  $_smarty_tpl->tpl_vars['vv'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['vv']->_loop = false;
+ $_smarty_tpl->tpl_vars['kk'] = new Smarty_Variable;
+ $_from = $_smarty_tpl->tpl_vars['selectList']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['vv']->key => $_smarty_tpl->tpl_vars['vv']->value){
+$_smarty_tpl->tpl_vars['vv']->_loop = true;
+ $_smarty_tpl->tpl_vars['kk']->value = $_smarty_tpl->tpl_vars['vv']->key;
+?>
+                            <option value="<?php echo $_smarty_tpl->tpl_vars['vv']->value['category_id'];?>
+"><?php echo $_smarty_tpl->tpl_vars['vv']->value['category_name'];?>
+</option>
+                        <?php } ?>
+                    </select>
+                </div>
                 <div class="input-group input-group-sm" style="width: 200px;">
                     <input type="text" name="title" class="form-control pull-right"
                            placeholder="请输入文章标题" style="font-size: 14px">
@@ -40,9 +56,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 /article/showlist">
                         <button type="submit" class="btn btn-default"><i class="fa fa-search"></i>
                         </button>
+                        <button type="button" class="btn btn-block btn-default btn-flat">Default</button>
                     </div>
                 </div>
             </div>
+
         </div>
 
 
@@ -126,7 +144,7 @@ $_smarty_tpl->tpl_vars['vv']->_loop = true;
         //保持搜索条件
         var searArr = JSON.parse(localStorage.getItem('searArr'));
         $.each(searArr, function (index, item) {
-            $("input[name='" + index + "']").val(item);
+            $("input[name='" + index + "'],select[name='" + index + "']").val(item);
         });
 
         //详情

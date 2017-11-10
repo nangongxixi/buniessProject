@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2017-11-10 13:52:08
+<?php /* Smarty version Smarty-3.1.6, created on 2017-11-10 17:06:27
          compiled from "D:/phpStudy/WWW/buniessProject/Project/Home/View\index\main.html" */ ?>
 <?php /*%%SmartyHeaderCode:123995a0142755eb3a2-95025325%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'e61be43a375c489567c910579cd211e24f6ebba0' => 
     array (
       0 => 'D:/phpStudy/WWW/buniessProject/Project/Home/View\\index\\main.html',
-      1 => 1510293126,
+      1 => 1510304785,
       2 => 'file',
     ),
   ),
@@ -26,6 +26,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'amount' => 0,
     'dkglList' => 0,
     'zxzxList' => 0,
+    'vv' => 0,
     'askList' => 0,
     'links' => 0,
   ),
@@ -324,7 +325,8 @@ foreach ($_from as $_smarty_tpl->tpl_vars['v']->key => $_smarty_tpl->tpl_vars['v
 $_smarty_tpl->tpl_vars['v']->_loop = true;
  $_smarty_tpl->tpl_vars['k']->value = $_smarty_tpl->tpl_vars['v']->key;
 ?>
-                        <li>
+                        <li class="manual-li" manualid="<?php echo $_smarty_tpl->tpl_vars['v']->value['id'];?>
+">
                             <h5>
                                 <a href="#" title="<?php echo $_smarty_tpl->tpl_vars['v']->value['title'];?>
 " imgurl="<?php echo $_smarty_tpl->tpl_vars['v']->value['img_url'];?>
@@ -359,23 +361,24 @@ more_03.png"></a>
                         <p>暂无...</p>
                     </div>
                     <ul>
-                        <?php  $_smarty_tpl->tpl_vars['v'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['v']->_loop = false;
- $_smarty_tpl->tpl_vars['k'] = new Smarty_Variable;
+                        <?php  $_smarty_tpl->tpl_vars['vv'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['vv']->_loop = false;
+ $_smarty_tpl->tpl_vars['kk'] = new Smarty_Variable;
  $_from = $_smarty_tpl->tpl_vars['zxzxList']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
-foreach ($_from as $_smarty_tpl->tpl_vars['v']->key => $_smarty_tpl->tpl_vars['v']->value){
-$_smarty_tpl->tpl_vars['v']->_loop = true;
- $_smarty_tpl->tpl_vars['k']->value = $_smarty_tpl->tpl_vars['v']->key;
+foreach ($_from as $_smarty_tpl->tpl_vars['vv']->key => $_smarty_tpl->tpl_vars['vv']->value){
+$_smarty_tpl->tpl_vars['vv']->_loop = true;
+ $_smarty_tpl->tpl_vars['kk']->value = $_smarty_tpl->tpl_vars['vv']->key;
 ?>
-                        <li>
+                        <li class="manual-li" manualid="<?php echo $_smarty_tpl->tpl_vars['vv']->value['id'];?>
+">
                             <h5>
-                                <a href="#" title="<?php echo $_smarty_tpl->tpl_vars['v']->value['title'];?>
-" imgurl="<?php echo $_smarty_tpl->tpl_vars['v']->value['img_url'];?>
+                                <a href="#" title="<?php echo $_smarty_tpl->tpl_vars['vv']->value['title'];?>
+" imgurl="<?php echo $_smarty_tpl->tpl_vars['vv']->value['img_url'];?>
 "
-                                   discript="<?php if ((mb_strlen($_smarty_tpl->tpl_vars['v']->value['discript'],'utf-8'))>50){?><?php echo mb_substr($_smarty_tpl->tpl_vars['v']->value['discript'],0,50,'utf-8');?>
-…<?php }else{ ?><?php echo $_smarty_tpl->tpl_vars['v']->value['discript'];?>
+                                   discript="<?php if ((mb_strlen($_smarty_tpl->tpl_vars['vv']->value['discript'],'utf-8'))>50){?><?php echo mb_substr($_smarty_tpl->tpl_vars['vv']->value['discript'],0,50,'utf-8');?>
+…<?php }else{ ?><?php echo $_smarty_tpl->tpl_vars['vv']->value['discript'];?>
 <?php }?>">
-                                    <?php if ((mb_strlen($_smarty_tpl->tpl_vars['v']->value['title'],'utf-8'))>20){?><?php echo mb_substr($_smarty_tpl->tpl_vars['v']->value['title'],0,20,'utf-8');?>
-…<?php }else{ ?><?php echo $_smarty_tpl->tpl_vars['v']->value['title'];?>
+                                    <?php if ((mb_strlen($_smarty_tpl->tpl_vars['vv']->value['title'],'utf-8'))>20){?><?php echo mb_substr($_smarty_tpl->tpl_vars['vv']->value['title'],0,20,'utf-8');?>
+…<?php }else{ ?><?php echo $_smarty_tpl->tpl_vars['vv']->value['title'];?>
 <?php }?>
                                 </a></h5>
                         </li>
