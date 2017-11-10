@@ -23,10 +23,10 @@
         background-color: #f6f6f6;
         width: 230px !important;
     }
+
 </style>
 
 {literal}
-
 
 
 <style type="text/css">
@@ -182,19 +182,34 @@
 </div>
 -->
 
-
 <div class="main">
     <div class="container">
         <div class="dkpt container">
 
             <div class="dkpt_l" style="border:0px">
                 <div class="dkpt_l_t">
-                    <span style="float: none; font-size: 20px" id="title">{$info.title}</span>
+                    <span style="float: none; font-size: 20px" id="title">{$catname}</span>
                 </div>
-                <div id="content" style="margin-top: 15px">
-                    <div style="line-height: 200%; margin-bottom: 60px">{$info.detail}</div>
-                    <div class="clear"> </div>
-                    <div class="nei-liuc" >
+                <div id="content" >
+                    <div style="line-height: 200%; margin-bottom: 60px">
+                        <div class="newscenter" style="margin: 0">
+                            <div >
+                                <div class="ntot" style="padding: 0 0 0 15px">
+                                    <ul>
+                                        {foreach $manualList as $k => $v}
+                                        <li style="border-bottom: 1px dotted #c3c3c3" class="manual-li" manualid="{$v.id}">
+                                            <h5>
+                                                <a style="line-height: 200%; font-size: 14px" href="#" title="{$v.title}" imgurl="public/upload/defauhead.png">{$v.title}<span style="float: right">{$v.createtime}</span> </a>
+                                            </h5>
+                                        </li>
+                                        {/foreach}
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                    <div class="nei-liuc">
                         <div class="nei nei-liuc">
                             <div class="nav">
                                 <span class="ico"></span>
@@ -213,7 +228,7 @@
                                                         {foreach $askList as $k => $v}
                                                         <dt><a href="#">{$v.title}</a></dt>
                                                         <dd style="border-bottom: 1px dotted #c3c3c3">{$v.content}</dd>
-                                                       <!-- <hr size="15" color="#f5f6f6"  style="position: relative;left: -15px; width: 1300px">-->
+                                                        <!-- <hr size="15" color="#f5f6f6"  style="position: relative;left: -15px; width: 1300px">-->
                                                         {/foreach}
                                                     </td>
                                                 </tr>
@@ -229,7 +244,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="clear"> </div>
+                    <div class="clear"></div>
                 </div>
             </div>
 
@@ -240,11 +255,13 @@
                         <div class="content">
                             <h3 style="margin:30px 0 15px 0; font-size: 24px; color: #333; text-align: center; letter-spacing: 3px">
                                 申请贷款</h3>
-                            <form enctype="multipart/form-data" id="formData" class="applyForm" method="POST" target="_blank">
+                            <form enctype="multipart/form-data" id="formData" class="applyForm" method="POST"
+                                  target="_blank">
                                 <div class="sum">
                                     <input onkeyup="this.value=this.value.replace(/[^0-9|\.^]/g,'');"
                                            onafterpaste="this.value=this.value.replace(/\D/g,'');" maxlength="5"
-                                           placeholder="贷款金额(单位：万元)" name="amount" type="text" errorMsg="金额格式为：X或者X.X或者X.XX"
+                                           placeholder="贷款金额(单位：万元)" name="amount" type="text"
+                                           errorMsg="金额格式为：X或者X.X或者X.XX"
                                            accept="number" autocomplete="off"
                                            value="">
                                 </div>
@@ -256,7 +273,8 @@
                                 <div class="tel">
                                     <input type="text" maxlength="11" name="phone"
                                            onkeyup="this.value=this.value.replace(/[^0-9|\.^]/g,'');"
-                                           onafterpaste="this.value=this.value.replace(/\D/g,'');" placeholder="输入手机号" accept="number"
+                                           onafterpaste="this.value=this.value.replace(/\D/g,'');" placeholder="输入手机号"
+                                           accept="number"
                                            autocomplete="off" value="" errorMsg="手机号为1开始的11位纯数字">
                                 </div>
                                 <input type="button" id="submit" class="btn_apply but_submit" value="立即申请"
@@ -268,8 +286,7 @@
             </div>
 
 
-
-            <div class="clear"> </div>
+            <div class="clear"></div>
         </div>
     </div>
 </div>

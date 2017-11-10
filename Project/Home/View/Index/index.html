@@ -471,8 +471,34 @@
         })
 
         //子页面
-        $(document).on('click','#myscrollbox li',function(){
-            $('#index').load('/index.php/Home/Car/detail');
+        $(document).on('click', '#myscrollbox li,.detailInfo', function () {
+            var id = $(this).attr('detailId');
+            var url = '/index.php/Home/Car/detail/id/' + id;
+            $('#index').load(url);
+            sessionStorage.setItem('homeSite', url);
+        });
+
+        //攻略-更多
+        $(document).on('click', '.manual-more', function () {
+            var catid = $(this).attr('catid');
+            var catname = $(this).attr('catname');
+            var url = '/index.php/Home/manual/index/catid/' + catid + '/catname/' + catname;
+            $('#index').load(url);
+            sessionStorage.setItem('homeSite', url);
+        });
+
+        //攻略-详情
+        $(document).on('click', '.manual-li', function () {
+            var manualid = $(this).attr('manualid');
+            var url = '/index.php/Home/manual/detail/id/' + manualid;
+            $('#index').load(url);
+            sessionStorage.setItem('homeSite', url);
+        });
+
+
+        //打开咨询窗口
+        $(document).on('click', '.ask', function () {
+            window.open("http://www16.53kf.com/webCompany.php?arg=10161753&amp;style=1&amp;language=cn&amp;charset=GBK&amp;kflist=off&amp;kf=&amp;zdkf_type=1&amp;referer=http%3A%2F%2Fwww.scmidai.com%2F&amp;keyword=&amp;tfrom=1&amp;tpl=crystal_blue&amp;uid=9469d95cc13f1e69b1a27b8527c440bf&amp;timeStamp=1502931683656&amp;ucust_id=");
         });
 
 

@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2017-11-09 14:32:11
+<?php /* Smarty version Smarty-3.1.6, created on 2017-11-10 11:33:55
          compiled from "D:/phpStudy/WWW/buniessProject/Project/Admin/View\article\add.html" */ ?>
 <?php /*%%SmartyHeaderCode:185675a0281755dbf66-31854902%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '27a3ccc445768961011a70130dd7a4d73add2a19' => 
     array (
       0 => 'D:/phpStudy/WWW/buniessProject/Project/Admin/View\\article\\add.html',
-      1 => 1510209120,
+      1 => 1510284828,
       2 => 'file',
     ),
   ),
@@ -117,7 +117,7 @@ $_smarty_tpl->tpl_vars['v']->_loop = true;
                         </td>
                     </tr>
                     <tr>
-                        <th class="detail-title">产品优势（内页有效）</th>
+                        <th class="detail-title">产品优势（栏目页有效）</th>
                         <td>
                             <!-- <textarea class="form-control" name="discript" rows="3"
                                        placeholder="请填写描述" errorMsg="描述不能为空"><?php echo $_smarty_tpl->tpl_vars['info']->value['discript'];?>
@@ -129,10 +129,22 @@ $_smarty_tpl->tpl_vars['v']->_loop = true;
                         </td>
                     </tr>
                     <tr>
-                        <th class="detail-title">内容</th>
+                        <th class="detail-title">内容（栏目页有效）</th>
                         <td>
                             <div>
                                 <textarea id="TextArea1" name="content" cols="20" rows="2" class="ckeditor"><?php echo $_smarty_tpl->tpl_vars['info']->value['content'];?>
+</textarea>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th class="detail-title">产品详情（详情页有效）</th>
+                        <td>
+                            <!-- <textarea class="form-control" name="discript" rows="3"
+                                       placeholder="请填写描述" errorMsg="描述不能为空"><?php echo $_smarty_tpl->tpl_vars['info']->value['discript'];?>
+</textarea>-->
+                            <div>
+                                <textarea id="TextArea4" name="detail" cols="20" rows="2" class="ckeditor"><?php echo $_smarty_tpl->tpl_vars['info']->value['detail'];?>
 </textarea>
                             </div>
                         </td>
@@ -152,7 +164,6 @@ $_smarty_tpl->tpl_vars['v']->_loop = true;
     </div>
 </div>
 
-
 <script>
     $(function () {
 
@@ -161,11 +172,13 @@ $_smarty_tpl->tpl_vars['v']->_loop = true;
         var discript = $.parseHTML(sessionStorage.getItem('editorcontent2'));//把html转换成实体
         var advantage = $.parseHTML(sessionStorage.getItem('editorcontent3'));//把html转换成实体
         var content = $.parseHTML(sessionStorage.getItem('editorcontent'));//把html转换成实体
+        var detail = $.parseHTML(sessionStorage.getItem('editorcontent4'));//把html转换成实体
 
        // editor3.setData(advantage);//给富文本区域赋值
 
         //数据提交
         $('#submit').unbind('click').click(function () {
+
             //检查图片是否保存
             if ($('#preview').find('.file_success:hidden').length != 0) {
                 layer.msg('您有图片没保存', {
@@ -184,12 +197,15 @@ $_smarty_tpl->tpl_vars['v']->_loop = true;
 
             var discript =  CKEDITOR.instances.TextArea2.getData();
             var advantage =  CKEDITOR.instances.TextArea3.getData();
+            var detail =  CKEDITOR.instances.TextArea4.getData();
            //var editorcontent =  $(window.frames["yuliu_ckedtor"].document).find("body").html();
             var editorcontent = CKEDITOR.instances.TextArea1.getData();
 
             formData.append('discript', discript);
             formData.append('advantage', advantage);
             formData.append('content', editorcontent);
+            formData.append('detail', detail);
+
             $.ajax({
                 url: '../article/add',
                 type: 'POST',
@@ -200,13 +216,18 @@ $_smarty_tpl->tpl_vars['v']->_loop = true;
                 processData: false,
                 success: function (returnJSON) {
                     if (returnJSON.status) {
-                        layer.msg(returnJSON.msg, {
+                        alert('操作成功！');
+                        sessionStorage.clear();
+                        localStorage.setItem('address', '../article/showlist');//保存当前地址,避免刷新跳转
+                        $('#content').load('../article/showlist');
+                        return false;
+                       layer.msg(returnJSON.msg, {
                             icon: 1,
                             time: 2000
                         }, function () {
                             sessionStorage.clear();
                             localStorage.setItem('address', '../article/showlist');//保存当前地址,避免刷新跳转
-                           // $('#content').load('../article/showlist');
+                            $('#content').load('../article/showlist');
                         });
                     } else {
                         layer.msg(returnJSON.msg, {
@@ -291,6 +312,9 @@ $_smarty_tpl->tpl_vars['v']->_loop = true;
         var editor3 = CKEDITOR.replace('TextArea3', {
             filebrowserImageUploadUrl: '../manager/ck_upload'
         });
+        var editor4 = CKEDITOR.replace('TextArea4', {
+            filebrowserImageUploadUrl: '../manager/ck_upload'
+        });
 
         var inputVal = JSON.parse(sessionStorage.getItem("inputVal"));
         //如果还没保存过输入，就定义一个空对象来保存
@@ -305,6 +329,7 @@ $_smarty_tpl->tpl_vars['v']->_loop = true;
         editor.setData(sessionStorage.getItem("editorcontent"));//回填富文本区域
         editor2.setData(sessionStorage.getItem("editorcontent2"));//回填富文本区域
         editor3.setData(sessionStorage.getItem("editorcontent3"));//回填富文本区域
+        editor4.setData(sessionStorage.getItem("editorcontent4"));//回填富文本区域
 
 
         //保存输入
@@ -323,6 +348,9 @@ $_smarty_tpl->tpl_vars['v']->_loop = true;
         });
         editor3.on('change', function (event) {
             sessionStorage.setItem('editorcontent3', this.getData());
+        });
+        editor4.on('change', function (event) {
+            sessionStorage.setItem('editorcontent4', this.getData());
         });
     }
 

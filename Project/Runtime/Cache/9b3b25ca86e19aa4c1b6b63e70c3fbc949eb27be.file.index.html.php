@@ -1,9 +1,39 @@
-<link href="{$smarty.const.CSS_URL}zzsc.css" rel="stylesheet" type="text/css">
+<?php /* Smarty version Smarty-3.1.6, created on 2017-11-10 13:20:48
+         compiled from "D:/phpStudy/WWW/buniessProject/Project/Home/View\Manual\index.html" */ ?>
+<?php /*%%SmartyHeaderCode:55005a0536ce49f4f0-90670360%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_valid = $_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    '9b3b25ca86e19aa4c1b6b63e70c3fbc949eb27be' => 
+    array (
+      0 => 'D:/phpStudy/WWW/buniessProject/Project/Home/View\\Manual\\index.html',
+      1 => 1510291241,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '55005a0536ce49f4f0-90670360',
+  'function' => 
+  array (
+  ),
+  'version' => 'Smarty-3.1.6',
+  'unifunc' => 'content_5a0536ce52421',
+  'variables' => 
+  array (
+    'other' => 0,
+    'v' => 0,
+  ),
+  'has_nocache_code' => false,
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_5a0536ce52421')) {function content_5a0536ce52421($_smarty_tpl) {?><link href="<?php echo @CSS_URL;?>
+zzsc.css" rel="stylesheet" type="text/css">
 
 <!--图片滚动-->
-<link href="{$smarty.const.CSS_URL}owl.carousel.css" rel="stylesheet" media="all"/>
-<link href="{$smarty.const.CSS_URL}owl.theme.css" rel="stylesheet" media="all"/>
-<script type="text/javascript" src="{$smarty.const.JS_URL}owl.carousel.min.js"></script>
+<link href="<?php echo @CSS_URL;?>
+owl.carousel.css" rel="stylesheet" media="all"/>
+<link href="<?php echo @CSS_URL;?>
+owl.theme.css" rel="stylesheet" media="all"/>
+<script type="text/javascript" src="<?php echo @JS_URL;?>
+owl.carousel.min.js"></script>
 
 <style>
     .nei-liuc{
@@ -25,7 +55,7 @@
     }
 </style>
 
-{literal}
+
 
 
 
@@ -169,68 +199,32 @@
         });
     });
 </script>
-{/literal}
+
 
 <!--
 <div class="banner" id="b03">
     <ul style="background-color: #fbfbfb">
-        {foreach $other['bannerImg'] as $k=>$v}
-        <li><img src="../../{$v.img_url}" style="max-width:100%;overflow:hidden;" alt=""
+        <?php  $_smarty_tpl->tpl_vars['v'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['v']->_loop = false;
+ $_smarty_tpl->tpl_vars['k'] = new Smarty_Variable;
+ $_from = $_smarty_tpl->tpl_vars['other']->value['bannerImg']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['v']->key => $_smarty_tpl->tpl_vars['v']->value){
+$_smarty_tpl->tpl_vars['v']->_loop = true;
+ $_smarty_tpl->tpl_vars['k']->value = $_smarty_tpl->tpl_vars['v']->key;
+?>
+        <li><img src="../../<?php echo $_smarty_tpl->tpl_vars['v']->value['img_url'];?>
+" style="max-width:100%;overflow:hidden;" alt=""
                  border="0"></li>
-        {/foreach}
+        <?php } ?>
     </ul>
 </div>
 -->
-
 
 <div class="main">
     <div class="container">
         <div class="dkpt container">
 
             <div class="dkpt_l" style="border:0px">
-                <div class="dkpt_l_t">
-                    <span style="float: none; font-size: 20px" id="title">{$info.title}</span>
-                </div>
-                <div id="content" style="margin-top: 15px">
-                    <div style="line-height: 200%; margin-bottom: 60px">{$info.detail}</div>
-                    <div class="clear"> </div>
-                    <div class="nei-liuc" >
-                        <div class="nei nei-liuc">
-                            <div class="nav">
-                                <span class="ico"></span>
-                                <span class="tit nei-liuc">常见问题</span>
-                            </div>
-                            <div class="newscenter">
-                                <div class="faq"
-                                     style="width:835px; height: auto; float: none !important; border: 0 !important;">
-                                    <div class="faqtot" style="padding: 0">
-                                        <dl id="dingdan" style="overflow: hidden;  height: 308px;">
-                                            <table cellspacing="0" cellpadding="0"
-                                                   style="border-collapse:collapse; width:835px !important">
-                                                <tbody>
-                                                <tr>
-                                                    <td style="background-color: #fff">
-                                                        {foreach $askList as $k => $v}
-                                                        <dt><a href="#">{$v.title}</a></dt>
-                                                        <dd style="border-bottom: 1px dotted #c3c3c3">{$v.content}</dd>
-                                                       <!-- <hr size="15" color="#f5f6f6"  style="position: relative;left: -15px; width: 1300px">-->
-                                                        {/foreach}
-                                                    </td>
-                                                </tr>
-                                                </tbody>
-                                            </table>
-                                        </dl>
-                                    </div>
-
-                                </div>
-                                <script type="text/javascript">
-                                    new Marquee("dingdan", 0, 1, 835, 308, 40, 0, 1000, 22);
-                                </script>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="clear"> </div>
-                </div>
+               fsdafdsaf
             </div>
 
             <div class="dkpt_r" style="border:0px; width: 258px !important; padding: 0">
@@ -274,7 +268,7 @@
     </div>
 </div>
 
-{literal}
+
 <script>
     $(document).ready(function (e) {
         $('#b03').unslider({
@@ -371,4 +365,4 @@
 
     });
 </script>
-{/literal}
+<?php }} ?>

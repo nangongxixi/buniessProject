@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2017-11-09 16:57:29
+<?php /* Smarty version Smarty-3.1.6, created on 2017-11-10 13:19:10
          compiled from "D:/phpStudy/WWW/buniessProject/Project/Home/View\Index\index.html" */ ?>
 <?php /*%%SmartyHeaderCode:33705a0268eeeeb946-24137944%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'f0dad774b95543d6d7c41475878874b3c87f1694' => 
     array (
       0 => 'D:/phpStudy/WWW/buniessProject/Project/Home/View\\Index\\index.html',
-      1 => 1510217844,
+      1 => 1510290458,
       2 => 'file',
     ),
   ),
@@ -621,8 +621,16 @@ tel.jpg"></li>
         })
 
         //子页面
-        $(document).on('click','#myscrollbox li',function(){
-            $('#index').load('/index.php/Home/Car/detail');
+        $(document).on('click','#myscrollbox li,.detailInfo',function(){
+            var id = $(this).attr('detailId');
+            var url = '/index.php/Home/Car/detail/id/'+id;
+            $('#index').load(url);
+            sessionStorage.setItem('homeSite', url);
+        });
+
+        //打开咨询窗口
+        $(document).on('click','.ask',function () {
+            window.open("http://www16.53kf.com/webCompany.php?arg=10161753&amp;style=1&amp;language=cn&amp;charset=GBK&amp;kflist=off&amp;kf=&amp;zdkf_type=1&amp;referer=http%3A%2F%2Fwww.scmidai.com%2F&amp;keyword=&amp;tfrom=1&amp;tpl=crystal_blue&amp;uid=9469d95cc13f1e69b1a27b8527c440bf&amp;timeStamp=1502931683656&amp;ucust_id=");
         });
 
 

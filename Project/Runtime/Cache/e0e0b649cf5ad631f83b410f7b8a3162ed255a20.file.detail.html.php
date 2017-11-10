@@ -1,9 +1,41 @@
-<link href="{$smarty.const.CSS_URL}zzsc.css" rel="stylesheet" type="text/css">
+<?php /* Smarty version Smarty-3.1.6, created on 2017-11-10 13:51:01
+         compiled from "D:/phpStudy/WWW/buniessProject/Project/Home/View\manual\detail.html" */ ?>
+<?php /*%%SmartyHeaderCode:264245a053e2f0cedd6-20020286%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_valid = $_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    'e0e0b649cf5ad631f83b410f7b8a3162ed255a20' => 
+    array (
+      0 => 'D:/phpStudy/WWW/buniessProject/Project/Home/View\\manual\\detail.html',
+      1 => 1510293060,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '264245a053e2f0cedd6-20020286',
+  'function' => 
+  array (
+  ),
+  'version' => 'Smarty-3.1.6',
+  'unifunc' => 'content_5a053e2f14fc7',
+  'variables' => 
+  array (
+    'other' => 0,
+    'v' => 0,
+    'info' => 0,
+    'askList' => 0,
+  ),
+  'has_nocache_code' => false,
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_5a053e2f14fc7')) {function content_5a053e2f14fc7($_smarty_tpl) {?><link href="<?php echo @CSS_URL;?>
+zzsc.css" rel="stylesheet" type="text/css">
 
 <!--图片滚动-->
-<link href="{$smarty.const.CSS_URL}owl.carousel.css" rel="stylesheet" media="all"/>
-<link href="{$smarty.const.CSS_URL}owl.theme.css" rel="stylesheet" media="all"/>
-<script type="text/javascript" src="{$smarty.const.JS_URL}owl.carousel.min.js"></script>
+<link href="<?php echo @CSS_URL;?>
+owl.carousel.css" rel="stylesheet" media="all"/>
+<link href="<?php echo @CSS_URL;?>
+owl.theme.css" rel="stylesheet" media="all"/>
+<script type="text/javascript" src="<?php echo @JS_URL;?>
+owl.carousel.min.js"></script>
 
 <style>
     .nei-liuc{
@@ -25,7 +57,7 @@
     }
 </style>
 
-{literal}
+
 
 
 
@@ -169,15 +201,22 @@
         });
     });
 </script>
-{/literal}
+
 
 <!--
 <div class="banner" id="b03">
     <ul style="background-color: #fbfbfb">
-        {foreach $other['bannerImg'] as $k=>$v}
-        <li><img src="../../{$v.img_url}" style="max-width:100%;overflow:hidden;" alt=""
+        <?php  $_smarty_tpl->tpl_vars['v'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['v']->_loop = false;
+ $_smarty_tpl->tpl_vars['k'] = new Smarty_Variable;
+ $_from = $_smarty_tpl->tpl_vars['other']->value['bannerImg']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['v']->key => $_smarty_tpl->tpl_vars['v']->value){
+$_smarty_tpl->tpl_vars['v']->_loop = true;
+ $_smarty_tpl->tpl_vars['k']->value = $_smarty_tpl->tpl_vars['v']->key;
+?>
+        <li><img src="../../<?php echo $_smarty_tpl->tpl_vars['v']->value['img_url'];?>
+" style="max-width:100%;overflow:hidden;" alt=""
                  border="0"></li>
-        {/foreach}
+        <?php } ?>
     </ul>
 </div>
 -->
@@ -189,10 +228,12 @@
 
             <div class="dkpt_l" style="border:0px">
                 <div class="dkpt_l_t">
-                    <span style="float: none; font-size: 20px" id="title">{$info.title}</span>
+                    <span style="float: none; font-size: 20px" id="title"><?php echo $_smarty_tpl->tpl_vars['info']->value['title'];?>
+</span>
                 </div>
                 <div id="content" style="margin-top: 15px">
-                    <div style="line-height: 200%; margin-bottom: 60px">{$info.detail}</div>
+                    <div style="line-height: 200%; margin-bottom: 60px"><?php echo $_smarty_tpl->tpl_vars['info']->value['content'];?>
+</div>
                     <div class="clear"> </div>
                     <div class="nei-liuc" >
                         <div class="nei nei-liuc">
@@ -210,11 +251,19 @@
                                                 <tbody>
                                                 <tr>
                                                     <td style="background-color: #fff">
-                                                        {foreach $askList as $k => $v}
-                                                        <dt><a href="#">{$v.title}</a></dt>
-                                                        <dd style="border-bottom: 1px dotted #c3c3c3">{$v.content}</dd>
+                                                        <?php  $_smarty_tpl->tpl_vars['v'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['v']->_loop = false;
+ $_smarty_tpl->tpl_vars['k'] = new Smarty_Variable;
+ $_from = $_smarty_tpl->tpl_vars['askList']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['v']->key => $_smarty_tpl->tpl_vars['v']->value){
+$_smarty_tpl->tpl_vars['v']->_loop = true;
+ $_smarty_tpl->tpl_vars['k']->value = $_smarty_tpl->tpl_vars['v']->key;
+?>
+                                                        <dt><a href="#"><?php echo $_smarty_tpl->tpl_vars['v']->value['title'];?>
+</a></dt>
+                                                        <dd style="border-bottom: 1px dotted #c3c3c3"><?php echo $_smarty_tpl->tpl_vars['v']->value['content'];?>
+</dd>
                                                        <!-- <hr size="15" color="#f5f6f6"  style="position: relative;left: -15px; width: 1300px">-->
-                                                        {/foreach}
+                                                        <?php } ?>
                                                     </td>
                                                 </tr>
                                                 </tbody>
@@ -274,7 +323,7 @@
     </div>
 </div>
 
-{literal}
+
 <script>
     $(document).ready(function (e) {
         $('#b03').unslider({
@@ -371,4 +420,4 @@
 
     });
 </script>
-{/literal}
+<?php }} ?>

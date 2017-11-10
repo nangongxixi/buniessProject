@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2017-11-08 13:33:57
+<?php /* Smarty version Smarty-3.1.6, created on 2017-11-10 13:52:08
          compiled from "D:/phpStudy/WWW/buniessProject/Project/Home/View\index\main.html" */ ?>
 <?php /*%%SmartyHeaderCode:123995a0142755eb3a2-95025325%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'e61be43a375c489567c910579cd211e24f6ebba0' => 
     array (
       0 => 'D:/phpStudy/WWW/buniessProject/Project/Home/View\\index\\main.html',
-      1 => 1510119236,
+      1 => 1510293126,
       2 => 'file',
     ),
   ),
@@ -126,12 +126,12 @@ $_smarty_tpl->tpl_vars['v']->_loop = true;
                     <div class="alConts" style="display: none;">
 
                         <div class="lotot">
-
                             <?php echo $_smarty_tpl->tpl_vars['v']->value['discript'];?>
 
                             <div class="anniu">
-                                <span class="s"><a href="#" target="_blank">我要贷款</a></span><span><a
-                                    href="#">了解详情</a></span>
+                                <span class="s"><a href="javascript:;" class="ask" target="_blank">我要贷款</a></span><span><a
+                                    href="javascript:;" class="detailInfo" detailId="<?php echo $_smarty_tpl->tpl_vars['v']->value['id'];?>
+">了解详情</a></span>
                             </div>
                         </div>
 
@@ -304,8 +304,7 @@ gl.jpg"></a></div>
                     <h4>
                         <a target="_blank" href="#">
                             贷款攻略</a><span>/Loan Raiders</span></h4>
-                    <a href="#">
-                        <img src="<?php echo @IMG_URL;?>
+                    <a href="javascript:;" class="manual-more" catid="7" catname="贷款攻略"><img src="<?php echo @IMG_URL;?>
 more_03.png"></a></div>
                 <div class="ntot">
 
@@ -349,7 +348,7 @@ $_smarty_tpl->tpl_vars['v']->_loop = true;
             <div class="lc">
                 <div class="ntit">
                     <h4><a href="#">资讯中心</a><span>/Information Center</span></h4>
-                    <a href="#"><img src="<?php echo @IMG_URL;?>
+                     <a href="javascript:;" class="manual-more" catid="8" catname="资讯中心"><img src="<?php echo @IMG_URL;?>
 more_03.png"></a>
                 </div>
                 <div class="ntot">
@@ -388,15 +387,17 @@ $_smarty_tpl->tpl_vars['v']->_loop = true;
             <div class="faq">
                 <div class="ntit">
                     <h4><a href="#">常见问题</a><span>/Frequently Asked Questions</span></h4>
-                    <a href="#"><img src="<?php echo @IMG_URL;?>
-more_03.png"></a>
+                  <!--  <a href="#"><img src="<?php echo @IMG_URL;?>
+more_03.png"></a>-->
                 </div>
                 <div class="faqtot">
+                    <!--
                     <div class="search">
                         <input type="text" name="" id="seachkeywords" class="txt">
                         <a href="javascript:" onclick="xuanze()"><img src="<?php echo @IMG_URL;?>
 search_06.png"></a>
                     </div>
+                    -->
                     <dl id="dingdan" style="overflow: hidden; width: 349px; height: 308px;">
                         <table cellspacing="0" cellpadding="0" style="border-collapse:collapse;">
                             <tbody>
@@ -496,36 +497,36 @@ $_smarty_tpl->tpl_vars['v']->_loop = true;
             var formVal = $('form input,textarea');
             //金额
             if ($(formVal[0]).val() == '' || !$(formVal[0]).val().match(/^\d+.?\d{0,2}$/g)) {
+                parent.layer.close(index);
                 layer.msg($(formVal[0]).attr("errorMsg"), {
                     icon: 2,
                     time: 2000
                 }, function () {
                     //alert(dd);
-                    parent.layer.close(index);
                 });
                 return false;
             }
 
             //姓名
             if ($(formVal[1]).val() == '') {
+                parent.layer.close(index);
                 layer.msg($(formVal[1]).attr("errorMsg"), {
                     icon: 2,
                     time: 2000
                 }, function () {
                     //alert(dd);
-                    parent.layer.close(index);
                 });
                 return false;
             }
 
             //电话
             if ($(formVal[2]).val() == '' || !$(formVal[2]).val().match(/^1\d{10}$/g)) {
+                parent.layer.close(index);
                 layer.msg($(formVal[2]).attr("errorMsg"), {
                     icon: 2,
                     time: 2000
                 }, function () {
                     //alert(dd);
-                    parent.layer.close(index);
                 });
                 return false;
             }

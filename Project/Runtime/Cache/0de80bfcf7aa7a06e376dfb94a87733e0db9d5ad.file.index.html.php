@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2017-11-09 16:57:02
+<?php /* Smarty version Smarty-3.1.6, created on 2017-11-10 12:24:27
          compiled from "D:/phpStudy/WWW/buniessProject/Project/Home/View\Car\index.html" */ ?>
 <?php /*%%SmartyHeaderCode:99715a011bf5c06665-58532291%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '0de80bfcf7aa7a06e376dfb94a87733e0db9d5ad' => 
     array (
       0 => 'D:/phpStudy/WWW/buniessProject/Project/Home/View\\Car\\index.html',
-      1 => 1510217820,
+      1 => 1510287857,
       2 => 'file',
     ),
   ),
@@ -216,7 +216,8 @@ foreach ($_from as $_smarty_tpl->tpl_vars['v']->key => $_smarty_tpl->tpl_vars['v
 $_smarty_tpl->tpl_vars['v']->_loop = true;
  $_smarty_tpl->tpl_vars['k']->value = $_smarty_tpl->tpl_vars['v']->key;
 ?>
-                        <li>
+                        <li detailId="<?php echo $_smarty_tpl->tpl_vars['v']->value['article_id'];?>
+">
                             <a href="javascript:;">
                                 <img src="../../<?php echo $_smarty_tpl->tpl_vars['v']->value['img_url'];?>
 " width="380" height="240">

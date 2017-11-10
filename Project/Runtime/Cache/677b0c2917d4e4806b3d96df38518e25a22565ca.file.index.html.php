@@ -1,9 +1,42 @@
-<link href="{$smarty.const.CSS_URL}zzsc.css" rel="stylesheet" type="text/css">
+<?php /* Smarty version Smarty-3.1.6, created on 2017-11-10 13:50:37
+         compiled from "D:/phpStudy/WWW/buniessProject/Project/Home/View\manual\index.html" */ ?>
+<?php /*%%SmartyHeaderCode:89395a0538625d06f6-88409826%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_valid = $_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    '677b0c2917d4e4806b3d96df38518e25a22565ca' => 
+    array (
+      0 => 'D:/phpStudy/WWW/buniessProject/Project/Home/View\\manual\\index.html',
+      1 => 1510292924,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '89395a0538625d06f6-88409826',
+  'function' => 
+  array (
+  ),
+  'version' => 'Smarty-3.1.6',
+  'unifunc' => 'content_5a05386263dd0',
+  'variables' => 
+  array (
+    'other' => 0,
+    'v' => 0,
+    'catname' => 0,
+    'manualList' => 0,
+    'askList' => 0,
+  ),
+  'has_nocache_code' => false,
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_5a05386263dd0')) {function content_5a05386263dd0($_smarty_tpl) {?><link href="<?php echo @CSS_URL;?>
+zzsc.css" rel="stylesheet" type="text/css">
 
 <!--图片滚动-->
-<link href="{$smarty.const.CSS_URL}owl.carousel.css" rel="stylesheet" media="all"/>
-<link href="{$smarty.const.CSS_URL}owl.theme.css" rel="stylesheet" media="all"/>
-<script type="text/javascript" src="{$smarty.const.JS_URL}owl.carousel.min.js"></script>
+<link href="<?php echo @CSS_URL;?>
+owl.carousel.css" rel="stylesheet" media="all"/>
+<link href="<?php echo @CSS_URL;?>
+owl.theme.css" rel="stylesheet" media="all"/>
+<script type="text/javascript" src="<?php echo @JS_URL;?>
+owl.carousel.min.js"></script>
 
 <style>
     .nei-liuc{
@@ -23,9 +56,9 @@
         background-color: #f6f6f6;
         width: 230px !important;
     }
+
 </style>
 
-{literal}
 
 
 
@@ -169,19 +202,25 @@
         });
     });
 </script>
-{/literal}
+
 
 <!--
 <div class="banner" id="b03">
     <ul style="background-color: #fbfbfb">
-        {foreach $other['bannerImg'] as $k=>$v}
-        <li><img src="../../{$v.img_url}" style="max-width:100%;overflow:hidden;" alt=""
+        <?php  $_smarty_tpl->tpl_vars['v'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['v']->_loop = false;
+ $_smarty_tpl->tpl_vars['k'] = new Smarty_Variable;
+ $_from = $_smarty_tpl->tpl_vars['other']->value['bannerImg']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['v']->key => $_smarty_tpl->tpl_vars['v']->value){
+$_smarty_tpl->tpl_vars['v']->_loop = true;
+ $_smarty_tpl->tpl_vars['k']->value = $_smarty_tpl->tpl_vars['v']->key;
+?>
+        <li><img src="../../<?php echo $_smarty_tpl->tpl_vars['v']->value['img_url'];?>
+" style="max-width:100%;overflow:hidden;" alt=""
                  border="0"></li>
-        {/foreach}
+        <?php } ?>
     </ul>
 </div>
 -->
-
 
 <div class="main">
     <div class="container">
@@ -189,12 +228,39 @@
 
             <div class="dkpt_l" style="border:0px">
                 <div class="dkpt_l_t">
-                    <span style="float: none; font-size: 20px" id="title">{$info.title}</span>
+                    <span style="float: none; font-size: 20px" id="title"><?php echo $_smarty_tpl->tpl_vars['catname']->value;?>
+</span>
                 </div>
-                <div id="content" style="margin-top: 15px">
-                    <div style="line-height: 200%; margin-bottom: 60px">{$info.detail}</div>
-                    <div class="clear"> </div>
-                    <div class="nei-liuc" >
+                <div id="content" >
+                    <div style="line-height: 200%; margin-bottom: 60px">
+                        <div class="newscenter" style="margin: 0">
+                            <div >
+                                <div class="ntot" style="padding: 0 0 0 15px">
+                                    <ul>
+                                        <?php  $_smarty_tpl->tpl_vars['v'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['v']->_loop = false;
+ $_smarty_tpl->tpl_vars['k'] = new Smarty_Variable;
+ $_from = $_smarty_tpl->tpl_vars['manualList']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['v']->key => $_smarty_tpl->tpl_vars['v']->value){
+$_smarty_tpl->tpl_vars['v']->_loop = true;
+ $_smarty_tpl->tpl_vars['k']->value = $_smarty_tpl->tpl_vars['v']->key;
+?>
+                                        <li style="border-bottom: 1px dotted #c3c3c3" class="manual-li" manualid="<?php echo $_smarty_tpl->tpl_vars['v']->value['id'];?>
+">
+                                            <h5>
+                                                <a style="line-height: 200%; font-size: 14px" href="#" title="<?php echo $_smarty_tpl->tpl_vars['v']->value['title'];?>
+" imgurl="public/upload/defauhead.png"><?php echo $_smarty_tpl->tpl_vars['v']->value['title'];?>
+<span style="float: right"><?php echo $_smarty_tpl->tpl_vars['v']->value['createtime'];?>
+</span> </a>
+                                            </h5>
+                                        </li>
+                                        <?php } ?>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                    <div class="nei-liuc">
                         <div class="nei nei-liuc">
                             <div class="nav">
                                 <span class="ico"></span>
@@ -210,11 +276,19 @@
                                                 <tbody>
                                                 <tr>
                                                     <td style="background-color: #fff">
-                                                        {foreach $askList as $k => $v}
-                                                        <dt><a href="#">{$v.title}</a></dt>
-                                                        <dd style="border-bottom: 1px dotted #c3c3c3">{$v.content}</dd>
-                                                       <!-- <hr size="15" color="#f5f6f6"  style="position: relative;left: -15px; width: 1300px">-->
-                                                        {/foreach}
+                                                        <?php  $_smarty_tpl->tpl_vars['v'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['v']->_loop = false;
+ $_smarty_tpl->tpl_vars['k'] = new Smarty_Variable;
+ $_from = $_smarty_tpl->tpl_vars['askList']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['v']->key => $_smarty_tpl->tpl_vars['v']->value){
+$_smarty_tpl->tpl_vars['v']->_loop = true;
+ $_smarty_tpl->tpl_vars['k']->value = $_smarty_tpl->tpl_vars['v']->key;
+?>
+                                                        <dt><a href="#"><?php echo $_smarty_tpl->tpl_vars['v']->value['title'];?>
+</a></dt>
+                                                        <dd style="border-bottom: 1px dotted #c3c3c3"><?php echo $_smarty_tpl->tpl_vars['v']->value['content'];?>
+</dd>
+                                                        <!-- <hr size="15" color="#f5f6f6"  style="position: relative;left: -15px; width: 1300px">-->
+                                                        <?php } ?>
                                                     </td>
                                                 </tr>
                                                 </tbody>
@@ -229,7 +303,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="clear"> </div>
+                    <div class="clear"></div>
                 </div>
             </div>
 
@@ -240,11 +314,13 @@
                         <div class="content">
                             <h3 style="margin:30px 0 15px 0; font-size: 24px; color: #333; text-align: center; letter-spacing: 3px">
                                 申请贷款</h3>
-                            <form enctype="multipart/form-data" id="formData" class="applyForm" method="POST" target="_blank">
+                            <form enctype="multipart/form-data" id="formData" class="applyForm" method="POST"
+                                  target="_blank">
                                 <div class="sum">
                                     <input onkeyup="this.value=this.value.replace(/[^0-9|\.^]/g,'');"
                                            onafterpaste="this.value=this.value.replace(/\D/g,'');" maxlength="5"
-                                           placeholder="贷款金额(单位：万元)" name="amount" type="text" errorMsg="金额格式为：X或者X.X或者X.XX"
+                                           placeholder="贷款金额(单位：万元)" name="amount" type="text"
+                                           errorMsg="金额格式为：X或者X.X或者X.XX"
                                            accept="number" autocomplete="off"
                                            value="">
                                 </div>
@@ -256,7 +332,8 @@
                                 <div class="tel">
                                     <input type="text" maxlength="11" name="phone"
                                            onkeyup="this.value=this.value.replace(/[^0-9|\.^]/g,'');"
-                                           onafterpaste="this.value=this.value.replace(/\D/g,'');" placeholder="输入手机号" accept="number"
+                                           onafterpaste="this.value=this.value.replace(/\D/g,'');" placeholder="输入手机号"
+                                           accept="number"
                                            autocomplete="off" value="" errorMsg="手机号为1开始的11位纯数字">
                                 </div>
                                 <input type="button" id="submit" class="btn_apply but_submit" value="立即申请"
@@ -268,13 +345,12 @@
             </div>
 
 
-
-            <div class="clear"> </div>
+            <div class="clear"></div>
         </div>
     </div>
 </div>
 
-{literal}
+
 <script>
     $(document).ready(function (e) {
         $('#b03').unslider({
@@ -371,4 +447,4 @@
 
     });
 </script>
-{/literal}
+<?php }} ?>

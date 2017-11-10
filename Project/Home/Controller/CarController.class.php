@@ -38,10 +38,16 @@ class CarController extends Controller
         $this->assign('askList', $askList); //常见问答
 
         $this->display();
-        //show_bug($customer);
+        //show_bug($carList);
     }
 
-    public function detail(){
+    public function detail($id){
+        $articles = D('Articles');
+        $info = $articles->where('id='.$id)->select();
+        //常见问答
+        $askList = $articles->where('category_id=10')->select();
+        $this->assign('askList', $askList); //常见问答
+        $this->assign('info', $info[0]); //常见问答
         $this->display();
     }
 

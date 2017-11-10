@@ -76,11 +76,10 @@
                     <div class="alConts" style="display: none;">
 
                         <div class="lotot">
-
                             {$v.discript}
                             <div class="anniu">
-                                <span class="s"><a href="#" target="_blank">我要贷款</a></span><span><a
-                                    href="#">了解详情</a></span>
+                                <span class="s"><a href="javascript:;" class="ask" target="_blank">我要贷款</a></span><span><a
+                                    href="javascript:;" class="detailInfo" detailId="{$v.id}">了解详情</a></span>
                             </div>
                         </div>
 
@@ -225,8 +224,7 @@
                     <h4>
                         <a target="_blank" href="#">
                             贷款攻略</a><span>/Loan Raiders</span></h4>
-                    <a href="#">
-                        <img src="{$smarty.const.IMG_URL}more_03.png"></a></div>
+                    <a href="javascript:;" class="manual-more" catid="7" catname="贷款攻略"><img src="{$smarty.const.IMG_URL}more_03.png"></a></div>
                 <div class="ntot">
 
                     <div class="one">
@@ -257,7 +255,7 @@
             <div class="lc">
                 <div class="ntit">
                     <h4><a href="#">资讯中心</a><span>/Information Center</span></h4>
-                    <a href="#"><img src="{$smarty.const.IMG_URL}more_03.png"></a>
+                     <a href="javascript:;" class="manual-more" catid="8" catname="资讯中心"><img src="{$smarty.const.IMG_URL}more_03.png"></a>
                 </div>
                 <div class="ntot">
                     <div class="one">
@@ -283,13 +281,15 @@
             <div class="faq">
                 <div class="ntit">
                     <h4><a href="#">常见问题</a><span>/Frequently Asked Questions</span></h4>
-                    <a href="#"><img src="{$smarty.const.IMG_URL}more_03.png"></a>
+                  <!--  <a href="#"><img src="{$smarty.const.IMG_URL}more_03.png"></a>-->
                 </div>
                 <div class="faqtot">
+                    <!--
                     <div class="search">
                         <input type="text" name="" id="seachkeywords" class="txt">
                         <a href="javascript:" onclick="xuanze()"><img src="{$smarty.const.IMG_URL}search_06.png"></a>
                     </div>
+                    -->
                     <dl id="dingdan" style="overflow: hidden; width: 349px; height: 308px;">
                         <table cellspacing="0" cellpadding="0" style="border-collapse:collapse;">
                             <tbody>
@@ -380,36 +380,36 @@
             var formVal = $('form input,textarea');
             //金额
             if ($(formVal[0]).val() == '' || !$(formVal[0]).val().match(/^\d+.?\d{0,2}$/g)) {
+                parent.layer.close(index);
                 layer.msg($(formVal[0]).attr("errorMsg"), {
                     icon: 2,
                     time: 2000
                 }, function () {
                     //alert(dd);
-                    parent.layer.close(index);
                 });
                 return false;
             }
 
             //姓名
             if ($(formVal[1]).val() == '') {
+                parent.layer.close(index);
                 layer.msg($(formVal[1]).attr("errorMsg"), {
                     icon: 2,
                     time: 2000
                 }, function () {
                     //alert(dd);
-                    parent.layer.close(index);
                 });
                 return false;
             }
 
             //电话
             if ($(formVal[2]).val() == '' || !$(formVal[2]).val().match(/^1\d{10}$/g)) {
+                parent.layer.close(index);
                 layer.msg($(formVal[2]).attr("errorMsg"), {
                     icon: 2,
                     time: 2000
                 }, function () {
                     //alert(dd);
-                    parent.layer.close(index);
                 });
                 return false;
             }

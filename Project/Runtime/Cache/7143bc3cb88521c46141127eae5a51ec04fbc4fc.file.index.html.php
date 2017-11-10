@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2017-11-09 16:48:30
+<?php /* Smarty version Smarty-3.1.6, created on 2017-11-10 12:14:35
          compiled from "D:/phpStudy/WWW/buniessProject/Project/Home/View\About\index.html" */ ?>
 <?php /*%%SmartyHeaderCode:121915a02b82a164824-42406428%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '7143bc3cb88521c46141127eae5a51ec04fbc4fc' => 
     array (
       0 => 'D:/phpStudy/WWW/buniessProject/Project/Home/View\\About\\index.html',
-      1 => 1510217300,
+      1 => 1510279760,
       2 => 'file',
     ),
   ),
@@ -139,6 +139,10 @@ $_smarty_tpl->tpl_vars['v']->_loop = true;
         $('.list .about-title:not(":last")').click(function(){
             $('#map').hide();
         });
+
+        if(sessionStorage.getItem('about-tit')=='联系我们'){
+            $('#map').show();
+        }
 
 
     });
