@@ -1,0 +1,452 @@
+<span id="index">
+<!-- 切换 -->
+<div class="banner" id="b03">
+    <ul>
+        <li><img src="{$smarty.const.IMG_URL}01.jpg" style="max-width:100%;overflow:hidden;" alt="" height="430"
+                 border="0"></li>
+
+        <li><img src="{$smarty.const.IMG_URL}02.jpg" style="max-width:100%;overflow:hidden;" alt="" height="430"
+                 border="0"></li>
+        <li><img src="{$smarty.const.IMG_URL}02.jpg" style="max-width:100%;overflow:hidden;" alt="" height="430"
+                 border="0"></li>
+    </ul>
+</div>
+<div style="position: relative; width: 1200px; margin: 0 auto">
+    <div style=" position:absolute; background-image: url({$smarty.const.IMG_URL}applybg.png); width: 330px; height: 290px;top:-360px; right:0"
+         class="apply">
+        <div class="content">
+            <h3 style="margin:30px 0 25px 0; font-size: 24px; color: #fff; text-align: center; letter-spacing: 3px">
+                申请贷款</h3>
+            <form enctype="multipart/form-data" id="formData" class="applyForm" method="POST"
+                  target="_blank">
+                <div class="sum">
+                    <span class="input_title">贷款金额： </span>
+                    <input onkeyup="this.value=this.value.replace(/[^0-9|\.^]/g,'');"
+                           onafterpaste="this.value=this.value.replace(/\D/g,'');" maxlength="5"
+                           placeholder="贷款金额(单位：万元)" name="amount" type="text" errorMsg="金额格式为：X或者X.X或者X.XX"
+                           accept="number" autocomplete="off"
+                           value="">
+                </div>
+                <div class="name clearfix">
+                    <span class="input_title">您的姓名： </span>
+                    <input type="text" maxlength="10" placeholder="请输入姓名" errorMsg="姓名不能为空" name="name"
+                           autocomplete="off" value="">
+                </div>
+
+                <div class="tel">
+                    <span class="input_title">手机号码： </span>
+                    <input type="text" maxlength="11" name="phone"
+                           onkeyup="this.value=this.value.replace(/[^0-9|\.^]/g,'');"
+                           onafterpaste="this.value=this.value.replace(/\D/g,'');" placeholder="输入手机号" accept="number"
+                           autocomplete="off" value="" errorMsg="手机号为1开始的11位纯数字">
+                </div>
+                <input type="button" id="submit" class="btn_apply but_submit" value="立即申请"
+                       style="margin: 10px 25px 0">
+            </form>
+        </div>
+    </div>
+</div>
+<script>
+    $(document).ready(function (e) {
+        $('#b03').unslider({
+            dots: true
+        });
+    });
+</script>
+
+    <!-- 主体 -->
+<div class="main">
+    <div class="container">
+
+        <div class="dkpt container">
+
+            <div class="dkpt_l">
+                <div class="dkpt_l_t">
+                    <h4 style="font-weight: bold">
+                        打造西南地区最快捷的贷款定制平台</h4>
+                    <span>高效•快捷•安全</span></div>
+                <div class="dkpt_l_o">
+                    <ul class="lo_ul">
+                        {foreach $articleList as $k => $v}
+                        <li class=""><a class="a3" href="#">
+                            {$v.title}</a></li>
+                        {/foreach}
+                    </ul>
+                    {foreach $articleList as $k => $v}
+                    <div class="alConts" style="display: none;">
+
+                        <div class="lotot">
+                            {$v.discript}
+                            <div class="anniu">
+                                <span class="s"><a href="javascript:;" class="ask" target="_blank">我要贷款</a></span><span><a
+                                    href="javascript:;" class="detailInfo" detailId="{$v.id}">了解详情</a></span>
+                            </div>
+                        </div>
+
+                    </div>
+                    {/foreach}
+
+
+                </div>
+            </div>
+            <script type="text/javascript">
+
+                $('.dkpt_l_o ul li').mouseover(function () {
+                    $(this).addClass("cur").siblings().removeClass("cur");
+                    $(".dkpt_l_o .alConts").eq($('.dkpt_l_o ul li').index(this)).show().siblings(".alConts").hide();
+                });
+            </script>
+
+
+            <div class="dkpt_r">
+                <div class="dkpt_r_t">
+                    <h4>
+                        <a href="#">
+                            信贷经理</a></h4>
+                </div>
+                <ul id="tuand" style="width: 258px; overflow: hidden;">
+                    <div style="overflow: hidden; zoom: 1">
+                        <div style="float: left;">
+                            {foreach $customer as $k => $v}
+                            <li>
+                                <a href="#" title="{$v.title}">
+                                    <img alt="{$v.title}" _src="../../{$v.img_url}" width="258"
+                                         height="239" src="../../{$v.img_url}"></a>
+                                <h5>
+                                    <a href="#" title="{$v.title}">
+                                        {$v.title}</a></h5>
+                                <a target="_blank"
+                                   href="http://www16.53kf.com/webCompany.php?arg=10161753&amp;style=1&amp;language=cn&amp;charset=GBK&amp;kflist=off&amp;kf=&amp;zdkf_type=1&amp;referer=http%3A%2F%2Fwww.scmidai.com%2F&amp;keyword=&amp;tfrom=1&amp;tpl=crystal_blue&amp;uid=9469d95cc13f1e69b1a27b8527c440bf&amp;timeStamp=1502931683656&amp;ucust_id="
+                                   class="ljzx">立即咨询</a>
+                            </li>
+                            {/foreach}
+                        </div>
+                    </div>
+                </ul>
+                <a href="javascript:" class="l" id="tleft"></a><a href="javascript:" class="r" id="tright"></a>
+            </div>
+            <script language="javascript" type="text/javascript">
+                var scrollPic_02 = new ScrollPic();
+                scrollPic_02.scrollContId = "tuand"; // 内容容器ID
+                scrollPic_02.arrLeftId = "tleft"; //左箭头ID
+                scrollPic_02.arrRightId = "tright"; //右箭头ID
+                scrollPic_02.frameWidth = 258; //显示框宽度
+                scrollPic_02.pageWidth = 258; //翻页宽度
+                scrollPic_02.speed = 8; //移动速度(单位毫秒，越小越快)
+                scrollPic_02.space = 5; //每次移动像素(单位px，越大越快)
+                scrollPic_02.autoPlay = true; //自动播放
+                scrollPic_02.autoPlayTime = 4; //自动播放间隔时间(秒)
+
+                scrollPic_02.initialize(); //初始化
+
+            </script>
+            <div class="clear">
+            </div>
+        </div>
+
+        <div class="sqlc">
+            <div class="sq_l">
+                <a href="#"
+                   target="_blank">
+                    <img _src="{$smarty.const.IMG_URL}sqlc_07.png"
+                         src="{$smarty.const.IMG_URL}sqlc_07.png"></a></div>
+            <div class="sq_r">
+                <p class="p1">
+                    米袋金融</p>
+                <p class="p2">
+                    西南地区最快捷的贷款定制平台</p>
+                <p class="p3">
+                    5年来，我们已经为客户解决了</p>
+                <p class="p4">
+                    758,654,876</p>
+                <p class="p5">
+                    的资金问题</p>
+            </div>
+            <div class="clear">
+            </div>
+        </div>
+
+
+        <div class="jg">
+            <div class="jgtit">
+                <img src="{$smarty.const.IMG_URL}ys.jpg">
+            </div>
+        </div>
+
+
+        <div class="ys container">
+            <div class="ystit ">
+                <em>西南地区最快捷的贷款定制平台</em>
+                <h4><span>成功案例</span>，他们通过米袋金融成功贷款</h4>
+            </div>
+            <hr width="1120" style="border:1px solid #ff8900;"/>
+            <ul>
+                {foreach $caseList as $k => $v}
+                <li>
+                    <a href="#">
+                    <span> <img src="../../{$v.img_url}" width="60" height="60"></span>
+                    <h5 style="border-bottom:1px dotted #d2d2d2;">{$v.title}</h5>
+                    <p>{if (mb_strlen($v.discript,'utf-8'))>320}{mb_substr($v.discript,0,320,'utf-8')}…{else}{$v.discript}{/if}</p>
+                    </a>
+                </li>
+                {/foreach}
+            </ul>
+        </div>
+
+
+        <div class="ggw">
+            <img src="{$smarty.const.IMG_URL}ggw.jpg">
+        </div>
+
+
+        <!--
+        <div class="gl">
+            <a href="#"
+               target="_blank">
+                <img src="{$smarty.const.IMG_URL}gl.jpg"></a>
+        </div>
+-->
+
+        <div class="jg">
+            <div class="jgtit">
+                <h4>
+                    感谢以下机构为<span style="font-size: 18px; color: #ff8900; font-weight: bold">米袋金融提供资金支持</span></h4>
+                <em>Thanks to the following organizations to provide financial support for the Express
+                    Loan</em>
+            </div>
+            {$amount[0].content}
+        </div>
+
+
+        <div class="newscenter">
+
+
+            <div class="lr">
+                <div class="ntit">
+                    <h4>
+                        <a target="_blank" href="#">
+                            贷款攻略</a><span>/Loan Raiders</span></h4>
+                    <a href="javascript:;" class="manual-more" catid="7" catname="贷款攻略"><img src="{$smarty.const.IMG_URL}more_03.png"></a></div>
+                <div class="ntot">
+
+                    <div class="one">
+                        <a href="#">
+                            <img src="{$smarty.const.IMG_URL}20160124205149_67478.jpg" width="111" height="111"></a>
+                        <h5><a href="#">暂无...</a></h5>
+                        <p>暂无...</p>
+                    </div>
+
+                    <ul>
+                        {foreach $dkglList as $k => $v}
+                        <li class="manual-li" manualid="{$v.id}">
+                            <h5>
+                                <a href="#" title="{$v.title}" imgurl="{$v.img_url}"
+                                   discript="{if (mb_strlen($v.discript,'utf-8'))>50}{mb_substr($v.discript,0,50,'utf-8')}…{else}{$v.discript}{/if}">
+                                    {if
+                                    (mb_strlen($v.title,'utf-8'))>20}{mb_substr($v.title,0,20,'utf-8')}…{else}{$v.title}{/if}
+                                </a></h5>
+                        </li>
+                        {/foreach}
+
+
+                    </ul>
+                </div>
+            </div>
+
+
+            <div class="lc">
+                <div class="ntit">
+                    <h4><a href="#">资讯中心</a><span>/Information Center</span></h4>
+                     <a href="javascript:;" class="manual-more" catid="8" catname="资讯中心"><img src="{$smarty.const.IMG_URL}more_03.png"></a>
+                </div>
+                <div class="ntot">
+                    <div class="one">
+                        <a href="#"><img src="{$smarty.const.IMG_URL}20170327192616_26378.jpg" width="111" height="111"></a>
+                        <h5><a href="#">暂无...</a></h5>
+                        <p>暂无...</p>
+                    </div>
+                    <ul>
+                        {foreach $zxzxList as $kk => $vv}
+                        <li class="manual-li" manualid="{$vv.id}">
+                            <h5>
+                                <a href="#" title="{$vv.title}" imgurl="{$vv.img_url}"
+                                   discript="{if (mb_strlen($vv.discript,'utf-8'))>50}{mb_substr($vv.discript,0,50,'utf-8')}…{else}{$vv.discript}{/if}">
+                                    {if
+                                    (mb_strlen($vv.title,'utf-8'))>20}{mb_substr($vv.title,0,20,'utf-8')}…{else}{$vv.title}{/if}
+                                </a></h5>
+                        </li>
+                        {/foreach}
+                    </ul>
+                </div>
+            </div>
+
+            <div class="faq">
+                <div class="ntit">
+                    <h4><a href="#">常见问题</a><span>/Frequently Asked Questions</span></h4>
+                  <!--  <a href="#"><img src="{$smarty.const.IMG_URL}more_03.png"></a>-->
+                </div>
+                <div class="faqtot">
+                    <!--
+                    <div class="search">
+                        <input type="text" name="" id="seachkeywords" class="txt">
+                        <a href="javascript:" onclick="xuanze()"><img src="{$smarty.const.IMG_URL}search_06.png"></a>
+                    </div>
+                    -->
+                    <dl id="dingdan" style="overflow: hidden; width: 349px; height: 308px;">
+                        <table cellspacing="0" cellpadding="0" style="border-collapse:collapse;">
+                            <tbody>
+                            <tr>
+                                <td>
+                                    {foreach $askList as $k => $v}
+                                    <dt><a href="#">{$v.title}</a></dt>
+                                    <dd>{$v.content}</dd>
+                                    {/foreach}
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </dl>
+                </div>
+            </div>
+            <script type="text/javascript">
+
+                new Marquee("dingdan", 0, 1, 349, 308, 40, 0, 1000, 22);
+            </script>
+        </div>
+        <div class="link container">{$links[0].content}</div>
+
+    </div>
+</div>
+</span>
+
+{literal}
+<script>
+
+    $(function () {
+        //贷款项目 默认显示
+        $('.lo_ul li:first-child').addClass('cur');
+        $('.alConts').eq(0).show();
+
+        //贷款攻略第一条
+        var dkglOne = $('.ntot').eq(0);
+        firstInfo(dkglOne);
+        //资讯中心第一条
+        var zxzxOne = $('.ntot').eq(1);
+        firstInfo(zxzxOne);
+
+
+        function getUrlParam(name) {
+            var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象
+            var r = window.location.search.substr(1).match(reg); //匹配目标参数
+            if (r != null) return unescape(r[2]); return null; //返回参数值
+        }
+
+        //数据提交
+        //数据提交
+        $('#submit').unbind('click').click(function () {
+
+            //  var xx = getUrlParam('source');
+            var index = layer.load(1, {
+                shade: [0.1,'#fff'] //0.1透明度的白色背景
+            });
+
+            var source = getUrlParam('source');
+
+            //数据验证
+            if (!validata()) {
+                parent.layer.close(index);
+                return false;
+            }
+
+
+            var formData = new FormData($("#formData")[0]);
+            $.ajax({
+                url: '/index.php/Home/Wap/add/source/'+source,
+                type: 'POST',
+                data: formData,
+                async: false,
+                cache: false,
+                contentType: false,
+                processData: false,
+                success: function (returnJSON) {
+                    //alert(77);
+                    //console.log(returnJSON);
+                    if (returnJSON.status) {
+                        layer.msg(returnJSON.msg, {
+                            icon: 1,
+                            time: 2000
+                        }, function () {
+                            //_taq.push({convert_id: "74381099680", event_type: "form"});
+                            sessionStorage.clear();
+                            location.reload();
+                            // localStorage.setItem('address', '../article/showlist');//保存当前地址,避免刷新跳转
+                            // $('#content').load('../article/showlist');
+                        });
+                    } else {
+                        layer.msg(returnJSON.msg, {
+                            icon: 2,
+                            time: 2000
+                        });
+                    }
+                }
+            });
+        });
+
+        //数据验证
+        function validata(index) {
+            var formVal = $('form input,textarea');
+            //金额
+            if ($(formVal[0]).val() == '' || !$(formVal[0]).val().match(/^\d+.?\d{0,2}$/g)) {
+                parent.layer.close(index);
+                layer.msg($(formVal[0]).attr("errorMsg"), {
+                    icon: 2,
+                    time: 2000
+                }, function () {
+                    //alert(dd);
+                });
+                return false;
+            }
+
+            //姓名
+            if ($(formVal[1]).val() == '') {
+                parent.layer.close(index);
+                layer.msg($(formVal[1]).attr("errorMsg"), {
+                    icon: 2,
+                    time: 2000
+                }, function () {
+                    //alert(dd);
+                });
+                return false;
+            }
+
+            //电话
+            if ($(formVal[2]).val() == '' || !$(formVal[2]).val().match(/^1\d{10}$/g)) {
+                parent.layer.close(index);
+                layer.msg($(formVal[2]).attr("errorMsg"), {
+                    icon: 2,
+                    time: 2000
+                }, function () {
+                    //alert(dd);
+                });
+                return false;
+            }
+            return true;
+        }
+
+
+        //第一条信息
+        function firstInfo(Obj) {
+            var coverImg = Obj.find('li:first-child a').attr('imgurl');
+            var title = Obj.find('li:first-child a').html();
+            var discript = Obj.find('li:first-child a').attr('discript');
+
+            Obj.find('.one img').attr('src', '../../' + coverImg);
+            Obj.find('.one h5 a').html(title);
+            Obj.find('.one p').html(discript);
+            Obj.find('li:first-child').remove();
+        }
+    });
+
+
+</script>
+{/literal}
